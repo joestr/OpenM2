@@ -1,0 +1,46 @@
+/* surrounding code: TD.references (DIV.references (TABLE.references)) */
+TD.references
+{
+/*
+    background: url("../images/global/refBackground.gif") left top fixed;
+*/
+    font-size: 10px;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    vertical-align: top;
+    width: 40%;
+}
+DIV.references
+{
+    text-align: right;
+    border: 0px solid blue;
+}
+TABLE.references
+{
+    border: 0px solid blue;
+    width: 40%;
+}
+TD.references TABLE.references
+{
+/*
+    background: url("../images/global/refBackground.gif") left top fixed;
+*/
+    /* necessary to ensure that the border is displayed: */
+    width: 100%;
+}
+
+/* list header: */
+.references TD.listheader
+{
+/*
+    background: url("../images/global/refHeadingBackground.gif") left top fixed;
+*/
+    font-size: 11px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* list elements: */
+.refRow1, .refRow2
+{
+    font-size: 10px;
+}

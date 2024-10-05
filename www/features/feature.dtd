@@ -1,0 +1,95 @@
+<?xml encoding="ISO-8859-1"?> 
+
+<!--
+********
+FEATURE:
+********
+feature node:
+    Contains the feature data.
+    id:             The id of the feature.
+    name:           The feature name.
+    version:        The version number of the feature.
+    build:          The build number of the feature.
+    providername:   The name of the provider for the feature.
+    active:         Is the feature active? ("true" or "false")
+-->
+<!ELEMENT feature (description? | copyright? | license? | update? | requires?)> 
+<!ATTLIST feature 
+    id            CDATA #REQUIRED 
+    name          CDATA #IMPLIED 
+    version       CDATA #REQUIRED 
+    build         CDATA #IMPLIED 
+    providername  CDATA #IMPLIED 
+    active        (true | false) "true"
+> 
+
+<!ELEMENT description (#PCDATA)> 
+<!ATTLIST description 
+    url           CDATA #IMPLIED 
+> 
+
+<!ELEMENT copyright (#PCDATA)> 
+<!ATTLIST copyright 
+    url           CDATA #IMPLIED 
+> 
+
+<!ELEMENT license (#PCDATA)> 
+<!ATTLIST license 
+    key           CDATA #IMPLIED 
+    url           CDATA #IMPLIED 
+> 
+
+<!ELEMENT update EMPTY> 
+<!ATTLIST update 
+    url           CDATA #REQUIRED 
+    label         CDATA #IMPLIED 
+> 
+
+<!--
+*********
+REQUIRES:
+*********
+requires node:
+    Contains all features and modules which are necessary for the feature
+    to run.
+    There must be at least one node reqfeature or reqmodule.
+-->
+<!ELEMENT requires (reqfeature* | reqmodule*)> 
+
+<!--
+*******************************
+NECESSARY FEATURES AND MODULES:
+*******************************
+reqfeature node (within requires node):
+    id:             The id of the necessary feature.
+    version:        The version number of the necessary feature.
+    match:          Version match.
+                    x ... identical, y ... greater, z ... any value
+                    perfect:        x.x.x
+                    equivalent:     x.x.x or x.x.y
+                    compatible:     x.x.x or x.x.y or x.y.z
+                    greaterOrEqual: x.x.x or x.x.y or x.y.z or y.z.z
+
+reqmodule node (within requires node):
+    id:             The id of the necessary module.
+    version:        The version number of the necessary module.
+    match:          Version match.
+                    x ... identical, y ... greater, z ... any value
+                    perfect:        x.x.x
+                    equivalent:     x.x.x or x.x.y
+                    compatible:     x.x.x or x.x.y or x.y.z
+                    greaterOrEqual: x.x.x or x.x.y or x.y.z or y.z.z
+-->
+<!ELEMENT reqfeature EMPTY> 
+<!ATTLIST reqfeature
+    id            CDATA #REQUIRED
+    version       CDATA #IMPLIED 
+    match         (perfect | equivalent | compatible | greaterOrEqual) "compatible"
+> 
+
+<!ELEMENT reqmodule EMPTY> 
+<!ATTLIST reqmodule
+    id            CDATA #REQUIRED
+    version       CDATA #IMPLIED 
+    match         (perfect | equivalent | compatible | greaterOrEqual) "compatible"
+> 

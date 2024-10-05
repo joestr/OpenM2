@@ -1,0 +1,31 @@
+@import url(styleCommon.css);
+
+HTML
+{
+    /* fix the problem in IE7.0 with page length not extending to bottom of window */
+    height: 100%;
+}
+
+BODY
+{
+/*
+    background: url("../images/menu/menuBarBackground.gif");
+    background-repeat: repeat;
+*/
+    background-color: #eeeeee;
+    padding-left: 10px;
+    height: 100%;
+    background-image: url("../images/tabs/navBarBackground.gif");
+    background-repeat: repeat-x;
+    background-position: top;
+}
+A
+{
+    color: #6e132a;
+    text-decoration: none;
+    font-weight: bold;
+}
+A:hover
+{
+    text-decoration: underline;
+}

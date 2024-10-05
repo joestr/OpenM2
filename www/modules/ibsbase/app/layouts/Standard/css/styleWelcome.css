@@ -1,0 +1,121 @@
+@import url(styleCommon.css);
+
+BODY
+{
+    background: url("../images/global/infoBackground.gif");
+    background-repeat: repeat;
+}
+
+A
+{
+    color: #6e132a;
+    font-weight: bold;
+}
+
+
+TABLE
+{
+    float: none;
+    left: 0pt;
+    margin: 0px;
+    top: 0pt;
+}
+.name
+{
+    font-size: 11px;
+    font-weight: bold;
+}
+COL.name
+{
+    width: 20%;
+}
+COL.value
+{
+    width: 40%;
+}
+.invisLink
+{
+    font-size: 11px;
+    color: black;
+    text-decoration: none;
+}
+
+/* styles for welcome page: */
+DIV
+{
+    height: 100%;
+    vertical-align: top;
+}
+TABLE.welcome
+{
+    height: 60%;
+    width: 100%;
+    vertical-align: middle;
+}
+TABLE.welcome TR
+{
+    vertical-align: middle;
+}
+TABLE.welcome TD
+{
+    font-size: 11px;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    height: 0px; /* necessary to ensure small distance between lines */
+}
+TABLE.welcome TD.user,
+TABLE.welcome TD.news
+{
+    font-weight: bold;
+}
+TABLE.welcome TD.news
+{
+    color: #6e132a;    
+}
+/* no specific definitions
+TABLE.welcome TD.login,
+TABLE.welcome TD.inbox
+{
+}
+*/
+
+TD.button,
+DIV.button,
+TD.button_pressed,
+DIV.button_pressed
+{
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 13pt;
+    white-space: no-wrap;
+    font-weight: bold;
+}
+TD.button A,
+DIV.button A,
+TD.button_pressed A,
+DIV.button_pressed A
+{
+    padding: 3px;
+    border: outset 2px white;
+    vertical-align: middle;
+    background-color: #7a603b;
+    color: #b7bfbf;
+    font-weight: bold;
+    text-decoration: none;
+}
+TD.button A:hover,
+DIV.button A:hover
+{
+/*
+    border: inset 2px white;
+*/
+    color: #f7ffff;
+    text-decoration: underline;
+}
+TD.button_pressed A,
+DIV.button_pressed A
+{
+    color: #7a603b;
+}

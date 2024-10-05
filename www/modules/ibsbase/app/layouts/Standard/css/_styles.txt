@@ -1,0 +1,143 @@
+
+homepage colors:
+  logocolor:        #110A12 /* #100911 */
+  background1:      #D1BF9D /* light brown */
+  background2:      #7A603B /* dark brown */
+  background2-text: #F7FFFF uppercase
+  background3:      #BDA474 /* middle brown */
+  background3-text: #7A603B uppercase
+  text_on_white:    #BDA474
+  Produktlinien:
+    Opera:          #950028
+    Tradition:      #B16704
+    Active:         #0066B7
+    Catwalk:        #82A000
+
+
+common
+  font-family:      Verdana, Tahoma, Arial, sans-serif
+
+navBar
+  background:       #eeeeee
+  text:             bold middle small-caps
+  link:             black
+  link:hover:       #6e132a underline
+  name:             black 11px
+  active backgr.:   white url("../images/tabs/navTabBackground.gif") repeat-x top
+  active text:      black 11px bold
+  inactive backgr.: 
+  inactive text:    #9e9b9b 11px bold
+
+menuBar
+  background:       #eeeeee
+  text:             black 11px
+  A:link:           black none
+  A:visited:        black none
+  A:active:         #6e132a none
+  A:hover:          #6e132a underline
+  level0 back:
+  level0 text:      11px bold small-caps
+  level1 back:
+  level1 text:      11px bold small-caps
+  level2 back:      
+  level2 text:      11px small-caps
+  level3+ back:     
+  level3+ text:     11px
+
+tabBar
+  background:       #eeeeee url("../images/tabs/tabBarBackground.gif") repeat-x top
+  text:             black middle small-caps
+  active backgr.:   white url("../images/tabs/navTabBackground.jpg") no-repeat
+  active text:      black 11px bold
+  inactive backgr.: 
+  inactive text:    #9e9b9b 11px bold
+  link:             #9e9b9b none
+  :hover:           #6e132a underline
+
+buttonBar
+  background:       #fafafa url("../images/tabs/buttonBarBackground.gif") repeat
+  text:             black left
+  button:           #9e9b9b none
+  button:hover:     #6e132a none
+  description:      #9e9b9b bold center small-caps
+
+sheet-heading
+  background:       orange url("../images/header/headerBackground.gif")
+  text:             black 11px middle left
+  headernum:        white 11px normal
+
+sheet-path
+  background:       url("../images/header/pathBackground.gif") repeat-x
+  path:             black 10px bold middle left none
+  path:hover:       #6e132a underline
+  pathsep:          black
+  pathobj:          #6e132a 10px bold none
+
+sheet-list
+  background:       #fafafa
+  text:             black 11px center
+  listdescription:  black 11px italic center
+  listheader back.: url("../images/sheet/listHeaderBackground.gif")
+  listheader:       black 11px bold
+  listheader:hover: #6e132a underline
+  listRow1 back:    #f1f2f2
+  listRow1 text:    11px left middle
+  listRow2 back:    white
+  listRow2 text:    11px left middle
+  listRow_saturday: #ffe8e8 11px left middle
+  listRow_sunday:   #ffddde 11px left middle
+
+sheet-info
+  background:       #fafafa
+  text:             black 11px left
+  infoRow1 back:    #f1f2f2
+  infoRow1 text:    11px left middle
+  infoRow2 back:    #dcddde
+  infoRow2 text:    11px left middle
+  name:             11px bold
+  value:            
+  link:             black
+  link:hover:       #6e132a none
+  input:            12px left top
+  mandatory:        #ffff80
+  objRef:           bold
+
+sheet-ref
+  text:             10px top
+  DIV.references:   right
+  DIV.border:       0px solid blue
+  background:       
+  listheader back:  
+  listheader:       11px bold center
+  refRow1 backgr.:  
+  refRow1 text:     10px
+  refRow2 backgr.:  
+  refRow2 text:     10px
+  references link:  
+
+sheet-print
+  background:
+  font-family:      Arial, Tahoma, Verdana, 'MS Sans Serif';
+  text:             black
+
+welcome
+  background:       url("../images/global/infoBackground.gif") repeat
+  text:             black 11px left top none
+  welcome_text:     vlack 11px center middle
+  link:             #6e132a bold
+  name:             11px bold
+  user:             bold
+  news:             #6e132a bold
+  login:            
+  inbox:            
+
+search
+  background:       #eeeeee url("../images/global/searchBackground.gif") repeat-x top
+  text:             black 12px none normal left top
+  A:                black 11px none
+  A:hover:          blue none
+  buttons:          middle
+  input-width:      150px
+
+logo
+  background:       white url("../images/global/logoBackground.gif") repeat-x top

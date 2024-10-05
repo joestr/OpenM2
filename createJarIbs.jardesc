@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="c:/dev/cvs/opentos/www/WEB-INF/lib/ibs.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/opentos/createJarIbs.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.incl"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.util"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.ml"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.bo.path"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.bo"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.dom"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.workflow"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.di.imp"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.install.sql"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.extdata"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.reporting"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.tech.http"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.bo.type"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.trace"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.di.diff"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.di.filter"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.tech.sql"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.di.edi"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.install.xml"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.wsp"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.module"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.bo.ref"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.func"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.search"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.util.crypto"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.util.file"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.workflow"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.user"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.webdav"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.action"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.install"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.bo.tab"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.doc"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.email"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.layout"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.app"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.menu"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.list"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.ml"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.util.list"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.tech.xslt"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.di"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.conf"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.query"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.di.connect"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.observer"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.util.trace"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.reporting"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.help"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.lang"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.ml.export"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.app.system"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.io.servlet"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.tech.xml"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.app.func"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.di.service"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.extdata.db"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.io.session"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.servicepoint"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.reporting.birt"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.reorg"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.di.trans"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.notification"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.service.user"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.io"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.di.agent"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.tech.html"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.log"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.tech.ntlm"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.obj.ref"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.bo.cache"/>
+        <javaElement handleIdentifier="=opentos/src\/java&lt;ibs.di.exp"/>
+    </selectedElements>
+</jardesc>

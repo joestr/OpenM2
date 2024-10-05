@@ -1,0 +1,14 @@
+@import url(styleCommon.css);
+
+HTML
+{
+    height: 100%;
+}
+BODY
+{
+    background-color: #eeeeee;
+    background-image: url("../../images/tabs/tabBarBackground.gif");
+    background-repeat: repeat-x;
+    background-position: top;
+    height: 100%
+}

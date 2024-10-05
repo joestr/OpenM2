@@ -1,0 +1,418 @@
+@import url(styleCommon.css);
+/* style definition */
+BODY
+{
+    BACKGROUND-COLOR: white;
+    TEXT-ALIGN: center;
+    MARGIN-LEFT: 0px;
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    FONT-SIZE: 11px;
+}
+table.welcome
+{
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    MARGIN-TOP: 2px;
+    TEXT-ALIGN: center;
+}
+TD.news, TD.inbox, TD.login
+{
+    FONT-SIZE: 12px;
+}
+TD.user
+{
+    FONT-WEIGHT: bold;
+}
+table.info
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    MARGIN: 1px;
+    PADDING-LEFT: 5px;
+    PADDING-TOP: 1px;
+    PADDING-BOTTOM: 1px;
+    BORDER-COLLAPSE:collapse;
+    BORDER-WIDTH: 0px;
+    BORDER-BOTTOM: 1px dotted #DDDDDD;
+    BORDER-LEFT: 1px dotted #DDDDDD;
+    BORDER-RIGHT: 1px dotted #DDDDDD;
+    WIDTH: 100%;
+    PADDING: 0px;
+    BORDER-SPACING: 0px;
+    BORDER-COLLAPSE: collapse;  
+}
+tr.listheader
+{
+    VERTICAL-ALIGN: MIDDLE;
+    FONT-SIZE: 11px;
+    TEXT-ALIGN: left;
+    FONT-WEIGHT: bold;
+}
+td.listheader
+{
+    BACKGROUND-IMAGE: url("../images/sheet/listHeaderBackground.gif");
+    VERTICAL-ALIGN: MIDDLE;
+    TEXT-ALIGN: left;
+    FONT-WEIGHT: bold;
+    PADDING-LEFT: 2px;
+    PADDING-TOP: 1px;
+    PADDING-BOTTOM: 1px;
+    BORDER-RIGHT: 1px solid #FFFFFF;
+    BORDER-TOP: 1px solid #CCCCCC;
+    BORDER-BOTTOM: 1px solid #CCCCCC;
+}
+/* info rows: */
+TABLE.info TD
+{
+    BORDER-RIGHT: 1px dotted #FFFFFF;
+    BORDER-BOTTOM: 1px dotted #FFFFFF;
+}
+COL.name
+{
+    width: 30%;
+}
+COL.value
+{
+    width: 70%;
+}
+TR.infoRow1,
+TR.infoRow2
+{
+    TEXT-ALIGN: left;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    VERTICAL-ALIGN: MIDDLE;
+}
+TR.infoRow1
+{
+    BACKGROUND-COLOR:#F1F2F2;
+}
+TR.infoRow2
+{
+    BACKGROUND-COLOR:#DCDDDE;
+}
+TR.infoRow1 TD,
+TR.infoRow2 TD
+{
+    BORDER-WIDTH: 0px;
+    PADDING: 5px;
+}
+
+
+/* no specific definitions
+TD,
+TR.infoRow1 TD
+TR.infoRow2 TD
+{
+    padding-left: 12px;
+}
+*/
+/* info content: */
+/* no specific definitions
+A
+{
+}
+A:hover
+{
+}
+*/
+.name
+{
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+}
+.value
+{
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+}
+.invisLink
+{
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    TEXT-DECORATION: none;
+}
+IMG
+{
+/*
+    vertical-align: middle;
+*/
+    VERTICAL-ALIGN: absmiddle;
+}
+/* input fields: */
+INPUT, TEXTAREA
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    FONT-WEIGHT: normal;
+    RESIZE: none;    
+}
+INPUT.readonly1,
+INPUT.readonly2
+{
+    TEXT-ALIGN: left;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    VERTICAL-ALIGN: TOP;
+    BORDER-WIDTH: 0;
+    BORDER-STYLE: none;
+}
+.mandatory 
+{
+    BACKGROUND-COLOR: #FFD2D2;
+}
+.objRef
+{
+    FONT-WEIGHT: bold;
+}
+/* styles for reminder: */
+TABLE.reminder,
+DIV.reminder
+{
+    TEXT-ALIGN: left;
+    FONT-SIZE: 11px;
+    VERTICAL-ALIGN: middle;
+}
+TABLE.reminder
+{
+    BORDER-RIGHT: 2px outset #DCDDDE;
+    BORDER-TOP: 2px outset #DCDDDE;
+    BORDER-BOTTOM: 2px outset #DCDDDE;
+}
+DIV.reminder
+{
+    BORDER-RIGHT: 0px solid #000000;
+    BORDER-TOP: 0px solid #000000;
+    BORDER-BOTTOM: 0px solid #000000;
+}
+TR.reminder
+{
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #DCDDDE;
+}
+DIV.reminder_invisible
+{
+    DISPLAY: none;
+}
+FIELDSET
+{
+    TEXT-ALIGN: center;
+    FONT-SIZE: 11px;
+    MARGIN: 5px 1px 5px 1px;
+    PADDING: 5px 1px 2px 1px;
+	BORDER: 1px solid #AAAAAA;
+}
+LEGEND
+{
+    TEXT-ALIGN: left;
+    FONT-SIZE: 10px;
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    COLOR: #000000;
+    PADDING: 0px 10px 5px 5px;
+}
+INPUT[type="text"]:hover,
+TEXTAREA:hover, SELECT:hover
+{
+    BORDER-COLOR: #DDDDDD;
+}
+BUTTON.submit
+{
+    FONT-WEIGHT: bold;
+}
+
+/* Styles for fieldref:*/
+TABLE.fieldRef
+{
+    MARGIN: 0px;
+    BORDER-WIDTH: 1px;
+    BORDER-STYLE: solid;
+    BORDER-COLOR: #AAAAAA;
+}
+
+TABLE.fieldRef IMG
+{
+    VERTICAL-ALIGN: bottom;
+}
+
+TABLE.fieldRef A
+{
+    font-size: 10px;
+    font-weight: normal;
+}
+
+TABLE.fieldRef TD
+{
+    BORDER-RIGHT: 0px;
+    BORDER-BOTTOM: 0px;
+}
+
+TABLE.fieldRefView
+{
+    MARGIN: 0px;
+    BORDER-TOP: 1px dotted #AAAAAA;
+    BORDER-RIGHT: 1px dotted #AAAAAA;
+    BORDER-BOTTOM: 1px dotted #AAAAAA;
+}
+
+TABLE.fieldRefView TD
+{
+    BORDER-LEFT: 1px dotted #AAAAAA;
+}
+
+TABLE.fieldRefAssign,
+TABLE.fieldRefAssign TD
+{
+    font-face: Times;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+TABLE.fieldRefSearchParamsLegend
+{
+    margin-top:0px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+TABLE.fieldRefSearchParams
+{
+    font-size: 10px;
+    font-weight: normal;
+}
+
+DIV.fieldRefSearchParamsHelpText
+{
+    TEXT-ALIGN: left;
+}
+
+DIV.fieldRefSearch_open
+{
+    margin-top:0px;
+    display: block;
+    visibility: visible;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+                        
+DIV.fieldRefSearch_closed
+{
+    margin-top:0px;
+    display: none;
+    visibility: visible;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+DIV.fieldRefExtSearchParams_closed
+{
+    float: left;
+    display: none;
+}
+
+DIV.fieldRefExtSearchParams_open
+{
+    float: left;
+    display: block;
+}
+
+/* Styles for objectref:*/
+TABLE.objectRef
+{
+    font-size: 10px;
+    font-weight: normal;
+    MARGIN: 0px;
+    BORDER-WIDTH: 1px;
+    BORDER-STYLE: solid;
+    BORDER-COLOR: #AAAAAA;
+}
+
+TABLE.objectRef IMG
+{
+    VERTICAL-ALIGN: bottom;
+}
+
+TABLE.objectRef A
+{
+    font-size: 10px;
+    font-weight: normal;
+}
+
+TABLE.objectRef TD
+{
+    BORDER-RIGHT: 0px;
+    BORDER-BOTTOM: 0px;
+    font-size: 10px;
+    font-weight: normal;
+
+}
+
+TABLE.objectRefSearch
+{
+    font-size: 10px;
+    font-weight: normal;
+}
+
+TABLE.objectRefSearch TD
+{
+    BORDER-LEFT: 0px solid #000000;
+    TEXT-ALIGN: left;
+}
+
+TABLE.objectRefSearchParamsLegend
+{
+    margin-top:0px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+TABLE.objectRefSearchParams
+{
+    font-size: 10px;
+    font-weight: normal;
+}
+
+DIV.objectRefSearch_open
+{
+    margin-top:0px;
+    display: block;
+    visibility: visible;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+                        
+DIV.objectRefSearch_closed
+{
+    margin-top:0px;
+    display: none;
+    visibility: visible;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+HR
+{
+    border-left: none;
+}
+
+TABLE.footer TD.actions
+{
+	border-right: 1px solid white;
+}
+
+/* Multi selection */
+SELECT.select OPTION
+{
+    height: 15px;
+}
+
+/* styles for multi lingual content */
+DIV.blkDefault_Extended
+{
+    background: LightYellow; 
+    width: 100%;
+}

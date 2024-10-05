@@ -1,0 +1,70 @@
+/* the import does not work correctly and the tree will not be shown
+@import url(styleCommon.css);
+*/
+
+BODY
+{
+    /* page properties: */
+    margin-left: 0px;
+    margin-top: 0px;
+    /* page colors: */
+    background-color: #eeeeee;
+    /* font properties: */
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    text-align: left;
+    vertical-align: top;
+    color: black;
+    font-size: 11px;
+    text-decoration: none;
+    /* specific properties: */
+    background-image: url("../images/tabs/navBarBackground.gif");
+    background-repeat: repeat-x;
+    background-position: top;
+
+}
+TABLE
+{
+    float: none;
+    padding-left: 5px;
+    padding-top: 0px;
+}
+TBODY
+{
+    font-size: 11px;
+}
+A:link,
+A:visited
+{
+    color: black;
+    text-decoration: none;
+}
+A:active
+{
+    color: #6e132a;
+    text-decoration: none;
+}
+A:hover
+{
+    color: #6e132a;
+    text-decoration: underline;
+}
+
+/* menu entries: */
+.l0, .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10, .l11, .l12, .l13, .l14, .l15
+{
+    font-size: 11px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.l0,
+.l1,
+.l2
+{
+    font-variant: small-caps;
+}
+.l0,
+.l1
+{
+    font-weight: bold;
+}

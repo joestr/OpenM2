@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="IncludeContainer"
+                TYPE="Inkludes-Ablage"
+                MAYEXISTIN="ExportContainer"
+                SHOWINMENU="YES">
+            <SYSTEM>
+                <NAME/>
+                <DESCRIPTION/>
+            </SYSTEM>
+            <VALUES/>
+            <CONTENT>
+                <MAYCONTAIN>Include</MAYCONTAIN>
+                <COLUMNS>
+                    <COLUMN NAME="topic" TOKEN="Thema"/>
+                    <COLUMN NAME="priority" TOKEN="Priorität"/>
+                </COLUMNS>
+            </CONTENT>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

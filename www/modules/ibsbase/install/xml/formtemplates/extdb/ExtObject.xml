@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="ExtObject" TYPE="Externes Objekt" MAYEXISTIN="ExportContainer" CLASS="ibs.extdata.db.ExtDbNode">
+            <SYSTEM>
+                <NAME/>
+                <DESCRIPTION/>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="INFO" TYPE="QUERY" QUERYNAME="_extObjectInfo"/>
+                <VALUE FIELD="CONTENT" TYPE="QUERY" QUERYNAME="_extObjectContent"/>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

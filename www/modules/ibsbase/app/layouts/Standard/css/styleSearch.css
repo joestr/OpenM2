@@ -1,0 +1,41 @@
+@import url(styleCommon.css);
+
+BODY
+{
+    background-color: #eeeeee;
+    background-image: url("../../images/global/searchBackground.gif");
+    background-repeat: repeat-x;
+    background-position: top;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 12px;
+    font-style: normal;
+    text-align: right;
+}
+A
+{
+    /* no specific definitions */
+}
+A:hover
+{
+    color: blue;
+    text-decoration: none;
+}
+BUTTON
+{
+    vertical-align: middle;
+    height: 25px;
+    width: 25px;
+}
+INPUT
+{
+    vertical-align: middle;
+    width: 100px;
+}
+SELECT
+{
+    vertical-align: middle;
+    width: 250px;
+}

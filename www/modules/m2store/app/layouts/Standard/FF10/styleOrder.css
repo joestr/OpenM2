@@ -1,0 +1,38 @@
+TABLE.order_table
+{
+    border-color: silver;	
+}
+
+TD
+{
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    color: black;
+    font-size: 13px;
+}
+TD.order_header
+{
+    background-color: beige;
+    text-align: center;
+    font-style: italic;
+}
+
+TD.order_dimension
+{
+    background-color: silver;
+    text-align: center;
+    font-weight: bold;
+}
+
+TD.order_value
+{
+    background-color: beige;
+    text-align: center;
+    font-style: italic;
+}
+
+TD.order_quantity
+{
+    background-color: silver;
+    text-align: center;
+    font-style: italic;
+}

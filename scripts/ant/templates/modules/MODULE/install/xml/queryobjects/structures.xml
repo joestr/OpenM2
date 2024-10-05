@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 import file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreatorContainer">
+            <SYSTEM>
+                <ID DOMAIN="@PROJECT_ID@.@MODULE_ID@_instquery">Berichte</ID>
+                <NAME>Berichte</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+        </OBJECT>
+        <OBJECT TYPECODE="QueryCreatorContainer">
+            <SYSTEM>
+                <ID DOMAIN="@PROJECT_ID@.@MODULE_ID@_instquery">System</ID>
+                <NAME>System</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+        </OBJECT>
+        <OBJECT TYPECODE="QueryCreatorContainer">
+            <SYSTEM>
+                <ID DOMAIN="@PROJECT_ID@.@MODULE_ID@_instquery">Suchmasken</ID>
+                <NAME>Suchmasken</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+        </OBJECT>
+        <OBJECT TYPECODE="QueryCreatorContainer">
+            <SYSTEM>
+                <ID DOMAIN="@PROJECT_ID@.@MODULE_ID@_instquery">Sonstige</ID>
+                <NAME>Sonstige</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

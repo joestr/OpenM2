@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ibs framework export file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreator">
+            <SYSTEM>
+                <ID DOMAIN="ibs_instquery">_getcheckoutobjects</ID>
+                <NAME>ibs_getCheckOutObjects</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>03.08.2002</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="SELECT" TYPE="CHAR">o.oid, o.name, o.typename, co.checkout,\nSTR (DATEDIFF (day, co.checkout, getDate())) + ' Tag(e)' AS checkoutDays</VALUE>
+                <VALUE FIELD="FROM" TYPE="CHAR">ibs_Object o, ibs_CheckOut_01 co</VALUE>
+                <VALUE FIELD="WHERE" TYPE="CHAR">o.oid = co.oid\nAND co.userId = #SYSVAR.USERID#\nAND o.state = 2</VALUE>
+                <VALUE FIELD="QUERYTYPE" TYPE="CHAR">REPORT</VALUE>
+                <VALUE FIELD="GROUPBY" TYPE="CHAR"/>
+                <VALUE FIELD="ORDERBY" TYPE="CHAR"/>
+                <VALUE FIELD="COLUMNHEADERS" TYPE="CHAR">Name, #OBJECTID, Typ, Ausgecheckt am, Dauer</VALUE>
+                <VALUE FIELD="COLUMNQUERYATTRIBUTES" TYPE="CHAR">name, oid, typename, checkout, checkoutDays</VALUE>
+                <VALUE FIELD="COLUMNTYPES" TYPE="CHAR">STRING, SYSVAR, STRING, DATETIME, STRING</VALUE>
+                <VALUE FIELD="SEARCHFIELDS" TYPE="CHAR"/>
+                <VALUE FIELD="SEARCHFIELDQUERYATTRIBUTES" TYPE="CHAR"/>
+                <VALUE FIELD="SEARCHFIELDTYPES" TYPE="CHAR"/>
+                <VALUE FIELD="MAXRESULTS" TYPE="INTEGER">-1</VALUE>
+                <VALUE FIELD="DEBUGGING" TYPE="BOOLEAN">0</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

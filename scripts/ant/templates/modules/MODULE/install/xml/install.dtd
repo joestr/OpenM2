@@ -1,0 +1,115 @@
+<?xml encoding="ISO-8859-1"?>
+<!--
+********
+install:
+********
+install node:
+    Contains the installation nodes.
+-->
+<!ELEMENT install (instpkg | instxml | instsql | import)+>
+
+<!--
+********
+instpkg:
+********
+instpkg node (within install node):
+    Perform installation of another package. This source file must  be a file
+    which is also defined through this dtd.
+
+    sourcefile:         The name of the sourcefile. A relative path to
+                        the installation directory can be set
+                        Use "/" as file separator. This will be replaced by
+                        the appropriate fileseparator of the operating system
+-->
+<!ELEMENT instpkg EMPTY>
+<!ATTLIST instpkg
+    sourcefile          CDATA #REQUIRED
+>
+
+<!--
+********
+instxml:
+********
+instxml node (within install node):
+    Perform installation of one or more xml files.
+
+    sourcefile:         The name of the sourcefile. A relative path to
+                        the installation directory can be set
+                        Use * to select multiple files within
+                        the source directory
+                        Use "/" as file separator. This will be replaced by
+                        the appropriate fileseparator of the operating system
+    destpath:           The m2 path for the destination container
+                        Please use "/" as separator (but note that "/" and "\"
+                        will be recognized as separator!)
+    destid:             The external key id for the destination container. Must
+                        be used in conjunction with destiddomain.
+    destiddomain:       The domain for the external key id defined in
+                        destid.
+
+Remark: For defining the target container you can use either destpath or
+        both destid and destiddomain together.
+-->
+<!ELEMENT instxml EMPTY>
+<!ATTLIST instxml
+    sourcefile          CDATA #REQUIRED
+    destpath            CDATA #IMPLIED
+    destid              CDATA #IMPLIED
+    destiddomain        CDATA #IMPLIED
+>
+
+<!--
+********
+instsql:
+********
+instsql node (within install node):
+    Perform installation of one or more sql files.
+
+    sourcefile:         The name of the sourcefile. A relative path to
+                        the installation directory can be set.
+                        Use * to select multiple files within
+                        the source directory.
+                        Use "/" as fileseparator. This will be replaced by
+                        the appropriate fileseparator of the operating system.
+                        Use #DBDIR# as placeholder for the directory
+                        with the dbtype-specific sources in absolute paths.
+                        For relative paths this is not necessary.
+    dispmode:           The display mode.
+                        dispno .... don't display sql statements
+                        dispone ... display first line of sql statements
+                        dispfull .. display full sql statements
+-->
+<!ELEMENT instsql EMPTY>
+<!ATTLIST instsql
+    sourcefile          CDATA #REQUIRED
+    dispmode            (dispno|dispone|dispfull) #IMPLIED
+>
+
+
+<!-- deprecated elements, just for backwards compatibility -->
+
+<!--
+*******
+import:
+*******
+import node (within install node):
+    Perform installation of one or more xml files.
+
+    sourcefile:         The name of the sourcefile. A relative path to
+                        the installation directory can be set
+                        Use * to select multiple files within
+                        the source directory
+                        Use "/" as fileseparator. This will be replaced by
+                        the appropriate fileseparator of the operating system
+    destinationpath:    The m2 path for the destination container
+                        Please use "/" as separator (but note that "/" and "\"
+                        will be recognized as separator!)
+
+@deprecated This element should not be longer used. It will be dropped in a
+            future release. Please use instxml instead.
+-->
+<!ELEMENT import EMPTY>
+<!ATTLIST import
+    sourcefile          CDATA #REQUIRED
+    destinationpath     CDATA #REQUIRED
+>

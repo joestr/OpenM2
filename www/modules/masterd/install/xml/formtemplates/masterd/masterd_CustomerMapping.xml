@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_CustomerMapping"
+		        TYPE="Customer"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="NO"
+		        DBTABLE="dbm_masterd_cust">
+			<SYSTEM DISPLAY="NO">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES>
+				<VALUE FIELD="Customer no" TYPE="TEXT" MANDATORY="YES" DBFIELD="m_custno"/>
+<!-- 				<VALUE FIELD="Customer" TYPE="OBJECTREF" MANDATORY="YES" TYPECODEFILTER="masterd_Company" SEARCHROOT="MasterData" SEARCHRECURSIVE="YES" DBFIELD="m_cust"/>
+				<VALUE FIELD="Assigned to" TYPE="OBJECTREF" TYPECODEFILTER="masterd_Company" SEARCHROOT="MasterData" SEARCHRECURSIVE="YES" DBFIELD="m_assignedto"/>
+				 -->
+				 
+				<VALUE FIELD="Customer" TYPE="FIELDREF"
+					   QUERYNAME="_masterd_getPotentialCustomers"
+ 					   MANDATORY="YES" DBFIELD="m_cust">
+                    <FIELDS>
+                        <SYSFIELD NAME="Name" TOKEN="Company"/>
+                        <!-- <FIELD NAME="Short name" TOKEN="Short"/>  -->
+                    </FIELDS>
+                </VALUE>
+                
+                <!-- Show only subsidiaries beyond the chosen customer company -->
+				<VALUE FIELD="Assigned to" TYPE="FIELDREF"
+					   QUERYNAME="_masterd_getPotentialAssignedToSubsForCustomer"
+ 					   MANDATORY="YES" DBFIELD="m_assignedto">
+                    <FIELDS>
+                        <SYSFIELD NAME="Name" TOKEN="Subsidiary"/>
+                        <!-- <FIELD NAME="Short name" TOKEN="Short"/>  -->
+                    </FIELDS>
+                </VALUE>
+			</VALUES>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

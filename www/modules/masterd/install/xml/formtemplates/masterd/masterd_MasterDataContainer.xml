@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_MasterDataContainer"
+		        TYPE="Masterdata container"
+		        SHOWINMENU="YES"
+		        MAYEXISTIN="ExportContainer,Container">
+			<SYSTEM>
+				<ID DOMAIN=""/>
+				<NAME>Masterdata</NAME>/>
+			</SYSTEM>
+			<VALUES/>
+			<CONTENT>
+				<MAYCONTAIN>masterd_CompanyContainer</MAYCONTAIN>
+				<COLUMNS/>
+			</CONTENT>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

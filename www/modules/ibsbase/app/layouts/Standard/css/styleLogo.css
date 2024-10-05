@@ -1,0 +1,26 @@
+@import url(styleCommon.css);
+
+BODY
+{
+    background-color: white;
+    background-image: url("../../images/global/logoBackground.gif");
+    background-repeat: repeat-x;
+    background-position: top;
+    margin-top: 0px;
+}
+.name,
+.ext
+{
+/*
+    background-image: url("../images/global/barBackground.gif");
+    background-color: #f1f2f2;
+*/
+    text-align: center;
+    font-size: 20px;
+    vertical-align: middle;
+    height: 10px;
+}
+.ext
+{
+    font-size: 6px;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_RoleMapper"
+		        TYPE="Role mapper"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="NO"
+		        DBTABLE="dbm_masterd_rolem">
+			<SYSTEM DISPLAY="NO">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES>
+				<VALUE FIELD="Staff member" TYPE="FIELDREF"
+					   QUERYNAME="_masterd_getPotentialOuStaffFromCompany"
+ 					   MANDATORY="YES" DBFIELD="m_staffm">
+                    <FIELDS>
+                        <SYSFIELD NAME="Name"/>
+                    </FIELDS>
+                </VALUE>
+
+  				<VALUE FIELD="Role" TYPE="VALUEDOMAIN" MANDATORY="NO" DBFIELD="m_role" CONTEXT="Role" READONLY="NO" REFRESH="YES" VIEWTYPE="CHECKLIST" MULTISELECTION="YES">
+    	        	<FIELDS>
+        		      <SYSFIELD NAME="Name"/> 
+		            </FIELDS>
+		        </VALUE>
+			</VALUES>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

@@ -1,0 +1,38 @@
+@import url(styleCommon.css);
+
+BODY
+{
+    text-align: center;
+}
+TABLE
+{
+    float: none;
+    left: 0pt;
+    margin: 0px;
+    top: 0pt;
+}
+.msgheader
+{
+    font-weight: bold;
+    color: darkblue;
+    text-align: left;
+    font-size: 12px;
+    font-variant: small-caps;
+    border-bottom: 1px dashed #ffffff;
+}
+.message
+{
+    font-size: 12px;
+    color: darkblue;
+}
+TABLE.message,
+TD.message
+{
+    padding: 5px 5px 5px 5px;
+}
+TABLE.message
+{
+    background-color: #f1f2f2;
+    margin: 5px 5px 5px 5px;
+    border: 1px dashed #dddddd;
+}

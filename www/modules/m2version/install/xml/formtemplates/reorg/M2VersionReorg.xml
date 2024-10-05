@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="M2VersionReorg"
+                TYPE="m2Version Reorganisation"
+                MAYEXISTIN="ExportContainer"
+                SHOWINMENU="YES"
+                CLASS="m2.version.obj.M2VersionReorg">
+            <SYSTEM DISPLAY="NO"/>
+            <VALUES>
+                <VALUE FIELD="Reorganisation simulieren" TYPE="BOOLEAN"/>
+                <VALUE FIELD="SEP" TYPE="SEPARATOR"/>
+                <VALUE FIELD="Letzte Aktualisierung der Versionen"
+                       TYPE="DATETIME"/>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

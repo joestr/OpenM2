@@ -1,0 +1,18 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function callChangePwdFct ()
+{
+     var fct = 7;
+     var target = top.sheet;
+     var name = (target == top) ? "top" : target.name;
+
+     top.callUrl (fct, "&redirect=welc", null, name);
+}
+-->
+</SCRIPT>
+
+<div id="changepwd" class="changepwd_open">
+	<p><%logininfo1%><br><%logininfo2%></p>
+	<button type="button" onclick="document.getElementById('changepwd').className='changepwd_closed'; callChangePwdFct();"><%yes%></button>&nbsp;
+	<button type="button" onclick="document.getElementById('changepwd').className='changepwd_closed';"><%no%></button>
+</div>

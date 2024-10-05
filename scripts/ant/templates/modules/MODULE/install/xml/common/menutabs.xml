@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ibs export file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="MenuTab">
+            <SYSTEM>
+                <ID DOMAIN="@PROJECT_ID@.@MODULE_ID@_instobj">@MODULE_ID@_menutab</ID>
+                <NAME>@MENUTAB_NAME@</NAME>
+                <DESCRIPTION>Projekte</DESCRIPTION>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="assignedObjectPath" TYPE="CHAR">/#CONFVAR.ibsbase.menuPublic#/MenuObjects/@MENUTAB_NAME@</VALUE>
+                <VALUE FIELD="filename" TYPE="FILE">@MODULE_ID@intro.htm</VALUE>
+                <VALUE FIELD="tabSort" TYPE="INTEGER">3000</VALUE>
+                <VALUE FIELD="frontView" TYPE="CHAR">groupFront</VALUE>
+                <VALUE FIELD="backView" TYPE="CHAR">groupBack</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

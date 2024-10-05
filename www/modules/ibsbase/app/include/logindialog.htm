@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"/>
+<HEAD><BASE HREF="<%base%>"><TITLE>Anmelden</TITLE></HEAD>
+<STYLE TYPE="text/css">
+BODY
+{
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    font-size: 13px;
+    color: black;
+}
+TD.header
+{
+    font-family: Arial, Verdana, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: darkblue;
+}
+TD.name
+{
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+TD.value
+{
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+}
+INPUT
+{
+/*
+    font-family: Courier New, Courier, sans-serif;
+*/
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    font-size: 12px;
+    color: black;
+}
+INPUT:focus
+{
+    border-color: darkblue;
+}
+BUTTON
+{
+    width: 100px;
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    font-size: 13px;
+    color: black;
+}
+BUTTON.submit
+{
+    width: 100px;
+    font-weight: bold;
+}
+
+</STYLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function exists (variable)
+{
+    return ("undefined" != ("" + variable));
+} // exists
+if (exists (top.startUrl))
+{
+    top.location.href = top.startUrl;
+} // if
+
+function submitAllowed ()
+{
+// restrictions
+// relations
+
+// exit method
+return true;
+} // submitAllowed
+// -->
+</SCRIPT>
+
+<BODY BGCOLOR="ffffff" ONLOAD="sheetForm.usr.focus ()">
+<BR/><BR/><BR/>
+<DIV ALIGN="CENTER">
+<TABLE BGCOLOR="white" STYLE="BORDER: 1px solid #000000" WIDTH="500px" CELLSPACING="0" CELLPADDING="3">
+    <THEAD></THEAD>
+    <TBODY>
+    <TR VALIGN="TOP"><TD ALIGN="CENTER" VALIGN="MIDDLE">
+        <FORM ACTION="<%formurl%>" NAME="sheetForm" TARGET="_top" METHOD="POST" OnSubmit="return submitAllowed ();">
+            <TABLE BORDERCOLOR="#FFFFFF" WIDTH="100%" BORDER="0" CELLSPACING="1" CELLPADDING="5">
+                <COLGROUP>
+                    <COL CLASS="name" ALIGN="RIGHT" VALIGN="MIDDLE"/>
+                    <COL CLASS="value" ALIGN="LEFT" VALIGN="MIDDLE"/>
+                    <COL CLASS="value" ALIGN="RIGHT" VALIGN="MIDDLE"/>
+                </COLGROUP>
+                <THEAD></THEAD>
+                <TBODY>
+                    <TR>
+                        <TD VALIGN="MIDDLE" ALIGN="LEFT" COLSPAN="3" CLASS="header">
+                            <IMG SRC="images/global/loginIcon.jpg" BORDER="0" ALIGN="ABSMIDDLE">
+                            <%LOGIN_PAGE_HEADER%>
+                        </TD>
+                    </TR>
+                    <TR BGCOLOR="white">
+                        <TD ALIGN="RIGHT" CLASS="name"><%USERNAME_LABEL%>:</TD>
+                        <TD COLSPAN="2" CLASS="value"><%username%></TD>
+                    </TR>
+                    <TR BGCOLOR="beige">
+                        <TD ALIGN="RIGHT" CLASS="name"><%PASSWORD_LABEL%>:</TD>
+                        <TD COLSPAN="2" CLASS="value"><%password%></TD>
+                    </TR>
+                    <TR BGCOLOR="white">
+                        <TD ALIGN="RIGHT" CLASS="name"><%DOMAIN_LABEL%>:</TD>
+                        <TD COLSPAN="2" CLASS="value"><%logindomains%></TD>
+                    </TR>
+                    <TR VALIGN="MIDDLE">
+                        <TD>&nbsp;</TD>
+                        <TD ALIGN="RIGHT">
+                            <BUTTON NAME="BUTT_SUBMIT" CLASS="submit" TYPE="SUBMIT"
+                                    onClick="this.disabled=true;form.submit ();"  ACCESSKEY="L" TITLE="[ALT] + L"><%OK_BUTTON%></BUTTON>
+                        </TD>
+                        <TD ALIGN="LEFT">
+                            <BUTTON NAME="BUTT_CANCEL" CLASS="cancel" TYPE="BUTTON"
+                                    onClick="this.disabled=true; top.history.back ();"><%CANCEL_BUTTON%></BUTTON>
+                        </TD>
+                    </TR>
+                </TBODY>
+            </TABLE>
+            <%fct%>
+        </FORM>
+    </TD></TR>
+    </TBODY>
+</TABLE>
+</DIV>
+
+<%logininfo%>
+<%sysinfo%>
+
+</BODY>
+</HTML>

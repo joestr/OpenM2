@@ -1,0 +1,76 @@
+<!-- Includes and tasks for m2 multilang -->
+<project name="openM2">
+	<!-- Include the ant-contrib tasks -->
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+	  <classpath>
+	    <!-- Adapt the path to your local ant-contrib installation -->
+	    <pathelement location="C:\dev\cvs\opentos\scripts\ant\lib\ant-contrib-0.3.jar"/>
+	  </classpath>
+	</taskdef>
+
+	<!-- Define properties -->
+	<property name="outputfolder" value="properties" />
+	
+	<target name="sync-resources">
+		<sync todir="/Volumes/wwwroot/cm/modules">
+			<fileset dir="www/modules">
+				<exclude name="**/CVS/**"/>
+			</fileset>
+			<preserveintarget>
+			    <include name="**/**"/>
+                <exclude name="ibsbase/**/**"/>
+                <exclude name="ibsdoc/**/**"/>
+			    <exclude name="ibswebdav/**/**"/>
+                <exclude name="ibsworkflow/**/**"/>
+                <exclude name="m2bbd/**/**"/>
+                <exclude name="m2diary/**/**"/>
+                <exclude name="m2doc/**/**"/>
+                <exclude name="m2mad/**/**"/>
+			    <exclude name="m2store/**/**"/>
+			    <exclude name="m2version/**/**"/>
+                <exclude name="masterd/**/**"/>
+			</preserveintarget>
+		</sync>
+	</target>
+	
+    <!-- Iterates over all formtemplates within one module and creates one resource bundles
+         for every formtemplate including all value fields of the form template -->
+	<target name="create-resource-bundles">
+		<foreach target="extractProperties" param="formtemplate">
+	        <fileset dir="../../../www/modules/" id="formtemplates_fileset">
+	            <include name="ibsbase/install/xml/formtemplates/*/*xml" />
+	        	<!--<include name="m2version/install/xml/formtemplates/*/*xml" />-->
+	        	<!--<include name="masterd/install/xml/formtemplates/*/*xml" />-->
+	            <exclude name="**/structures.xml" />
+	        </fileset>
+		</foreach>
+	</target>
+
+    <!-- Creates a resource bundles for the formtemplate including all value fields of
+         the form template -->
+    <target name="extractProperties">
+    	<basename property="formtemplate.filename" file="${formtemplate}" suffix=".xml"/>
+        <xslt in="${formtemplate}" out="${outputfolder}/${formtemplate.filename}.properties" style="extractProperties.xsl" />
+    </target>
+	
+    <!-- Iterates over all formtemplates within one module and creates one resource bundles
+         for every formtemplate including all tabs of the form template -->
+    <target name="create-resource-bundles-for-tabs">
+        <foreach target="extractTabs" param="formtemplate">
+            <fileset dir="../../../www/modules/" id="formtemplates_fileset">
+            	<include name="ibsbase/install/xml/formtemplates/*/*xml" />
+            	<!--<include name="m2version/install/xml/formtemplates/*/*xml" />-->
+            	<!--<include name="masterd/install/xml/formtemplates/*/*xml" />-->
+                <exclude name="**/structures.xml" />
+            </fileset>
+        </foreach>
+    </target>
+    
+    <!-- Creates a resource bundles for the formtemplate including all tabs of
+         the form template -->
+    <target name="extractTabs">
+        <basename property="formtemplate.filename" file="${formtemplate}" suffix=".xml"/>
+        <xslt in="${formtemplate}" out="${outputfolder}/${formtemplate.filename}.properties" style="extractTabs.xsl" />
+    </target>
+    
+</project>

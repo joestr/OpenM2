@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_CustomerMappingContainer"
+		        TYPE="Customer container"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="YES">
+			<SYSTEM DISPLAY="NO">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES/>
+			<CONTENT>
+				<MAYCONTAIN>masterd_CustomerMapping</MAYCONTAIN>
+				<COLUMNS>
+					<COLUMN NAME="Customer no"/>
+				</COLUMNS>
+			</CONTENT>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

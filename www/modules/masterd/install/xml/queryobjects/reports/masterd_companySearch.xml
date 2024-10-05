@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreator">
+            <SYSTEM>
+                <ID DOMAIN="masterd_instquery">masterd_companySearch</ID>
+                <NAME>masterd_companySearch</NAME>
+                <DESCRIPTION>Searches for companies</DESCRIPTION>
+                <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="SELECT" TYPE="CHAR">compo.name compName, comp.*</VALUE>
+                <VALUE FIELD="FROM" TYPE="CHAR">dbm_masterd_company comp, ibs_object compo</VALUE>
+                <VALUE FIELD="WHERE" TYPE="CHAR">	compo.oid = comp.oid\n	AND compo.state = 2</VALUE>
+                <VALUE FIELD="CATEGORY" TYPE="CHAR"/>
+                <VALUE FIELD="QUERYTYPE" TYPE="CHAR">SEARCH,REPORT</VALUE>
+                <VALUE FIELD="GROUPBY" TYPE="CHAR"/>
+                <VALUE FIELD="ORDERBY" TYPE="CHAR"/>
+                <VALUE FIELD="COLUMNHEADERS" TYPE="CHAR">#OBJECTID, Company name, Company Type</VALUE>
+                <VALUE FIELD="COLUMNQUERYATTRIBUTES" TYPE="CHAR">oid, compName, m_comptype</VALUE>
+                <VALUE FIELD="COLUMNTYPES" TYPE="CHAR">SYSVAR, STRING, VALUEDOMAIN</VALUE>
+                <VALUE FIELD="SEARCHFIELDS" TYPE="CHAR">Name, Company Type</VALUE>
+                <VALUE FIELD="SEARCHFIELDQUERYATTRIBUTES" TYPE="CHAR">compo.name, m_comptype</VALUE>
+                <VALUE FIELD="SEARCHFIELDTYPES" TYPE="CHAR">STRING, VALUEDOMAINOID(Company Type: MULTIPLE)</VALUE>
+                <VALUE FIELD="MAXRESULTS" TYPE="INTEGER">-1</VALUE>
+                <VALUE FIELD="DEBUGGING" TYPE="BOOLEAN">0</VALUE>
+            </VALUES>
+            <RIGHTS>
+                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+                       PROFILE="READ"/>
+                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+                       PROFILE="WRITE"/>
+                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+                       PROFILE="ADMIN"/>
+                <RIGHT NAME="USER MasterData" TYPE="GROUP"
+                       PROFILE="READ"/>
+            </RIGHTS>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

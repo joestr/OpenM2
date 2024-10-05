@@ -1,0 +1,28 @@
+div.tableContainer
+{
+	overflow: auto;
+	margin: 0px auto;
+}
+
+div.tableContainer table
+{
+    /* 100% of container produces horiz. scroll in Mozilla*/
+	width: 100%;
+}
+
+div.tableContainer table>tbody /* child selector syntax which IE6 and older do not support*/
+{
+	overflow: auto;
+}
+
+div.tableContainer thead td
+{
+	position: relative;
+
+    top: -1px;
+}
+
+div.tableContainer td:last-child /*prevent Mozilla scrollbar from hiding cell content*/
+{
+    padding-right: 20px;
+}

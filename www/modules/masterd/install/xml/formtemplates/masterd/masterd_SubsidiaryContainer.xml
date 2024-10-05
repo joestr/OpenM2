@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_SubsidiaryContainer"
+		        TYPE="Subsidiary container"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="YES">
+			<SYSTEM DISPLAY="NO">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES/>
+			<CONTENT>
+				<MAYCONTAIN>masterd_Subsidiary</MAYCONTAIN>
+				<COLUMNS>
+				<!--
+					<SYSCOLUMN NAME="Name"/>
+					 
+						<COLUMN NAME="Subsidiary"/>
+						 -->
+				</COLUMNS>
+			</CONTENT>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

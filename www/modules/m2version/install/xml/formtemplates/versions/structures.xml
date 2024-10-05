@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- intos/m2 export file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="DocumentTemplateContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="m2version_install">Formularvorlagen</ID></CONTAINER>
+                <ID DOMAIN="m2version_insttempl">versioning_templates</ID>
+                <NAME>Versionieren</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+            <OBJECTS>
+                <!-- versions -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="m2version_insttempl">m2version</ID>
+                        <NAME>Version</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">m2Version_01.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="m2version_insttempl">m2versioncontainer</ID>
+                        <NAME>Versionen Ablage</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">m2VersionContainer_01.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="m2version_insttempl">m2fileversion</ID>
+                        <NAME>versionierte Datei</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">m2FileVersion_01.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+
+                <!-- publications -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="m2version_insttempl">m2publication</ID>
+                        <NAME>Publikation</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">m2Publication_01.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="m2version_insttempl">m2publicationcontainer</ID>
+                        <NAME>Publikationsablage</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">m2PublicationContainer_01.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="m2version_insttempl">m2pversion</ID>
+                        <NAME>Version (Pub)</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">m2PVersion_01.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="m2version_insttempl">m2pversioncontainer</ID>
+                        <NAME>Versionen Ablage (Pub)</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">m2PVersionContainer_01.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+
+                <!-- version publications -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="m2version_insttempl">m2filepublication</ID>
+                        <NAME>publizierte Datei</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">m2FilePublication_01.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="m2version_insttempl">m2filepversion</ID>
+                        <NAME>versionierte PDatei</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">m2FilePVersion_01.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+            </OBJECTS>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

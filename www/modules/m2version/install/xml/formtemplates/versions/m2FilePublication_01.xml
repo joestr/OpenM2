@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- DOCTYPE IMPORT SYSTEM "import.dtd" -->
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPE="publizierte Datei"
+		        TYPECODE="m2FilePublication"
+		        CLASS="m2.version.publish.FilePublication_01"
+		        MAYEXISTIN="ExportContainer" DBTABLE="dbm_m2FilePub">
+			<SYSTEM>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+				<SHOWINNEWS/>
+			</SYSTEM>
+			<VALUES>
+				<!--Originalobject-->
+				<VALUE FIELD="OObjekt" TYPE="OBJECTREF" DBFIELD="m_oObject" TYPECODEFILTER="m2PFileVersion"/>
+			</VALUES>
+			<TABS>
+				<TABOBJECT TYPECODE="m2PublicationContainer" TABCODE="m2FilePublication_tab1"/>
+			</TABS>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

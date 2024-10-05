@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 export/import file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="Container">
+            <SYSTEM>
+                <ID DOMAIN="@PROJECT_ID@.@MODULE_ID@_instobj">@MENUTAB_ID@</ID>
+                <NAME>@MENUTAB_NAME@</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

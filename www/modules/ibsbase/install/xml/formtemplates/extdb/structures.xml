@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 export/import file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="DocumentTemplateContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="ibs_install">Formularvorlagen</ID></CONTAINER>
+                <ID DOMAIN="ibs_insttempl">extdb_templates</ID>
+                <NAME>Externe Datenquellen</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+            <OBJECTS>
+                <!-- external root container -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_insttempl">extrootcontainer</ID>
+                        <NAME>Root-Ablage</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">ExtRootContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+
+                <!-- external entry point -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_insttempl">extentrypoint</ID>
+                        <NAME>Externer Datenhalter</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">ExtEntryPoint.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+
+                <!-- external object -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_insttempl">extobject</ID>
+                        <NAME>Externes Objekt</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">ExtObject.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+            </OBJECTS>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

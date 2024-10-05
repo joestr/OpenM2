@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="ExtRootContainer" TYPE="Root-Ablage" MAYEXISTIN="ExportContainer" CLASS="ibs.extdata.db.ExtDbRootContainer">
+            <SYSTEM>
+                <NAME/>
+                <DESCRIPTION/>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="INFO" TYPE="QUERY" QUERYNAME="_extRootContainerInfo"/>
+                <VALUE FIELD="CONTENT" TYPE="QUERY" QUERYNAME="_extRootContainerContent"/>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

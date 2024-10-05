@@ -1,0 +1,64 @@
+@import url(styleCommon.css);
+
+BODY
+{
+    background-color: #ffffff;
+}
+
+TABLE
+{
+    margin-top: 1px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    float: none;
+    height: 100%;
+}
+TD
+{
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 25px;
+    color: black;
+    font-variant: small-caps;
+}
+
+A
+{
+    color: #9e9b9b;
+    text-decoration: none;
+}
+A:hover
+{
+    color: #6e132a;
+    text-decoration: underline;
+}
+.nameFront,
+.nameBack
+{
+    font-size: 11px;
+    font-weight: bold;
+}
+.nameFront
+{
+    color: black;
+}
+.nameBack
+{
+    color: #9e9b9b;
+}
+TD.nameFront
+{
+    background-color: white;
+    background-image: url("../images/tabs/navTabBackground.jpg");
+    background-repeat: no-repeat;
+    border: 1px dotted #dddddd;
+    border-top: 2px solid #e9c82d;
+    border-bottom: 1px solid white;
+}
+TD.nameBack
+{
+    border-bottom: 1px dotted #dddddd;
+    padding-top: 3px;
+}

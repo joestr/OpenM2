@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ibs export file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="Group">
+            <SYSTEM>
+                <ID DOMAIN="masterd_instobj">groupMasterData</ID>
+                <NAME>Master Data</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>01.01.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+            <OBJECTS>
+                <OBJECT TYPECODE="Group">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_instobj">groupADMINMasterData</ID>
+                        <NAME>ADMIN MasterData</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>01.01.2099</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                    <OBJECTS/>
+                </OBJECT>
+                <OBJECT TYPECODE="Group">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_instobj">groupUSERMasterData</ID>
+                        <NAME>USER MasterData</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>01.01.2099</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                    <OBJECTS/>
+                </OBJECT>
+                <OBJECT TYPECODE="Group">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_instobj">groupADMINValueDomain</ID>
+                        <NAME>ADMIN ValueDomain</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>01.01.2099</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                    <OBJECTS/>
+                </OBJECT>
+                <OBJECT TYPECODE="Group">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_instobj">groupUSERValueDomain</ID>
+                        <NAME>USER ValueDomain</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>01.01.2099</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                    <OBJECTS/>
+                </OBJECT>
+            </OBJECTS>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

@@ -1,0 +1,107 @@
+BODY
+{
+    BACKGROUND: url("layouts/Standard/images/global/calendarBackground.gif") #FFFFFF;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: right;    
+    BACKGROUND-ATTACHMENT: scroll;
+    TEXT-ALIGN: center;
+    MARGIN-LEFT: 10px;
+    FONT-FAMILY: Helvetica, Verdana, Tahoma, Arial, sans-serif;    
+}
+TABLE.calheader
+{
+    FONT-FAMILY: Helvetica, Verdana, Tahoma, Arial, sans-serif;
+    FONT-SIZE: 13px;    
+    FONT-WEIGHT: bold;
+    BACKGROUND-COLOR: #EFBC98;
+    FLOAT: none;
+}
+TABLE
+{
+    FONT-FAMILY: Helvetica, Verdana, Tahoma, Arial, sans-serif;
+    FONT-SIZE: 13px;
+    FLOAT: none;
+    MARGIN-LEFT: 0px;
+    MARGIN-TOP: 0px;
+    BORDER-COLOR: white;
+}
+TABLE.day
+{
+    BORDER: 0px;
+    BORER-STYLE: solid;
+    BORDER-WIDTH: 0px;
+    BORDER-COLOR: white;    
+    BORDER-DARK-COLOR: white;           
+}
+TABLE.month
+{
+    BORDER-COLOR: black;
+}
+TABLE.calheader 
+{
+    FONT-WEIGHT: bold;
+}
+TD.calheader 
+{
+    TEXT-ALIGN: center;
+}
+COL.hours
+{
+    BACKGROUND-COLOR: #EFBC98;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+}
+COL.days
+{
+    BACKGROUND-COLOR: #EFBC98;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+}
+TD.listrow1
+{
+    TEXT-ALIGN: left;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Helvetica, Verdana, Tahoma, Arial, sans-serif;
+    VERTICAL-ALIGN: TOP;
+}
+TD.listrow2
+{
+    BACKGROUND-COLOR: beige;
+    TEXT-ALIGN: left;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Helvetica, Verdana, Tahoma, Arial, sans-serif;
+    VERTICAL-ALIGN: TOP;
+}
+A
+{
+   FONT-FAMILY: Helvetica, Verdana, Tahoma, Arial, sans-serif;
+   FONT-SIZE: 12px;
+   COLOR: darkblue;
+   TEXT-DECORATION: none;
+}
+.term
+{
+    MARGIN-LEFT: 0px;
+    MARGIN-TOP: 0px;
+    BORDER: 0px;
+    BORER-STYLE: none;
+    BORDER-COLOR: white;
+    BORDER-DARK-COLOR: white;
+    BORDER-WIDTH: 0px;
+    BACKGROUND-COLOR: beige;
+    COLOR: black;
+}
+.place
+{
+   COLOR: black;
+}
+.holiday
+{
+    COLOR: darkblue;
+}
+TABLE.calbody
+{
+    BORDER: 0px;
+    Padding: 2px; 
+    spacing: 1px;
+}

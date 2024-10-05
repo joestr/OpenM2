@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreator">
+            <SYSTEM>
+                <ID DOMAIN="masterd_instquery">_masterd_getPotentialUsers</ID>
+                <NAME>_masterd_getPotentialUsers</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>01.01.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="SELECT" TYPE="CHAR">usro.oid AS usrOid, usr.name AS usrName,usr.fullname AS fullname,'setFieldRef (''_USER'',''#SYSVAR.ELEMOID#'', new Array (''' + usr.name + '''))' AS setButton</VALUE>
+                <VALUE FIELD="FROM" TYPE="CHAR">ibs_user usr, ibs_object usro</VALUE>
+                <VALUE FIELD="WHERE" TYPE="CHAR">usr.oid = usro.oid and usro.state = 2 and usr.oid not in(select pers.m_user from dbm_masterd_person pers, ibs_object perso where perso.oid = pers.oid AND perso.state = 2)</VALUE>
+                <VALUE FIELD="QUERYTYPE" TYPE="CHAR">SYSTEM</VALUE>
+                <VALUE FIELD="GROUPBY" TYPE="CHAR"/>
+                <VALUE FIELD="ORDERBY" TYPE="CHAR">usr.name ASC</VALUE>
+                <VALUE FIELD="COLUMNHEADERS" TYPE="CHAR">#OBJECTID, Name, Full name, #SET</VALUE>
+                <VALUE FIELD="COLUMNQUERYATTRIBUTES" TYPE="CHAR">usrOid, usrName, fullname, setButton</VALUE>
+                <VALUE FIELD="COLUMNTYPES" TYPE="CHAR">SYSVAR, STRING, STRING, SYSVAR</VALUE>
+                <VALUE FIELD="SEARCHFIELDS" TYPE="CHAR">Name</VALUE>
+                <VALUE FIELD="SEARCHFIELDQUERYATTRIBUTES" TYPE="CHAR">usr.name</VALUE>
+                <VALUE FIELD="SEARCHFIELDTYPES" TYPE="CHAR">STRING</VALUE>
+                <VALUE FIELD="MAXRESULTS" TYPE="INTEGER">-1</VALUE>
+                <VALUE FIELD="DEBUGGING" TYPE="BOOLEAN">0</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreator">
+            <SYSTEM>
+                <ID DOMAIN="masterd_instquery">_masterd_getPotentialCompanyContacts</ID>
+                <NAME>_masterd_getPotentialCompanyContacts</NAME>
+                <DESCRIPTION>This query selects all ContactData objects with kind=Business which are in the same company as the staff member.</DESCRIPTION>
+                <VALIDUNTIL>01.01.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="SELECT" TYPE="CHAR">        con.*,\n        'setFieldRef (''_CONTACT'',''#SYSVAR.ELEMOID#'', new Array (''' + persono.name + ' - ' + con.name + '''))' AS setButton,\n		persono.name personName</VALUE>
+                <VALUE FIELD="FROM" TYPE="CHAR">	    ibs_Object o, ibs_Object compo, ibs_Object persono, dbm_masterd_person person,\n        (\n            SELECT  cono.oid AS compOid, cono.name, cono.containerOid2, con.*\n            FROM    ibs_Object cono, dbm_masterd_contactd con\n            WHERE   con.m_kind = 'Business'\n                AND con.oid not in\n                	  (\n                        select  staff.m_contact\n                        FROM    ibs_Object obj\n                        INNER JOIN dbm_masterd_staffmem staff\n                        ON obj.oid = staff.oid \n                    		where   obj.state = 2\n                    )\n                AND cono.oid = con.oid\n                AND cono.state = 2\n            UNION ALL\n            SELECT  cono.oid AS compOid, cono.name, cono.containerOid2, con.*\n            FROM    ibs_Object cono, dbm_masterd_contactd con, dbm_masterd_staffmem m\n            WHERE   m.oid = #SYSVAR.CURRENTOBJECTOID#\n                AND m.m_contact = cono.oid\n                AND cono.oid = con.oid\n                AND cono.state = 2\n        ) con</VALUE>
+                <VALUE FIELD="WHERE" TYPE="CHAR">	o.oid = #SYSVAR.CURRENTOBJECTOID#\n    AND o.containerOid2 = compo.oid\n    AND compo.state = 2\n    AND persono.containerOid2 = compo.oid\n    AND con.containerOid2 = persono.oid\n	AND person.oid = persono.oid</VALUE>
+                <VALUE FIELD="CATEGORY" TYPE="CHAR"/>
+                <VALUE FIELD="QUERYTYPE" TYPE="CHAR">SYSTEM</VALUE>
+                <VALUE FIELD="GROUPBY" TYPE="CHAR"/>
+                <VALUE FIELD="ORDERBY" TYPE="CHAR">con.name ASC</VALUE>
+                <VALUE FIELD="COLUMNHEADERS" TYPE="CHAR">#OBJECTID, Contact name, Person name, Contact kind, Email, Phone 1, #SET</VALUE>
+                <VALUE FIELD="COLUMNQUERYATTRIBUTES" TYPE="CHAR">oid, name, personName, m_kind, m_email, m_phone1,setButton</VALUE>
+                <VALUE FIELD="COLUMNTYPES" TYPE="CHAR">SYSVAR, STRING, STRING, STRING, STRING, STRING, SYSVAR</VALUE>
+                <VALUE FIELD="SEARCHFIELDS" TYPE="CHAR">Contact name, Person name</VALUE>
+                <VALUE FIELD="SEARCHFIELDQUERYATTRIBUTES" TYPE="CHAR">con.name, persono.name</VALUE>
+                <VALUE FIELD="SEARCHFIELDTYPES" TYPE="CHAR">STRING, STRING</VALUE>
+                <VALUE FIELD="MAXRESULTS" TYPE="INTEGER">-1</VALUE>
+                <VALUE FIELD="DEBUGGING" TYPE="BOOLEAN">0</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

@@ -1,0 +1,2 @@
+This directory should contain servlet log files. 
+At the moment this are the log files of Tomcat.

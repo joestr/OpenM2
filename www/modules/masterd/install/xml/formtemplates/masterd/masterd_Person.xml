@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_Person"
+		        TYPE="Person"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="NO"
+		        DBTABLE="dbm_masterd_person">
+			<SYSTEM DISPLAY="YES">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES>
+  				<VALUE FIELD="Salutation" TYPE="SELECTIONBOX" OPTIONS="Mr.,Mrs.,Ms." EMPTYOPTION="NO" DBFIELD="m_salut"/>
+<!--   				<VALUE FIELD="Title" TYPE="SELECTIONBOX" OPTIONS=" ,Dr." EMPTYOPTION="YES" DBFIELD="m_title"/>    -->
+  				
+  				<VALUE FIELD="Title" TYPE="VALUEDOMAIN" MANDATORY="NO" DBFIELD="m_title" CONTEXT="Title" READONLY="NO" REFRESH="YES">
+    	        	<FIELDS>
+        		      <SYSFIELD NAME="Name" TOKEN="Name"/> 
+		            </FIELDS>
+		        </VALUE>
+  				        				
+				<VALUE FIELD="First name" TYPE="TEXT" MANDATORY="YES" DBFIELD="m_firstname"/>
+				<VALUE FIELD="Surname" TYPE="TEXT" MANDATORY="YES" DBFIELD="m_surname"/>
+                <VALUE FIELD="Nationality" TYPE="TEXT" DBFIELD="m_nat"/>
+				<VALUE FIELD="Birhtdate" TYPE="DATE" DBFIELD="m_birthdate"/>
+                <VALUE FIELD="Gender" TYPE="TEXT" OPTIONS="male,female" DBFIELD="m_gender"/>
+				<VALUE FIELD="Social Insurence No" TYPE="NUMBER" DBFIELD="m_socialINo"/>
+
+				<!-- ibs.obj.user.User_01 cannot be cast to ibs.di.XMLViewer_01;
+					java.lang.ClassCastException: ibs.obj.user.User_01 cannot be cast to ibs.di.XMLViewer_01 at ibs.di.XMLViewer_01.addFieldRefData(XMLViewer_01.java:4244) at ibs.di.XMLViewer_01.createDomTreeValueNode
+				-->
+				<!--
+				<VALUE FIELD="User" TYPE="FIELDREF"
+					   QUERYNAME="_masterd_getPotentialUsers"
+ 					   MANDATORY="YES" DBFIELD="m_user">
+                    <FIELDS>
+                        <SYSFIELD NAME="Name" TOKEN="User name"/>
+                    </FIELDS>
+                </VALUE>
+				-->
+                <VALUE FIELD="User" TYPE="OBJECTREF"
+                       TYPECODEFILTER="User"
+                       SEARCHROOT="Administration/user administration/USERS"
+                       SEARCHRECURSIVE="YES"
+                       DBFIELD="m_user"/>
+				</VALUES>
+			<TABS>
+				<TABOBJECT TYPECODE="masterd_ContactDataContainer" TABCODE="masterd_ContactData_masterd_ContactDataContainer">
+					<SYSTEM>
+						<ID DOMAIN=""/>
+						<NAME>Contact data</NAME>
+					</SYSTEM>
+				</TABOBJECT>
+			</TABS>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

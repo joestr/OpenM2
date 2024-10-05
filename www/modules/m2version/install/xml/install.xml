@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE install SYSTEM "install.dtd">
+<!--
+    multi-installer configuration file
+    this file defines the steps for an installation
+-->
+<install>
+    <!-- create common structures -->
+    <instxml sourcefile="common/structures.xml"
+             destiddomain="ibs_instobj" destid="di"/>
+
+    <!-- create the queryobject structures -->
+<!--
+    <instxml sourcefile="queryobjects/structures.xml"
+             destiddomain="m2version_install" destid="Queries"/>
+-->
+    <!-- create the queryobjects -->
+<!--
+    <instxml sourcefile="queryobjects/reports/*.xml"
+             destiddomain="m2version_instquery" destid="Berichte"/>
+    <instxml sourcefile="queryobjects/search/*.xml"
+             destiddomain="m2version_instquery" destid="Suchmasken"/>
+    <instxml sourcefile="queryobjects/system/*.xml"
+             destiddomain="m2version_instquery" destid="System"/>
+    <instxml sourcefile="queryobjects/misc/*.xml"
+             destiddomain="m2version_instquery" destid="Sonstige"/>
+-->
+
+    <!-- create the connectors -->
+
+    <!-- create the importscrips -->
+
+    <!-- create the translators -->
+<!--
+    <instxml sourcefile="translators/structures.xml"
+             destiddomain="m2version_install" destid="Translatoren"/>
+-->
+
+    <!-- create the workflowtemplates -->
+<!--
+    <instxml sourcefile="workflows/structures.xml"
+             destiddomain="m2version_install" destid="Workflowvorlagen"/>
+-->
+
+    <!-- create the formtemplates structures -->
+<!--
+    <instxml sourcefile="formtemplates/structures.xml"
+             destiddomain="m2version_install" destid="Formularvorlagen"/>
+-->
+
+    <!-- formtemplates "..." -->
+    <!-- versioning -->
+    <instxml sourcefile="formtemplates/versions/structures.xml"
+             destiddomain="m2version_install" destid="Formularvorlagen"/>
+    <!-- reorg -->
+    <instxml sourcefile="formtemplates/reorg/structures.xml"
+             destiddomain="m2version_install" destid="Formularvorlagen"/>
+
+    <!-- stucture templates -->
+<!--
+    <instxml sourcefile="structures/structures.xml"
+             destiddomain="m2version_install" destid="Strukturvorlagen"/>
+-->
+
+    <!-- create common object structures -->
+    <instxml sourcefile="common/objects.xml"
+             destiddomain="ibs_instobj" destid="menuobjects"/>
+<!--
+    <instxml sourcefile="common/menutabs.xml"
+             destiddomain="ibs_instobj" destid="menutabs"/>
+-->
+</install>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--DOCTYPE IMPORT SYSTEM "import.dtd"-->
+<IMPORT VERSION="1.0">
+	<OBJECTS>
+		<OBJECT TYPECODE="m2PVersion"
+		        TYPE="Version"
+		        MAYEXISTIN="ExportContainer"
+		        DBTABLE="dbm_m2PVersion"
+		        CLASS="m2.version.publish.PVersion_01">
+			<SYSTEM DISPLAY="YES">
+				<!--Objektname-->
+				<NAME/>
+				<!--Beschreibung des Objekts-->
+				<DESCRIPTION/>
+				<!--Ende der Gueltigkeit des Objekts-->
+				<VALIDUNTIL/>
+				<SHOWINNEWS/>
+			</SYSTEM>
+			<VALUES>
+				<!--Name der Datei (muss Feld aus VERSION)-->
+				<VALUE FIELD="Dateiname" TYPE="FILE" DBFIELD="m_filename" MANDATORY="YES"/>
+				<!--Größe der Datei (muss Feld aus VERSION)-->
+				<VALUE FIELD="Dateigröße" TYPE="INTEGER" DBFIELD="m_size" UNIT="Bytes"/>
+				<!--Version der Datei (muss Feld aus VERSION)-->
+				<VALUE FIELD="Version" TYPE="INTEGER" DBFIELD="m_version"/>
+				<!--Datei ist Master? (muss Feld aus VERSION)-->
+				<VALUE FIELD="Master" TYPE="BOOLEAN" DBFIELD="m_isMaster"/>
+				<!--Publizierungsdatum (zuaetzliches Feld)-->
+				<VALUE FIELD="PDatum" TYPE="DATETIME" DBFIELD="m_pDate"/>
+				<!--Publizierungsversion (zuaetzliches Feld)-->
+				<VALUE FIELD="PVersion" TYPE="INTEGER" DBFIELD="m_pVersion"/>
+				<!--publiziertes Objekt (zuaetzliches Feld)-->
+				<VALUE FIELD="PObjekt" TYPE="OBJECTREF" DBFIELD="m_pObject" TYPECODEFILTER="m2Publication"/>
+				<!--Größe des publizierten Objekts (zuaetzliches Feld)-->
+				<VALUE FIELD="PGröße" TYPE="INTEGER" DBFIELD="m_pSize"/>
+			</VALUES>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

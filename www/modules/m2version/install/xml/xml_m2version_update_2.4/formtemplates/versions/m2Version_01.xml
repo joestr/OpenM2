@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--DOCTYPE IMPORT SYSTEM "import.dtd"-->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="m2Version"
+                TYPE="Version"
+                MAYEXISTIN="ExportContainer"
+                DBTABLE="dbm_m2version"
+                CLASS="m2.version.Version_01">
+            <SYSTEM DISPLAY="YES">
+                <!--Objektname-->
+                <NAME/>
+                <!--Beschreibung des Objekts-->
+                <DESCRIPTION/>
+                <!--Ende der Gueltigkeit des Objekts-->
+                <VALIDUNTIL/>
+            </SYSTEM>
+            <VALUES>
+                <!-- KR 20051007: this field is just for backwards compatibility
+                     to ensure that no data is lost.
+                     It shall be deleted in a future release (in a year or so)
+                -->
+                <!--Name der Datei-->
+                <VALUE FIELD="Dateiname" TYPE="FILE" DBFIELD="m_filename"
+                       MANDATORY="NO"/>
+                <!--Größe der Datei-->
+                <VALUE FIELD="Dateigröße" TYPE="INTEGER" DBFIELD="m_size"
+                       UNIT="Bytes"/>
+                <!--Version der Datei-->
+                <VALUE FIELD="Version" TYPE="INTEGER" DBFIELD="m_version"/>
+                <!--Version ist Master?-->
+                <VALUE FIELD="Master" TYPE="BOOLEAN" DBFIELD="m_isMaster"/>
+            </VALUES>
+            <TABS>
+                <TABOBJECT TYPECODE="m2Version" KIND="VIEW"
+                           PRIORITY="8000"
+                           TABCODE="m2Version_tab1"
+                           CLASS="m2.version.Version_01">
+                    <SYSTEM>
+                        <NAME>Dokument</NAME>
+                        <DESCRIPTION>Hier ist das versionierte Objekt zu finden.</DESCRIPTION>
+                    </SYSTEM>
+                </TABOBJECT>
+            </TABS>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

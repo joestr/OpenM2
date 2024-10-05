@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<project default="main" basedir=".">
+	
+	<property file="addModule.properties"/>
+	
+ 	<target name="main" >	
+		<antcall target="addModule"/>
+		<antcall target="addModuleConf"/>
+		<antcall target="addFeatureEntry"/>
+		<antcall target="createDelivery"/> 		
+  	</target>
+  
+	<!-- Adds a new module with the specified module settings to the specified project -->
+	<target name="addModule">
+		<copy todir="${projectHome}\www\modules">
+			<fileset dir="${templates}\modules"/>
+		    <filterset>
+		      <filter token="MODULE_ID" value="${moduleId}"/>
+		      <filter token="MODULE_NAME" value="${moduleName}"/>
+		      <filter token="MODULE_VERS" value="${moduleVers}"/>
+
+		      <filter token="MODULE_INTRO_NAME" value="${moduleIntroName}"/>
+			  <filter token="MODULE_MAIN_GROUP_ID" value="${moduleMainGroupId}"/>
+			  <filter token="MODULE_MAIN_GROUP_NAME" value="${moduleMainGroupName}"/>
+			  <filter token="MODULE_CLASSNAME_PREFIX" value="${moduleClassNamePrefix}"/>
+
+			  <filter token="MENUTAB_NAME" value="${menutabName}"/>
+			  <filter token="MENUTAB_ID" value="${menutabId}"/>
+		      <filter token="PROJECT_ID" value="${projectId}"/>
+
+		      <filter token="REQ_IBSBASE_VERS" value="${reqIbsBaseVers}"/>
+		    </filterset>
+			<mapper type="glob" from="MODULE" to="${moduleId}"/>
+		</copy>
+
+		<!-- Rename directories and files -->
+		<move file="${projectHome}\www\modules\${moduleId}\install\xml\formtemplates\MODULE" tofile="${projectHome}\www\modules\${moduleId}\install\xml\formtemplates\${moduleId}"/>
+		<move file="${projectHome}\www\modules\${moduleId}\install\xml\common\MODULEintro.htm" tofile="${projectHome}\www\modules\${moduleId}\install\xml\common\${moduleId}intro.htm"/>
+	</target>
+
+	<!-- Add a new module config file to the conf folder -->
+	<target name="addModuleConf">
+		<copy file="${templates}\conf\MODULE.xml" tofile="${projectHome}\www\conf\${moduleId}.xml">
+		    <filterset>
+		      <filter token="MODULE_ID" value="${moduleId}"/>
+		      <filter token="MODULE_VERS" value="${moduleVers}"/>
+		    </filterset>
+		</copy>
+	</target>
+
+	<!-- Adds the new module to the feature.xml. All older entries for this module are removed first.  -->
+	<target name="addFeatureEntry">
+		<!-- Remove earlier versions of this module from the features.xml -->
+		<replaceregexp file="${projectHome}\www\features\${projectId}\feature.xml"
+			match="&lt;reqmodule id=&quot;${moduleId}&quot;.*/&gt;" replace="" byline="true"/>
+
+		<!-- Add the module in the current version to the feature.xml -->
+		<replace file="${projectHome}\www\features\${projectId}\feature.xml"
+			token="&lt;/requires&gt;"
+			value="&lt;reqmodule id=&quot;${moduleId}&quot; version=&quot;${moduleVers}&quot; match=&quot;equivalent&quot;/&gt;
+				&lt;/requires&gt;"/>
+	</target>
+
+	<!-- Copies the new module folder, the changed feature.xml and the config xml to the delivery folder -->
+	<target name="createDelivery">
+		<copy todir="${deliveryFolder}\www\modules\${moduleId}">
+			<fileset dir="${projectHome}\www\modules\${moduleId}"/>
+		</copy>
+		<copy file="${projectHome}\www\features\${projectId}\feature.xml" tofile="${deliveryFolder}\www\features\${projectId}\feature.xml"/>
+		<copy file="${projectHome}\www\conf\${moduleId}.xml" tofile="${deliveryFolder}\www\conf\${moduleId}.xml"/>
+	</target>
+
+	<!-- Copies the delivery to the server (overwriting enabled!!!) -->
+	<target name="installDelivery">
+			<copy todir="${serverAppFolder}" overwrite="true">
+				<fileset dir="${deliveryFolder}\www"/>
+			</copy>
+	</target>
+</project>

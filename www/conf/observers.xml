@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE OBSERVERLOADER SYSTEM "observers.dtd">
+<!-- intos/m2: observerloader configuration file -->
+<OBSERVERLOADER>
+
+    <!-- observer job classes used in application -->
+    <OBSERVERJOBCLASS>ibs.service.observer.M2ReminderObserverJob</OBSERVERJOBCLASS>
+
+    <!-- configuration for observer m2Observer -->
+    <OBSERVER CLASS="ibs.service.observer.M2Observer" CONFIGURATIONCLASS="ibs.service.observer.M2ObserverConfiguration">
+        <BASE>
+            <!-- name of observer must have 18 characters or less -->
+            <!--  123456789|12345678 -->
+            <NAME>standard</NAME>
+            <!-- name of domain in which observer will run -->
+            <DOMAIN>m2</DOMAIN>
+            <!-- time of refreshing in milliseconds -->
+            <REFRESH>60000</REFRESH>
+            <!-- echo can be: OFF(=default)|TRACE|DEBUG -->
+            <ECHO>DEBUG</ECHO>
+        </BASE>
+        <!-- if not given: no error-notification -->
+        <NOTIFICATION>
+            <SMTPSERVER ACCOUNT="@ACCOUNT@" PASSWORD="@PWD@">@SMTPSERVER@</SMTPSERVER>
+            <RECEIVER>support@trinitec.at</RECEIVER>
+            <SENDER>m2Observer@trinitec.at</SENDER>
+            <SUBJECT>[@APPSERVER@] Observer Errormessage</SUBJECT>
+        </NOTIFICATION>
+        <!-- if not given: no logging -->
+        <LOGGING>
+            <LOGDIR>observer\logs</LOGDIR>
+        </LOGGING>
+        <!-- Additional information -->
+        <M2CONNECTION>
+            <!-- type can be: ASP(=default)|SERVLET -->
+            <M2TYPE>SERVLET</M2TYPE>
+            <!-- name can be: localhost (=default) or any url to m2-server -->
+            <M2SERVER>@APPSERVER@</M2SERVER>
+            <!-- name can be: any url-subpath; default=/m2/app -->
+            <M2APPPATH>@APPHOMEPAGEPATH@</M2APPPATH>
+            <!-- domain can be: any m2-domain-id; default=1 -->
+            <M2DOMAIN>1</M2DOMAIN>
+            <M2USERNAME>Administrator</M2USERNAME>
+            <M2PASSWORD>secret</M2PASSWORD>
+            <!-- timeout can be: any value in milliseconds (gt 0); default=30000 -->
+            <M2TIMEOUT>30000</M2TIMEOUT>
+        </M2CONNECTION>
+        <!-- if not given: no NTLM authentication -->
+        <AUTHENTICATION>
+            <DOMAIN></DOMAIN>
+            <USERNAME></USERNAME>
+            <PASSWORD></PASSWORD>
+        </AUTHENTICATION>
+    </OBSERVER>
+</OBSERVERLOADER>

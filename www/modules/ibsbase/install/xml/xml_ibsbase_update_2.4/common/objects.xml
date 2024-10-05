@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 export/import file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <!-- Reorg Container -->
+        <OBJECT TYPECODE="XMLViewerContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="ibs_instobj">di</ID></CONTAINER>
+                <ID DOMAIN="ibs_instobj">reorgcontainer</ID>
+                <NAME>Reorganisation</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="useStandardHeader" TYPE="BOOLEAN">1</VALUE>
+                <VALUE FIELD="headerFields" TYPE="CHAR"/>
+                <VALUE FIELD="templateTypeCode" TYPE="CHAR"/>
+                <VALUE FIELD="workflowTemplateOID" TYPE="CHAR"/>
+            </VALUES>
+            <OBJECTS>
+                <OBJECT TYPECODE="IbsReorg">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_instobj">ibsreorg</ID>
+                        <NAME>IBS Reorganisation</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="Reorganisation simulieren" TYPE="BOOLEAN"/>
+                        <VALUE FIELD="Datenbank reorganisieren" TYPE="BOOLEAN"/>
+                        <VALUE FIELD="SEP" TYPE="SEPARATOR"/>
+                        <VALUE FIELD="Dateisystem reorganisieren" TYPE="BOOLEAN"/>
+                        <VALUE FIELD="Letzter Dateisystem Reorg am" TYPE="DATETIME"/>
+                        <VALUE FIELD="Status letzter Dateisystem Reorg" TYPE="LONGTEXT"/>
+                    </VALUES>
+                </OBJECT>
+            </OBJECTS>
+        </OBJECT>
+
+        <!-- update container: -->
+        <OBJECT TYPECODE="XMLViewerContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="PATH">#CONFVAR.ibsbase.menuPublic#/Informationen</CONTAINER>
+                <ID DOMAIN="ibs_instobj">updates</ID>
+                <NAME>Updates</NAME>
+                <DESCRIPTION>Ablage mit Informationen über Systemupdates.</DESCRIPTION>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

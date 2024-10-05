@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="complib/activation.jar"/>
+	<classpathentry kind="lib" path="complib/cryptix-jce-provider.jar"/>
+	<classpathentry kind="lib" path="complib/cryptix-jce-api.jar"/>
+	<classpathentry kind="lib" path="complib/eagle.jar" sourcepath="c:/dev/doc/eagle-doc-1.0-108/src"/>
+	<classpathentry kind="lib" path="complib/jcifs-0.7.3.jar"/>
+	<classpathentry kind="lib" path="complib/jt400.jar"/>
+	<classpathentry kind="lib" path="complib/mail.jar"/>
+	<classpathentry kind="lib" path="complib/xalan.jar" sourcepath="c:/dev/doc/xalan2.5.1/src.zip"/>
+	<classpathentry kind="lib" path="complib/servlet23.jar" sourcepath="c:/dev/doc/servlet-2_3-fcs-docs/src.zip"/>
+	<classpathentry kind="lib" path="complib/commons-net-1.1.0.jar"/>
+	<classpathentry kind="lib" path="www/WEB-INF/lib/xercesImpl.jar" sourcepath="c:/dev/doc/xerces2.5.0/src.zip"/>
+	<classpathentry kind="lib" path="www/WEB-INF/lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="www/WEB-INF/lib/Sprinta2000.jar"/>
+	<classpathentry kind="lib" path="www/WEB-INF/lib/jtds-1.2.7.jar"/>
+	<classpathentry kind="output" path="comp"/>
+</classpath>

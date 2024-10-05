@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_Address"
+		        TYPE="Address"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="NO"
+		        DBTABLE="dbm_masterd_address">
+			<SYSTEM DISPLAY="YES">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES>
+  				<VALUE FIELD="Purpose" TYPE="SELECTIONBOX" OPTIONS="Delivery,Billing,Reclamation" EMPTYOPTION="NO" DBFIELD="m_purpose"/>
+				<VALUE FIELD="Address1" TYPE="TEXT" MANDATORY="YES" DBFIELD="m_address1"/>
+				<VALUE FIELD="Address2" TYPE="TEXT" DBFIELD="m_address2"/>
+				<VALUE FIELD="Address3" TYPE="TEXT" DBFIELD="m_address3"/>
+				<VALUE FIELD="Address4" TYPE="TEXT" DBFIELD="m_address4"/>
+				<VALUE FIELD="City" TYPE="TEXT" MANDATORY="YES" DBFIELD="m_city"/>
+				<VALUE FIELD="Zip code" TYPE="TEXT" MANDATORY="YES" DBFIELD="m_zipcode"/>
+				<VALUE FIELD="Country" TYPE="TEXT" MANDATORY="YES" DBFIELD="m_country"/>
+				<VALUE FIELD="Country code" TYPE="TEXT" MANDATORY="YES" DBFIELD="m_countryCode"/>
+				<VALUE FIELD="Region name" TYPE="TEXT" DBFIELD="m_regionName"/>
+			</VALUES>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

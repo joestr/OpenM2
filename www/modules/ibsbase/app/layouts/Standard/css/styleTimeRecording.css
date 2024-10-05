@@ -1,0 +1,154 @@
+/*
+    inherited styles:
+    font-family: comes from document body
+*/
+/* invisible list rows: */
+TR.listRow1_invisible,
+TR.listRow2_invisible,
+.mandatory_invisible,
+.none_invisible
+{
+    display: none;
+}
+
+/* inactive and deleted list rows: */
+TD.listRow1_inactive,
+TD.listRow2_inactive,
+TD.listRow1_deleted,
+TD.listRow2_deleted
+{
+    text-align: left;
+    font-size: 11px;
+    vertical-align: middle;
+    height: 23px;
+}
+TD.listRow1_inactive,
+TD.listRow1_deleted
+{
+    background: #e0e0e0;
+    color: #f0f0f0;
+}
+TD.listRow2_inactive,
+TD.listRow2_deleted
+{
+    background: #d8d8d8;
+}
+TR.listRow1_inactive A,
+TR.listRow2_inactive A,
+TR.listRow1_deleted A,
+TR.listRow2_deleted A
+{
+    text-decoration: none;
+}
+.mandatory_inactive,
+.none_inactive,
+.mandatory_deleted,
+.none_deleted
+{
+    background-color:   #e0e0e0;
+    color:              #c2c2c2;
+    border:             1px dotted #cccccc;
+    border-style:       dotted;
+}
+
+DIV,
+DIV.none_inactive,
+DIV.none_deleted
+{
+    border: none;
+    width: 0px;
+    height: 0px;
+    vertical-align: middle;
+}
+
+/* input elements: */
+/*
+SELECT
+{
+    position: absolute;
+/ *
+    top: 0px;
+* /
+    width: 200px;
+    overflow: auto;
+    clip: rect(0px, 150px, auto, 0px);
+}
+*/
+SELECT,
+INPUT
+{
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+}
+SELECT.listRow1,
+SELECT.listRow2,
+SELECT.listRow1_inactive,
+SELECT.listRow2_inactive,
+SELECT.listRow1_deleted,
+SELECT.listRow2_deleted,
+INPUT.listRow1,
+INPUT.listRow2,
+INPUT.listRow1_inactive,
+INPUT.listRow2_inactive,
+INPUT.listRow1_deleted,
+INPUT.listRow2_deleted,
+INPUT.checkbox_listRow1,
+INPUT.checkbox_listRow2,
+INPUT.checkbox_listRow1_inactive,
+INPUT.checkbox_listRow2_inactive,
+INPUT.checkbox_listRow1_deleted,
+INPUT.checkbox_listRow2_deleted
+{
+    font-size: 9px;
+}
+SELECT.listRow1_inactive,
+SELECT.listRow2_inactive,
+SELECT.listRow1_deleted,
+SELECT.listRow2_deleted,
+INPUT.checkbox_listRow1_inactive,
+INPUT.checkbox_listRow2_inactive,
+INPUT.checkbox_listRow1_deleted,
+INPUT.checkbox_listRow2_deleted
+{
+    background-color:   #e0e0e0;
+    color:              #a2a2a2;/* #c2c2c2;*/
+    border:             0px solid #cccccc;
+}
+INPUT.listRow1_inactive,
+INPUT.listRow2_inactive,
+INPUT.listRow1_deleted,
+INPUT.listRow2_deleted
+{
+    background-color:   #e0e0e0;
+    color:              #a2a2a2;/* #c2c2c2;*/
+    border:             1px dotted #cccccc;
+}
+SELECT.listRow1_deleted,
+SELECT.listRow2_deleted,
+INPUT.checkbox_listRow1_deleted,
+INPUT.checkbox_listRow2_deleted,
+INPUT.listRow1_deleted,
+INPUT.listRow2_deleted
+{
+    text-decoration:    line-through;
+}
+
+.input_description,
+TABLE.input_description
+{
+    align: left;
+    text-align: left;
+    font-size: 11px;
+    vertical-align: middle;
+    width: 10;
+}
+TEXTAREA.input_description
+{
+    background-color: #ffffc0;
+    width: 300;
+    cols: 20;
+}
+TEXTAREA.input_description_invisible,
+.input_description_invisible
+{
+    display: none;
+}

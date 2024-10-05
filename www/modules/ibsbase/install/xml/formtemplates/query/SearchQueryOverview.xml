@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="SearchQueryOverview"
+                TYPE="Suchabfragen-Übersicht"
+                MAYEXISTIN="Container"
+                SHOWINMENU="YES">
+            <CONFIG>
+                <INFOBUTTONS>EDIT,DELETE</INFOBUTTONS>                
+            </CONFIG>
+            <SYSTEM>
+                <ID DOMAIN=""/>
+                <NAME>Suchabfragen-Übersicht</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL/>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="Searchqueries" TYPE="QUERY" 
+                    QUERYNAME="_ibsbase_GetSearchQueries"/>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

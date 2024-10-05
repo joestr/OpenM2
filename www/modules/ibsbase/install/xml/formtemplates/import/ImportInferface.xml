@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+	<OBJECTS>
+		<OBJECT TYPECODE="ImportInterface" TYPE="import interface">
+			<SYSTEM>
+				<ID DOMAIN=""/>
+				<NAME>import interface</NAME>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES>
+				<VALUE FIELD="connector" DBFIELD="m_connectorOid" TYPE="SELECTION" TYPECODEFILTER="FileConnector,FTPConnector,MailConnector,HTTPConnector,HTTPScriptConnector,EDISwitchConnector,SAPBCXMLRFCConnector" SEARCHROOT="group" SEARCHRECURSIVE="YES"/>
+				<VALUE FIELD="importscript" DBFIELD="m_importscriptOid" TYPE="SELECTION" TYPECODEFILTER="ImportScript" SEARCHROOT="group" SEARCHRECURSIVE="YES"/>
+				<VALUE FIELD="translator" DBFIELD="m_translatorOid" TYPE="SELECTION" TYPECODEFILTER="Translator,ASCIITranslator" SEARCHROOT="group" SEARCHRECURSIVE="YES"/>
+				<VALUE FIELD="filter" DBFIELD="m_filterId" TYPE="IMPORTFILTER"/>
+				<VALUE FIELD="delete importfile after import" DBFIELD="m_isDeleteImportfile" TYPE="BOOLEAN">false</VALUE>
+				<VALUE FIELD="enable starting workflow" DBFIELD="m_isEnableWorkflow" TYPE="BOOLEAN">false</VALUE>
+				<VALUE FIELD="info" TYPE="REMARK">The &quot;enable starting workflow&quot; option let you start an workflow when importing a form object into a form container that has a workflow template associated.</VALUE>
+				<VALUE FIELD="SEPARATOR" TYPE="SEPARATOR"/>
+				<VALUE FIELD="display log" DBFIELD="m_isDisplayLog" TYPE="BOOLEAN">true</VALUE>
+				<VALUE FIELD="save log" DBFIELD="m_isSaveLog" TYPE="BOOLEAN">false</VALUE>
+				<VALUE FIELD="name of logfile" DBFIELD="m_logFileName" TYPE="TEXT"/>
+				<VALUE FIELD="path of logfile" DBFIELD="m_logFilePath" TYPE="TEXT"/>
+				<VALUE FIELD="add log to existing logfile" DBFIELD="m_isAddtoLog" TYPE="BOOLEAN">false</VALUE>
+			</VALUES>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    @PROJECT_ID@ configuration file
+
+    - the configuration files of the m2 system are defined via xml-nodes and
+    - attributes.
+    - the format of this file is xml-conform.
+
+    The configuration values can be referenced in xml and xslt files with
+    #CONFVAR.<moduleName>.<valueName>#
+-->
+
+<!--
+    configuration node:
+        Contains all configuration values for one module.
+        moduleId:       Id of module to which this configuration belongs to.
+                        This is the same as the id of the module.
+        moduleVersion:  Version of the module. This must exactly be the same
+                        as the installed version of the module.
+-->
+<configuration moduleid="@MODULE_ID@" moduleversion="@MODULE_VERS@">
+
+    <!--
+        confvalue node:
+            A configuration value. The content of the node is the node value.
+            name:   Name of the configuration variable for which to set the
+                    value.
+
+            template:
+    <confvalue name=""></confvalue>
+    -->
+</configuration>

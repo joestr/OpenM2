@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $Id: install.xml,v 1.1 2005/06/15 22:12:23 klreimue Exp $ -->
+<!DOCTYPE install SYSTEM "install.dtd">
+<!--
+    multi-installer configuration file
+    this file defines the steps for an installation
+-->
+<install>
+<!--
+    import node (within actions node):
+        sourcefile:         The name of the sourcefile. A relative path to
+                            the installation directory can be set
+                            Use * to select multiple files within
+                            the source directory
+                            Use "/" as fileseparator. This will be replaced by
+                            the appropriate fileseparator of the operating system
+        destinationpath:    The m2 path for the destination container
+                            Please use "/" as separator (but note that "/" and "\"
+                            will be recognized as separator!)
+    -->
+
+    <!-- create common structures -->
+
+    <!-- create the queryobject structures -->
+    <!-- create the queryobjects -->
+    <import sourcefile="queryobjects/reports/*.xml" destinationpath="/Verwaltung/Data Interchange/ibs/Queries/Berichte"/>
+
+    <!-- create the connectors -->
+
+    <!-- create the importscrips -->
+
+    <!-- create the translators -->
+
+    <!-- create the workflowtemplates -->
+
+
+    <!-- create the formtemplates structures -->
+
+    <!-- formtemplates "..." -->
+
+    <!-- stucture templates -->
+
+    <!-- create common object structures -->
+</install>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="WebDavDocumentTemplate01" TYPE="WebDav Dokumentvorlage" MAYEXISTIN="Container,ExportContainer"  CLASS="ibs.obj.webdav.WebDavDocument_01" SHOWINMENU="NO" DBTABLE="dbm_webdavdoctempl01">
+            <SYSTEM DISPLAY="YES">
+                <ID DOMAIN=""/>
+                <NAME>WebDav Dokumentvorlage</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL/>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="Vorlage" TYPE="FILE" DBFIELD="m_template"/>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--DOCTYPE IMPORT SYSTEM "import.dtd"-->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="DBConnector" TYPE="DatenbankConnector" MAYEXISTIN="Container" DBTABLE="dbm_DBConnector">
+            <SYSTEM DISPLAY="YES">
+                <!--Objektname-->
+                <NAME/>
+                <!--Beschreibung des Objekts-->
+                <DESCRIPTION/>
+                <!--Ende der Gueltigkeit des Objekts-->
+                <VALIDUNTIL/>
+            </SYSTEM>
+            <VALUES>
+                <!-- The type of the database.
+                     Default: "sqls65"
+                -->
+                <VALUE FIELD="type" TYPE="SELECTIONBOX" OPTIONS="ora805,sqls65,db2" DBFIELD="m_type" MANDATORY="YES">sqls65</VALUE>
+
+                <!-- The class which is instantiated for calling the database.
+                     This class is driver specific.
+                     Default: "com.inet.tds.TdsDriver"
+                -->
+                <VALUE FIELD="jdbcdriverclass" TYPE="CHAR" DBFIELD="m_jdbcDriverClass" MANDATORY="YES">com.inet.tds.TdsDriver</VALUE>
+
+                <!-- String which is used by the jdbc driver to connect to the
+                     database.
+                     Default: "jdbc:inetdae7a:m2Server:1433"
+                -->
+                <VALUE FIELD="jdbcconnectionstring" TYPE="CHAR" DBFIELD="m_connectionString" MANDATORY="YES">jdbc:inetdae7a:m2Server:1433</VALUE>
+
+                <!-- The name of the database.
+                     Default: "m2"
+                -->
+                <VALUE FIELD="sid" TYPE="CHAR" DBFIELD="m_sid" MANDATORY="YES">m2</VALUE>
+
+                <!-- The name of the database user. The application uses this
+                     user for connecting to the database.
+                     Default: "sa"
+                -->
+                <VALUE FIELD="user" TYPE="CHAR" DBFIELD="m_userName" MANDATORY="NO">sa</VALUE>
+
+                <!-- The password for the database user.
+                     The application uses this password together with the user
+                     name for connecting to the database.
+                     Default: null
+                -->
+                <VALUE FIELD="password" TYPE="PASSWORD" DBFIELD="m_password" MANDATORY="NO">sa</VALUE>
+
+                <!-- Database timeout during login.
+                     Default: 45
+                -->
+                <VALUE FIELD="logintimeout" TYPE="INTEGER" DBFIELD="m_loginTimeOut" MANDATORY="YES">45</VALUE>
+
+                <!-- Database timeout during performing a query.
+                     Default: 120
+                -->
+                <VALUE FIELD="querytimeout" TYPE="INTEGER" DBFIELD="m_queryTimeOut" MANDATORY="YES">120</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

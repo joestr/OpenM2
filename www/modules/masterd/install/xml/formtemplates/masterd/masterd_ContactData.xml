@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_ContactData"
+		        TYPE="Contact data"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="NO"
+		        DBTABLE="dbm_masterd_contactd">
+			<SYSTEM DISPLAY="YES">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES>
+  				<VALUE FIELD="Contact kind" TYPE="SELECTIONBOX" OPTIONS="Business,Private,UnitContact" EMPTYOPTION="NO" DBFIELD="m_kind"/>
+				<VALUE FIELD="Email" TYPE="TEXT" DBFIELD="m_email"/>
+                <VALUE FIELD="Phone 1" TYPE="TEXT" DBFIELD="m_phone1"/>
+				<VALUE FIELD="Phone 2" TYPE="TEXT" DBFIELD="m_phone2"/>
+				<VALUE FIELD="Fax" TYPE="TEXT" DBFIELD="m_fax"/>
+				<VALUE FIELD="Sms address" TYPE="TEXT" DBFIELD="m_sms"/>
+				<VALUE FIELD="Language" TYPE="TEXT" DBFIELD="m_lang"/>
+				<VALUE FIELD="Website" TYPE="TEXT" DBFIELD="m_website"/>
+				<VALUE FIELD="Accepts mailing" TYPE="BOOLEAN" DBFIELD="m_accmail"/>
+			</VALUES>
+			<TABS>
+				<TABOBJECT TYPECODE="masterd_AddressContainer" TABCODE="masterd_ContactData_masterd_AddressContainer">
+					<SYSTEM>
+						<ID DOMAIN=""/>
+						<NAME>Address</NAME>
+					</SYSTEM>
+				</TABOBJECT>
+			</TABS>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

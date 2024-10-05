@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    ibsbase configuration file
+
+    - the configuration files of the m2 system are defined via xml-nodes and
+    - attributes.
+    - the format of this file is xml-conform.
+
+    The configuration values can be referenced in the files with
+    #CONFVAR.<moduleName>.<valueName>#
+-->
+
+<!--
+    configuration node:
+        Contains all configuration values for one module.
+        moduleid:       Id of module to which this configuration belongs to.
+                        This is the same as the id of the module.
+        moduleversion:  Version of the module. This must exactly be the same
+                        as the installed version of the module.
+-->
+<configuration moduleid="ibsbase" moduleversion="3.4.0">
+
+    <!--
+        confvalue node:
+            A configuration value. The content of the node is the node value.
+            name:   Name of the configuration variable for which to set the
+                    value.
+
+            template:
+    <confvalue name=""></confvalue>
+    -->
+    <confvalue name="appServlet">ApplicationServlet</confvalue>
+    <confvalue name="fileServlet">FileAccessServlet</confvalue>
+    <confvalue name="webdavServlet">WebdavLinkServlet</confvalue>
+    <!-- Number of retries if there is a deadlock -->
+    <confvalue name="retriesOnDeadlock">20</confvalue>
+    <!-- Time in milliseconds before retry after a deadlock -->
+    <confvalue name="retryTimeOnDeadlock">256</confvalue>
+    <!-- Time in milliseconds for a random number to be added
+        to retry after a deadlock -->
+    <confvalue name="retryTimeOffsetOnDeadlock">256</confvalue>
+    <!-- Timespan in milliseconds before a new DB connection is tried
+    	to be created -->
+    <confvalue name="retryTimeOffsetOnDBConnectionLoss">1000</confvalue>
+    <!-- Number of retries to create a new DB connection -->
+    <confvalue name="retriesForDBConnection">10</confvalue>
+    <!-- Number of losses of DBConnection before informing the SysAdmin -->
+    <confvalue name="dbConnectionLossThreshold">15</confvalue>
+    <!-- Timespan within losses of DBConnections are counted. When
+    	dbConnLossThreshold is exceeded within timespan, the SysAdmin
+    	is informed. In Milliseconds.-->
+    <confvalue name="dbConnectionLossTimespan">86400000</confvalue>
+    <!-- Time in milliseconds until a query field result expires -->
+    <confvalue name="queryFieldResultExpires">300000</confvalue>
+    <!-- Name of database owner -->
+    <confvalue name="dbOwner">dbo</confvalue>
+    <!-- Language of system installation -->
+    <confvalue name="lang">de</confvalue>
+    <!-- Multi lingual content leading language -->
+    <confvalue name="leadLangMLC">de</confvalue>
+    <!-- Multi lingual content languages -->
+    <confvalue name="langsMLC">en</confvalue>
+    <!-- Multi lingual content language labels -->
+    <confvalue name="labelsMLC">English</confvalue>
+    <!-- Name of public menu container -->
+    <confvalue name="menuPublic">Verwaltung</confvalue>
+    <!-- Name of private menu container -->
+    <confvalue name="menuPrivate">Privat</confvalue>
+    <!-- Default value for valid until date -->
+    <confvalue name="validUntil">01.01.2099</confvalue>
+    <!-- Default value for valid until date, sql format -->
+    <confvalue name="validUntilSql">2099-01-01</confvalue>
+    <!-- Default value for historySize -->
+    <confvalue name="historySize">20</confvalue>
+    <!-- Default notification service implementation -->
+    <confvalue name="notificationServiceClassname">ibs.service.notification.NotificationService</confvalue>
+    <!-- Administrator's workbox (used for workflows) -->
+    <confvalue name="AdministratorWorkbox">workbox</confvalue>
+    <!-- System installation language specific group name for admin group -->
+    <confvalue name="adminGroupName">Administratoren</confvalue>
+    <!-- System installation language specific group name for all group -->
+    <confvalue name="allGroupName">Jeder</confvalue>
+</configuration>

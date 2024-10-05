@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreator">
+            <SYSTEM>
+                <ID DOMAIN="masterd_instquery">_masterd_getPotentialAssignedToSubsForCustomer</ID>
+                <NAME>_masterd_getPotentialAssignedToSubsForCustomer</NAME>
+                <DESCRIPTION>This query selects first the company in which the customer mapping should be created. Then all Subsidiary Objects in this company. And finally returns the Companies which are referenced in this Subsidiary objects.</DESCRIPTION>
+                <VALIDUNTIL>01.01.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="SELECT" TYPE="CHAR">distinct (subsidcomp.oid) AS compOid,subsidcompo.name,subsidcomp.*,'setFieldRef (''_ASSIGNEDXTO'',''#SYSVAR.ELEMOID#'', new Array (''' + subsidcompo.name + '''))' AS setButton</VALUE>
+                <VALUE FIELD="FROM" TYPE="CHAR">ibs_Object o, ibs_Object compo, dbm_masterd_company comp, ibs_Object subo, dbm_masterd_subsid sub, ibs_Object subsidcompo, dbm_masterd_company subsidcomp</VALUE>
+                <VALUE FIELD="WHERE" TYPE="CHAR">compo.oid = comp.oid AND subo.oid = sub.oid AND compo.state = 2 AND subo.state = 2 AND o.oid = #SYSVAR.CURRENTOBJECTOID#\n AND o.posNoPath LIKE compo.posNoPath + '%' AND subo.posNoPath LIKE compo.posNoPath + '%' AND sub.m_subsid = subsidcomp.oid AND subsidcompo.oid = subsidcomp.oid</VALUE>
+                <VALUE FIELD="QUERYTYPE" TYPE="CHAR">SYSTEM</VALUE>
+                <VALUE FIELD="GROUPBY" TYPE="CHAR"/>
+                <VALUE FIELD="ORDERBY" TYPE="CHAR">subsidcompo.name ASC</VALUE>
+                <VALUE FIELD="COLUMNHEADERS" TYPE="CHAR">#OBJECTID, Name, Short name, Legal form, Company no, #SET</VALUE>
+                <VALUE FIELD="COLUMNQUERYATTRIBUTES" TYPE="CHAR">compOid, name, m_shortname, m_legalform, m_compnumber, setButton</VALUE>
+                <VALUE FIELD="COLUMNTYPES" TYPE="CHAR">SYSVAR, STRING, STRING, STRING, STRING, SYSVAR</VALUE>
+                <VALUE FIELD="SEARCHFIELDS" TYPE="CHAR">Name</VALUE>
+                <VALUE FIELD="SEARCHFIELDQUERYATTRIBUTES" TYPE="CHAR">compo.name</VALUE>
+                <VALUE FIELD="SEARCHFIELDTYPES" TYPE="CHAR">STRING</VALUE>
+                <VALUE FIELD="MAXRESULTS" TYPE="INTEGER">-1</VALUE>
+                <VALUE FIELD="DEBUGGING" TYPE="BOOLEAN">0</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

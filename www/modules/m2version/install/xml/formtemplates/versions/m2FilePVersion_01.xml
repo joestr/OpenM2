@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- DOCTYPE IMPORT SYSTEM "import.dtd" -->
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPE="versionierte PDatei"
+		        TYPECODE="m2FilePVersion"
+		        CLASS="m2.version.publish.FilePVersion_01"
+		        DBTABLE="dbm_m2FilePVersion">
+			<SYSTEM>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+				<SHOWINNEWS/>
+			</SYSTEM>
+			<VALUES>
+				<!--Verweis auf publiziertes Objekt-->
+				<VALUE FIELD="PObjekt" TYPE="OBJECTREF" DBFIELD="m_pObject" TYPECODEFILTER="m2FilePublication"/>
+				<!--Publizierungscontainer-->
+				<VALUE FIELD="publiziere in" TYPE="OBJECTREF" DBFIELD="m_publishIn" TYPECODEFILTER="Container" SEARCHROOT="#CONFVAR.ibsbase.menuPublic#" SEARCHRECURSIVE="YES"/>
+				<!--Name der Klasse, welche den Konverter repraesentiert-->
+				<VALUE FIELD="Konverter" TYPE="TEXT" DBFIELD="m_converter">m2.version.publish.converter.ConverterImpl</VALUE>
+			</VALUES>
+			<TABS>
+				<TABOBJECT TYPECODE="m2PVersionContainer" TABCODE="m2FilePVersion_tab1"/>
+			</TABS>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

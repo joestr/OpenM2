@@ -1,0 +1,32 @@
+<HTML>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <HEAD><BASE HREF="<%base%>">
+          <TITLE>Welcome</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+document.write ('<LINK REL=StyleSheet TYPE="text/css" HREF="' + top.system.browserDir + '/styleSheet.css">');
+</SCRIPT>
+    </HEAD>
+<BODY BGCOLOR="ffffff">
+    <BR>
+    <TABLE CLASS="welcome" WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" FRAME="BOX" RULES="NONE">
+        <TBODY>
+           <TR VALIGN="TOP"><TD CLASS="news">
+	            <%news%>
+           </TD></TR>
+           <TR VALIGN="TOP"><TD CLASS="inbox">
+                <%inbox%>
+           </TD></TR>
+           <TR VALIGN="TOP"><TD CLASS="user">
+                <%userfullname%>
+           </TD></TR>
+           <TR VALIGN="TOP"><TD CLASS="login">
+                <%lastlogin%>
+           </TD></TR>
+           <TR><TD CLASS="login">
+                <%includes%>
+            </TD></TR>
+        </TBODY>
+    </TABLE>
+    <%changepwd%>
+</BODY>
+</HTML>

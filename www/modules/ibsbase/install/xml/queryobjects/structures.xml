@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 import file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreatorContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="ibs_install">Queries</ID></CONTAINER>
+                <ID DOMAIN="ibs_instquery">Berichte</ID>
+                <NAME>Berichte</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+        </OBJECT>
+        <OBJECT TYPECODE="QueryCreatorContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="ibs_install">Queries</ID></CONTAINER>
+                <ID DOMAIN="ibs_instquery">System</ID>
+                <NAME>System</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+        </OBJECT>
+        <OBJECT TYPECODE="QueryCreatorContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="ibs_install">Queries</ID></CONTAINER>
+                <ID DOMAIN="ibs_instquery">Suchmasken</ID>
+                <NAME>Suchmasken</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+        </OBJECT>
+        <OBJECT TYPECODE="QueryCreatorContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="ibs_install">Queries</ID></CONTAINER>
+                <ID DOMAIN="ibs_instquery">Sonstige</ID>
+                <NAME>Sonstige</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

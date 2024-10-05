@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_Company"
+		        TYPE="Company"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="NO"
+		        DBTABLE="dbm_masterd_company">
+			<SYSTEM DISPLAY="YES">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES>
+				<VALUE FIELD="Short name" TYPE="TEXT" DBFIELD="m_shortname"/>
+				<VALUE FIELD="Legal form" TYPE="TEXT" DBFIELD="m_legalform"/>
+				<VALUE FIELD="Company no" TYPE="TEXT" DBFIELD="m_compnumber"/>
+				<VALUE FIELD="State" TYPE="TEXT" DBFIELD="m_state"/>
+				<VALUE FIELD="Tax no" TYPE="TEXT" DBFIELD="m_taxno"/>
+							
+  				<VALUE FIELD="Company Type" TYPE="VALUEDOMAIN" MANDATORY="YES" DBFIELD="m_comptype" CONTEXT="Company Type" READONLY="NO" REFRESH="YES" MULTISELECTION="YES">
+    	        	<FIELDS>
+        		      <SYSFIELD NAME="Name" TOKEN="Name"/> 
+		            </FIELDS>
+		        </VALUE>
+				
+				<VALUE FIELD="Branch of business" TYPE="TEXT" DBFIELD="m_branch"/>
+		
+				<VALUE FIELD="Info" TYPE="TEXT" DBFIELD="m_info"/>
+			</VALUES>
+			<TABS>
+				<TABOBJECT TYPECODE="masterd_OrganizationalUnitContainer" TABCODE="masterd_Company_masterd_OrganizationalUnitContainer">
+					<SYSTEM>
+						<ID DOMAIN=""/>
+						<NAME>Organizational units</NAME>
+					</SYSTEM>
+				</TABOBJECT>
+				<TABOBJECT TYPECODE="masterd_CustomerMappingContainer" TABCODE="masterd_Company_masterd_CustomerMappingContainer">
+					<SYSTEM>
+						<ID DOMAIN=""/>
+						<NAME>Customers</NAME>
+					</SYSTEM>
+				</TABOBJECT>
+				<TABOBJECT TYPECODE="masterd_SubsidiaryContainer" TABCODE="masterd_Company_masterd_SubsidiaryContainer">
+					<SYSTEM>
+						<ID DOMAIN=""/>
+						<NAME>Subsidiaries</NAME>
+					</SYSTEM>
+				</TABOBJECT>
+				<TABOBJECT TYPECODE="masterd_StaffMemberContainer" TABCODE="masterd_Company_masterd_StaffMemberContainer">
+					<SYSTEM>
+						<ID DOMAIN=""/>
+						<NAME>Staff</NAME>
+					</SYSTEM>
+				</TABOBJECT>
+				<TABOBJECT TYPECODE="masterd_PersonContainer" TABCODE="masterd_Company_masterd_PersonContainer">
+					<SYSTEM>
+						<ID DOMAIN=""/>
+						<NAME>Persons</NAME>
+					</SYSTEM>
+				</TABOBJECT>
+			</TABS>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>
