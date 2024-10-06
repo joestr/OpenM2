@@ -82,7 +82,7 @@ public class NTLMServer extends Object
             // did the client respond with an NTLM authentication message?
             else if (auth.startsWith (NTLMServer.AUTH_NTLM_PREFIX))
             {
-                byte[] msg = new sun.misc.BASE64Decoder ().decodeBuffer (auth.substring (5));
+                byte[] msg = java.util.Base64.getMimeDecoder().decode(auth.substring (5));
                 int off = 0;
                 int length = 0;
                 int offset = 0;
@@ -107,7 +107,7 @@ public class NTLMServer extends Object
                     };
                     response.setHeader (NTLMServer.AUTH_HEADER,
                         NTLMServer.AUTH_NTLM_PREFIX +
-                        new sun.misc.BASE64Encoder ().encodeBuffer (msg1).trim ());
+                        java.util.Base64.getMimeEncoder ().encodeToString (msg1).trim ());
                     response.sendError (HttpServletResponse.SC_UNAUTHORIZED);
                 } // if (msg[8] == 1)
                 else if (msg[8] == 3)

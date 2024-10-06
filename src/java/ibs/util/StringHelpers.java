@@ -9,6 +9,7 @@ package ibs.util;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Base64.Encoder;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -901,8 +902,8 @@ public abstract class StringHelpers extends Object
             byte[] hash = md.digest ();
 
             // Obtain a BASE64 output. Output is an integral of 24 bit
-            sun.misc.BASE64Encoder encoder = new sun.misc.BASE64Encoder ();
-            base64cipher = encoder.encode (hash);
+            Encoder encoder = java.util.Base64.getMimeEncoder();
+            base64cipher = encoder.encodeToString (hash);
         } // try
         catch (UnsupportedEncodingException e)
         {
