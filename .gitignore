@@ -1,0 +1,5 @@
+# Eclipse workspace folder
+.metadata
+
+# JDK realted files like extracted folder, compressed folder, and docs folder
+jdk*
