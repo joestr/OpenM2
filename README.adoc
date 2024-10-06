@@ -1,0 +1,12 @@
+= OpenM2
+
+This project is a fork of the original OpenM2 project (https://sourceforge.net/projects/openm2project/[SourceForge] and https://openm2.org/[homepage]) by https://trinitec.at/loesungen/openM2[trinitec].
+
+== Goals
+
+The goal here is to tinker around and see if we can port this project to more modern toolchain and try to be backwards compatible.
+
+== License
+
+This project is dual licensed. +
+The original code parts are licensed under the GPLv3 while additional code or changed files are licensed under the AGPLv3.
