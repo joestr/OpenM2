@@ -3,3 +3,7 @@
 
 # JDK realted files like extracted folder, compressed folder, and docs folder
 jdk*
+
+# Ignore build output
+comp2/m2/
+comp2/ibs/
