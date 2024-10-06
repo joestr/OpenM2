@@ -13,18 +13,5 @@
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
-		<nature>com.sysdeo.eclipse.tomcat.tomcatnature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>comp</name>
-			<type>2</type>
-			<locationURI>comp</locationURI>
-		</link>
-		<link>
-			<name>complib</name>
-			<type>2</type>
-			<locationURI>complib</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>

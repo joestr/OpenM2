@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
 <jardesc>
-    <jar path="c:/dev/cvs/opentos/www/WEB-INF/lib/ibs.jar"/>
+    <jar path="./www/WEB-INF/lib/ibs.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/opentos/createJarIbs.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
