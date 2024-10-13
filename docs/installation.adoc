@@ -1,0 +1,27 @@
+= Installation
+
+This guide walks thtough the installation on a Ubuntu 22.04 system.
+
+[source,bash]
+----
+wget https://download.oracle.com/x/jdk-9.0.4_linux-x64_bin.tar.gz --output-document=jdk.tar.gz
+tar -xf jdk.tar.gz 
+sudo mv jdk-9.0.4/ /opt/
+echo "PATH=$PATH:/opt/jdk-9.0.4/bin" | sudo tee /etc/profile.d/99-jdk9.sh
+echo "JAVA_HOME=/opt/jdk-9.0.4" | sudo tee -a /etc/profile.d/99-jdk9.sh
+source /etc/profile && source ~/.profile
+java -version
+echo $JAVA_HOME 
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.95/bin/apache-tomcat-9.0.95.tar.gz --output-document=tomcat.tar.gz
+tar -xf tomcat.tar.gz
+sudo mv apache-tomcat-9.0.95/ /opt/
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl -fsSL https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list | sudo tee /etc/apt/sources.list.d/mssql-server-2022.list
+sudo apt-get update && sudo apt-get install -y mssql-server
+sudo /opt/mssql/bin/mssql-conf setup
+systemctl status mssql-server --no-pager
+curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+sudo apt-get update && sudo apt-get install mssql-tools18 unixodbc-dev
+echo "PATH:$PATH:/opt/mssql-tools18/bin" | sudo tee /etc/profile.d/98-mssql-tools18.sh
+source /etc/profile && source ~/.profile
+----
