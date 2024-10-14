@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<META http-equiv="Content-Type" CONTENT="no-cache; text/html; charset=UTF-8">
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// if the flag is true, the m2-standard search button in every
+// container is disabled
+top.simpleSearch = true;
+
+document.write ('<LINK REL=StyleSheet TYPE="text/css" HREF="' + top.system.browserDir + '/styleSearch.css">');
+
+function getSelectElem ()
+{
+    return document.searchForm.slct;
+}
+
+function add (name, value)
+{
+    toAdd = new Option (name, value);
+    document.searchForm.slct.options[document.searchForm.slct.length] = toAdd;
+}
+
+function refresh ()
+{
+    // check for Netscape 4:
+    if (top.system.browser.ns4)
+    {
+        // refresh the page:
+        history.go (0);
+    } // if
+} // refresh
+
+function trySubmit (simple)
+{
+    document.searchForm.curoid.value = top.oid;
+    document.searchForm.oid.value = top.oid;
+    if (simple)
+    {
+        document.searchForm.fct.value = 333;
+        if (top.iTx (document.searchForm.sval, false) &&
+            top.iLLE(document.searchForm.sval, 255))
+        {
+            document.searchForm.submit ();
+        }
+    } // if
+    else
+    {
+        document.searchForm.fct.value=85;
+    	if (document.searchForm.slct)
+    	{
+                if (document.searchForm.slct.selectedIndex > 1)
+                {
+                    var i = 0;
+                    i = document.searchForm.slct.selectedIndex;
+                    document.searchForm.qucroid.value = document.searchForm.slct.options[i].value;
+                    document.searchForm.oid.value = "";
+                    document.searchForm.slct.selectedIndex = 0;
+                    document.searchForm.submit ();
+                } // if
+    	} // if
+    }
+} // trySubmit
+
+function setValues (param)
+{
+    if (top.oid != 0x0000000000000000 && top.isPhysical)
+        document.searchForm.srcid.value = top.oid;
+    else
+        param = true;
+    document.searchForm.sgl.value = '' + param;
+} // setValues
+
+function doLogout ()
+{
+    if (confirm (top.multilang.ibs_ibsbase_scripts_MSG_LOGOUT_CONFIRM))
+    {
+        document.searchForm.fct.value = 6;
+        document.searchForm.submit ();
+        top.window.location.reload();
+    }
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+    document.write ('<FORM NAME="searchForm" ACTION="' + top.urlSearchAdv +'" TARGET="searchFrame" METHOD="POST">');
+</SCRIPT>
+<BODY>
+<TABLE>
+    <TR>
+        <TD ALIGN="LEFT" COLSPAN="2" VALIGN="MIDDLE" STYLE="padding-right: 10px;">
+            <NOBR>
+            <SELECT NAME="slct" SIZE="1" OnChange="top.scripts.showSearchFrame(false, true, true); trySubmit (false);">
+                <OPTION STYLE="color: #AAAAAA;" READONLY="">Select...</OPTION>
+            </SELECT>
+
+            <BUTTON TYPE="BUTTON" ONCLICK="top.scripts.actualizeSearchFrameHistory();top.scripts.showSearchFrame (false, true, false, false); top.createButtonBar ('0x0000000000000000','200000000',null,0); var sb = null; var frame = top.searchFrame.sheet1; if(frame != null) sb = frame.document.getElementById('historyElemSelection'); if(sb == null || sb.length < 2) {if(top.buttons.document != null && top.buttons.document.getElementById('histButton') != null) top.buttons.document.getElementById('histButton').disabled = true;}"
+                STYLE="padding : 0px;">
+                <IMG NAME="sback" SRC="images/header/navBack.gif" BORDER="0"
+                    ALT="top.multilang.ibs_ibsbase_buttons_btnDesc_searchBack"
+                    ONLOAD="top.tryCall('top.search.document.images.sback.alt=top.scripts.getVarContent(\'s4\')');">
+            </BUTTON>
+
+            <INPUT TYPE="TEXT" NAME="sval" SIZE="10" MAXLENGTH="255" VALUE="">
+
+            <BUTTON TYPE="BUTTON"
+                    ONCLICK="setValues (true); top.scripts.showSearchFrame(false, true, true); trySubmit (true);"
+                    STYLE="padding : 0px;">
+                <IMG NAME="ssgl" SRC="images/buttons/buttonSearchSimpleGlobal.gif" BORDER="0"
+                     ALT="top.multilang.ibs_ibsbase_buttons_btnDesc_search"
+                     ONLOAD="top.tryCall('top.search.document.images.ssgl.alt=top.scripts.getVarContent(\'s1\')');">
+            </BUTTON>
+
+            <BUTTON TYPE="BUTTON"
+                    ONCLICK="setValues (false); top.scripts.showSearchFrame(false, true, true); trySubmit (true);"
+                    STYLE="padding : 0px;">
+                <IMG NAME="ssc" SRC="images/buttons/buttonSearchSimpleContainer.gif" BORDER="0"
+                     ALT="top.multilang.ibs_ibsbase_buttons_btnDesc_searchContainer"
+                     ONLOAD="top.tryCall('top.search.document.images.ssc.alt=top.scripts.getVarContent(\'s2\')');">
+            </BUTTON>
+
+<!--
+            <A HREF="JavaScript: trySubmit (false);">
+                <IMG NAME="ssa"
+                     SRC="images/buttons/buttonSearchAdvanced.gif" BORDER="0"
+                     ALT="Erweiterte Suche"
+                     OnLoad="top.tryCall('top.search.document.images.ssa.alt=top.scripts.getVarContent(\'s3\')');">
+            </A>
+-->
+            </NOBR>
+        </TD>
+        <TD STYLE="border-left: 1px dotted white; padding-left: 5px;">
+        &nbsp;
+            <BUTTON TYPE="BUTTON" NAME="logout" ID="logout" ONCLICK="doLogout ();"
+                    STYLE="width:30px; font-size: 10px; padding : 0px;" TITLE="Logout">
+                <IMG NAME="logout" SRC="images/buttons/buttonLogout.gif" ALIGN="ABSMIDDLE">
+            </BUTTON>
+        </TD>
+    </TR>
+</TABLE>
+<INPUT NAME="sgl" TYPE="HIDDEN" VALUE="true">
+<INPUT NAME="fct" TYPE="HIDDEN" VALUE="333">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+    var event = 100;
+    if (document.searchForm.slct)
+        event = 101;
+    document.write ('<INPUT NAME="evt" TYPE="HIDDEN" VALUE="' + event + '">');
+//-->
+</SCRIPT>
+
+<INPUT NAME="srcid" TYPE="HIDDEN" VALUE="0x0000000000000000">
+<INPUT NAME="curoid" TYPE="HIDDEN" VALUE="0x0000000000000000">
+<INPUT NAME="oid" TYPE="HIDDEN" VALUE="0x0000000000000000">
+<INPUT NAME="qucroid" TYPE="HIDDEN" VALUE="0x0000000000000000">
+</FORM>
+</BODY>
+</HTML>

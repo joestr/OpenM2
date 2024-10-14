@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 export/import file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="DocumentTemplateContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="masterd_install">Formularvorlagen</ID></CONTAINER>
+                <ID DOMAIN="masterd_insttempl">masterd_templates</ID>
+                <NAME>Master Data</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+            <OBJECTS>
+                <!-- address -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">address</ID>
+                        <NAME>Address</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_Address.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+                <!-- address -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">addresscontainer</ID>
+                        <NAME>Address Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_AddressContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+                <!-- contactdata -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">contactdata</ID>
+                        <NAME>Contact Data</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_ContactData.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+                <!-- contactdatacontainer -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">contactdatacontainer</ID>
+                        <NAME>Contact Data Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_ContactDataContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- person -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">person</ID>
+                        <NAME>Person</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_Person.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- personcontainer -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">personcontainer</ID>
+                        <NAME>Person Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_PersonContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- staffmember -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">staffmember</ID>
+                        <NAME>Staff Member</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_StaffMember.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- staffmembercontainer -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">staffmembercontainer</ID>
+                        <NAME>Staff Member Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_StaffMemberContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- rolemapper -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">rolemapper</ID>
+                        <NAME>Role Mapper</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_RoleMapper.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- rolemappercontainer -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">rolemappercontainer</ID>
+                        <NAME>Role Mapper Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_RoleMapperContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- organizationalunit -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">organizationalunit</ID>
+                        <NAME>Organizational Unit</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_OrganizationalUnit.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- organizationalunitcontainer -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">organizationalunitcontainer</ID>
+                        <NAME>Organizational Unit Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_OrganizationalUnitContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- customermapping -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">customermapping</ID>
+                        <NAME>Customer Mapping</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_CustomerMapping.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+				<!-- customermappingcontainer -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">customermappingcontainer</ID>
+                        <NAME>Customer Mapping Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_CustomerMappingContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+
+				<!-- subsidiary -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">subsidiary</ID>
+                        <NAME>Subsidiary</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_Subsidiary.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- subsidiarycontainer -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">subsidiarycontainer</ID>
+                        <NAME>Subsidiary Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_SubsidiaryContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- company -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">company</ID>
+                        <NAME>Company</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_Company.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+				<!-- companycontainer -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">companycontainer</ID>
+                        <NAME>Company Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_CompanyContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+                
+                <!-- masterdatacontainer -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_insttempl">masterdatacontainer</ID>
+                        <NAME>Master Data Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">masterd_MasterDataContainer.xml</VALUE>
+                    </VALUES>
+                </OBJECT>               
+            </OBJECTS>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

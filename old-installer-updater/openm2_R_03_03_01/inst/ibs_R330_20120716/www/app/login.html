@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write ('<META HTTP-EQUIV="Refresh" CONTENT="0; URL=../ApplicationServlet' + document.location.search + '">');
+//-->
+</SCRIPT>
+<TITLE>ibs login</TITLE>
+<STYLE> 
+    BODY {font: 9pt "Arial";}
+    H1  {font: 16pt "Arial";}
+    H2  {font: 12pt "Arial";}
+    H3  {font: 10pt "Arial";}
+    TR  {font: 9pt "Arial";}
+    TR.between {font: 3pt "Arial";}
+    TD.little {font: 8pt "Arial";}
+    A.invers{font: 9pt "Arial"; color: white}
+    A {font: 12pt "Arial"; font-weight:bold}
+</STYLE>
+</HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- hide script content from older web browsers
+var stepCounter = 0;                    // counter for the steps
+var MAX_COUNTER = 100;                  // maximum number of steps
+var STEP_TIME = 1000;                   // time for one step in milli seconds
+
+/**
+ * void copyright ()
+ * Display copyright message.
+ */
+function copyright ()
+{
+    var timer = null;
+    var status = "Copyright (c) trinitec IT Solutions & Consulting GmbH and comparo Software & Consulting GmbH. All Rights Reserved.";
+
+    window.status = status;
+    timer = window.setTimeout ('copyright ()', 5000);
+} // copyright
+
+/**
+ * void nextStep ()
+ * Next step during starting.
+ */
+function nextStep ()
+{
+    var obj = window.document.getElementById ("message");
+    var timer = null;
+
+    if (++stepCounter <= MAX_COUNTER)   // just a normal step?
+    {
+        // make output:
+        obj.innerHTML += ".";
+        // call this function another time:
+        timer = window.setTimeout ('nextStep ()', STEP_TIME);
+    } // just a normal step
+    else                                // the last step
+    {
+        // print corresponding message:
+        obj.innerHTML = "There was a problem during startup of application.<BR /> Please call your administrator.";
+    } // else the last step
+} // nextStep
+// end of script -->
+</SCRIPT>
+
+<BODY BGCOLOR=#FFFFFF TEXT="#000000" 
+    LINK="#829AB2" VLINK="#13507B" onLoad="copyright ();nextStep ();">
+<H1><DIV ID="message">Application is starting</DIV></H1>
+</BODY>
+</HTML>

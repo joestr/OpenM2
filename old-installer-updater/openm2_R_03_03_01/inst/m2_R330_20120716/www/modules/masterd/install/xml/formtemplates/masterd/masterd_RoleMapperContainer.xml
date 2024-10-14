@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_RoleMapperContainer"
+		        TYPE="Role mapper container"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="NO">
+			<SYSTEM DISPLAY="NO">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES/>
+			<CONTENT>
+				<MAYCONTAIN>masterd_RoleMapper</MAYCONTAIN>
+				<COLUMNS/>
+				<!-- 
+				<COLUMN NAME="Beschreibung"/>
+				</COLUMNS>
+				 -->
+			</CONTENT>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

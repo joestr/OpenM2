@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 export/import file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="WorkspaceTemplate">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="m2store_install">Strukturvorlagen</ID></CONTAINER>
+                <ID DOMAIN="m2store_install">wsptemplate</ID>
+                <NAME>Warenkatalog WorkspaceTemplate</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="filename" TYPE="FILE">workspaceTemplate.xml</VALUE>
+            </VALUES>
+            <TABS/>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

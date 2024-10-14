@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="ExtEntryPoint" TYPE="Externer Datenhalter" MAYEXISTIN="ExportContainer,Container">
+            <SYSTEM>
+                <NAME/>
+                <DESCRIPTION/>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="ID" TYPE="TEXT"/>
+            </VALUES>
+            <TABS>
+                <TABOBJECT TYPE="Inhalt" TYPECODE="ExtRootContainer" TABCODE="ExtEntryPoint_ExtRootContainer">
+                    <SYSTEM>
+                        <NAME>Inhalt</NAME>
+                    </SYSTEM>
+                </TABOBJECT>
+            </TABS>            
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

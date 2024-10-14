@@ -1,0 +1,15 @@
+@import url(styleCommon.css);
+
+HTML
+{
+    height: 100%;
+}
+BODY
+{
+/*
+    background: url("../images/tabs/buttonBarBackground.gif");
+    background-repeat: repeat;
+*/
+    background-color: #ffffff;
+    height: 100%
+}

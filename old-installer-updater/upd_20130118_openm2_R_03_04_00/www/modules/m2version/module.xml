@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+module configuration file
+
+- this file contains all data which is necessary for the module
+- the format of this file is xml-conform.
+-->
+
+<!--
+*******
+MODULE:
+*******
+module node:
+    Contains the module data.
+    id:             The id of the module.
+    name:           The module name.
+    version:        The version number of the module.
+    build:          The build number of the module.
+    providername:   The name of the provider for the module.
+    active:         Is the module active? ("true" or "false")
+-->
+<module
+    id="m2version"
+    name="m2 Version Module"
+    version="3.4.0"
+    build="#BUILD_NUMBER#"
+    providername="kr"
+    active="true">
+
+    <description>
+        %description
+    </description>
+
+    <copyright url="%copyrightURL">
+        (c) 1998 - 2008 trinitec IT Solutions &amp; Consulting GmbH. All Rights Reserved.
+    </copyright>
+
+    <license key="" url="%licenseURL">
+        %licensetext
+    </license>
+
+    <update url="%licenseURL" label=""/>
+
+    <!--
+    *********
+    REQUIRES:
+    *********
+    requires node:
+        Contains all modules which are necessary for the module to run.
+    -->
+    <requires>
+    <!--
+    ******************
+    NECESSARY MODULES:
+    ******************
+    reqmodule node (within requires node):
+        id:         The id of the necessary module.
+        version:    The version number of the necessary module.
+        match:      Version match.
+                    x ... identical, y ... greater, z ... any value
+                    perfect:        x.x.x
+                    equivalent:     x.x.x or x.x.y
+                    compatible:     x.x.x or x.x.y or x.y.z
+                    greaterOrEqual: x.x.x or x.x.y or x.y.z or y.z.z
+    -->
+        <reqmodule id="ibsbase" version="3.4.0" match="equivalent"/>
+        <reqmodule id="ibsdoc" version="3.4.0" match="equivalent"/>
+        <reqmodule id="ibsworkflow" version="3.4.0" match="equivalent"/>
+        <reqmodule id="ibswebdav" version="3.4.0" match="equivalent"/>
+        <reqmodule id="m2doc" version="3.4.0" match="equivalent"/>
+    </requires>
+
+    <!--
+    ******************
+    FUNCTION HANDLERS:
+    ******************
+    functionhandlers node:
+        Contains all available function handlers.
+
+    functionhandler node (within functionhandlers node):
+        id:         The id of the function handler.
+        classname:  The fully qualified name of the class which implements the
+                    function handler.
+        minfunc:    The minimum handled function number.
+        maxfunc:    The maximum handled function number.
+        replace:    The id of the function handler which is replaced by this
+                    one.
+    -->
+    <functionhandlers>
+	    <functionhandler id="m2versionfunctions" name="m2 Version Functions"
+	        classname="m2.version.VersionFunctionHandler"
+	        minfunc="10031" maxfunc="10031" replace=""/>
+    </functionhandlers>
+</module>

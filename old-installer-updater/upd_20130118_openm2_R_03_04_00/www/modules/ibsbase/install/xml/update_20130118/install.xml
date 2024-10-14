@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $Id: install.xml,v 1.14 2011/10/18 14:53:08 rburgermann Exp $ -->
+<!DOCTYPE install SYSTEM "install.dtd">
+<!--
+    multi-installer configuration file
+    this file defines the steps for an installation
+-->
+<install>
+
+    <!-- update necessary procedures -->
+	<instsql sourcefile="../sql_ibsbase/#DBDIR#/update/3.3/U331001p_ObjectProc2.sql" dispmode="dispone"/>
+    <instsql sourcefile="../sql_ibsbase/#DBDIR#/update/3.3/U331002p_Helpers2.sql" dispmode="dispone"/>
+
+	<!-- the updates -->
+    <instxml sourcefile="common/updates.xml" destiddomain="ibs_instobj" destid="updates"/>
+
+</install>

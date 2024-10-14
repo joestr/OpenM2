@@ -1,0 +1,96 @@
+.header
+{
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    COLOR: WHITE;
+    TEXT-ALIGN: right;
+    VERTICAL-ALIGN:	middle;
+    PADDING-LEFT: 5px;
+    PADDING-RIGHT: 5px;
+}
+TABLE.header
+{
+    LEFT: 0pt;
+    MARGIN: 0px;
+    TOP: 0pt;
+    BACKGROUND-IMAGE: url("../images/header/headerBackground.gif");
+    BACKGROUND-COLOR: orange;
+}
+.header TD
+{
+    HEIGHT: 26px;
+    VERTICAL-ALIGN: middle;
+}
+.headernum
+{
+    FONT-SIZE: 11px; 
+    FONT-WEIGHT: normal;
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    COLOR: WHITE;
+}
+.path
+{
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    FONT-FAMILY : Verdana, Tahoma, Arial, sans-serif;
+    PADDING-LEFT: 5px;
+    PADDING-RIGHT: 5px;
+}
+.path A
+{
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+	FONT-FAMILY : Verdana, Tahoma, Arial, sans-serif;
+    COLOR: black;
+    TEXT-DECORATION: none;
+}
+.path A:hover
+{
+	FONT-FAMILY : Verdana, Tahoma, Arial, sans-serif;
+    COLOR: #6E132A;
+    TEXT-DECORATION: underline;
+}
+TABLE.path
+{
+    BACKGROUND-IMAGE: url("../images/header/pathBackground.gif");
+    BACKGROUND-REPEAT: repeat-x;
+	WIDTH:		100%;
+	TEXT-ALIGN:	left;
+	PADDING-TOP: 5px;
+    MARGIN-BOTTOM: 5px;
+	HEIGHT: 20px;
+}
+TR.path TD
+{
+	VERTICAL-ALIGN: middle;
+}
+TD.path
+{
+	TEXT-ALIGN:	left;
+}
+.path A
+{
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    FONT-FAMILY : Verdana, Tahoma, Arial, sans-serif;
+    COLOR: BLACK;
+    TEXT-DECORATION: NONE;
+}
+.path A:hover
+{
+    COLOR: #6E132A;
+    TEXT-DECORATION: underline;
+}
+.pathsep
+{
+    COLOR: BLACK;
+}
+.pathobj
+{
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    FONT-FAMILY : Verdana, Tahoma, Arial, sans-serif;
+    COLOR: #6E132A;
+    TEXT-DECORATION: NONE;
+}

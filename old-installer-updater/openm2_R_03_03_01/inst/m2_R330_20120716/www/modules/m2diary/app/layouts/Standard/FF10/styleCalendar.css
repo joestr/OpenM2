@@ -1,0 +1,98 @@
+BODY
+{
+    background: url(../images/global/calendarBackground.gif) #cccccc no-repeat right 50%;
+    margin-left: 10px;
+    text-align: center;
+}
+TABLE
+{
+    float: none;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 13px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+TABLE.calheader
+{
+    background-color: #c0c0c0;
+    font-weight: bold;
+}
+TD.calheader
+{
+    text-align: center;
+}
+
+TABLE.calbody
+{
+    padding: 2px;
+}
+
+TABLE.day,
+TABLE.month
+{
+    border-bottom-color: black;
+    border-left-color: black;
+    border-right-color: black;
+    border-top-color: black;
+}
+COL.hours,
+COL.days
+{
+    background-color: #cccccc;
+    font-weight: bold;
+    text-align: left;
+}
+
+TD.listrow1,
+TD.listrow2
+{
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+TD.listrow2
+{
+    background-color: #c0c0c0;
+}
+A
+{
+    color: darkblue;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+}
+A:hover
+{
+    color: blue;
+    text-decoration: underline;
+}
+.term
+{
+    background-color: #c0c0c0;
+}
+.place
+{
+    color: black;
+}
+.holiday
+{
+    color: darkblue;
+}
+
+.termname1 A
+{
+    color: blue;
+}
+.termname2 A
+{
+    color: purple;
+}
+.termname3 A
+{
+    color: navy;
+}
+.termname4 A
+{
+    color: fuchsia;
+}

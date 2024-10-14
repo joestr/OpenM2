@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="WebDavDocument02" TYPE="WebDav Dokument aus Vorlage" MAYEXISTIN="Container,ExportContainer" CLASS="ibs.obj.webdav.WebDavDocument_02" SHOWINMENU="NO" DBTABLE="dbm_webdavdocument02">
+            <SYSTEM DISPLAY="YES">
+                <ID DOMAIN=""/>
+                <NAME>WebDav Dokument aus Vorlage</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL/>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="Dokument" TYPE="FILE" DBFIELD="m_document"/>
+                <VALUE FIELD="Vorlage" TYPE="QUERYSELECTIONBOX" QUERYNAME="_GetDocumentTemplate" REFRESH="YES" EMPTYOPTION="YES" DBFIELD="m_template"/>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE install SYSTEM "install.dtd">
+<!--
+	multi-installer configuration file
+	this file defines the steps for an installation
+-->
+<install>
+	<!-- create common structures -->
+	<instxml sourcefile="common/structures.xml" destiddomain="ibs_instobj" destid="di" />
+
+	<!-- create the queryobject structures -->
+	<instxml sourcefile="queryobjects/structures.xml" destiddomain="masterd_install" destid="Queries" />
+
+	<!-- create the queryobjects -->
+	<instxml sourcefile="queryobjects/reports/*.xml" destiddomain="masterd_instquery" destid="Berichte" />
+	<instxml sourcefile="queryobjects/search/*.xml" destiddomain="masterd_instquery" destid="Suchmasken" />
+	<instxml sourcefile="queryobjects/system/*.xml" destiddomain="masterd_instquery" destid="System" />
+	<instxml sourcefile="queryobjects/misc/*.xml" destiddomain="masterd_instquery" destid="Sonstige" />
+
+	<!-- create the connectors -->
+	<!-- nothing to do -->
+
+	<!-- create the importscrips -->
+	<!-- nothing to do -->
+
+	<!-- create the translators -->
+	<!-- nothing to do -->
+
+	<!-- create the workflowtemplates -->
+	<!-- nothing to do -->
+
+	<!-- create the formtemplates structures -->
+	<!-- nothing to do -->
+
+	<!-- create the formtemplates -->
+	<!-- masterdata -->
+	<instxml sourcefile="formtemplates/masterd/structures.xml"
+		destiddomain="masterd_install" destid="Formularvorlagen" />
+
+	<!-- stucture templates -->
+	<!-- nothing to do -->
+
+	<!-- create common object structures -->
+	<instxml sourcefile="common/usergroups.xml"	destiddomain="ibs_instobj" destid="groups" />
+	<instxml sourcefile="common/objects.xml" destiddomain="ibs_instobj"	destid="menuobjects" />
+	<instxml sourcefile="common/menutabs.xml" destiddomain="ibs_instobj" destid="menutabs" />
+</install>

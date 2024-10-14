@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $Id: install.xml,v 1.14 2011/10/18 14:53:08 rburgermann Exp $ -->
+<!DOCTYPE install SYSTEM "install.dtd">
+<!--
+    multi-installer configuration file
+    this file defines the steps for an installation
+-->
+<install>
+    <!-- create common package structures -->
+    <instxml sourcefile="common/structures.xml"
+             destiddomain="ibs_instobj" destid="di"/>
+
+    <!-- create the queryobject structures -->
+    <instxml sourcefile="queryobjects/structures.xml"
+             destiddomain="ibs_install" destid="Queries"/>
+    <!-- create the queryobjects -->
+    <instxml sourcefile="queryobjects/reports/*.xml"
+             destiddomain="ibs_instquery" destid="Berichte"/>
+    <instxml sourcefile="queryobjects/search/*.xml"
+             destiddomain="ibs_instquery" destid="Suchmasken"/>
+    <instxml sourcefile="queryobjects/system/*.xml"
+             destiddomain="ibs_instquery" destid="System"/>
+    <instxml sourcefile="queryobjects/misc/*.xml"
+             destiddomain="ibs_instquery" destid="Sonstige"/>
+
+    <!-- create the connectors -->
+    <instxml sourcefile="connectors/structures.xml"
+             destiddomain="ibs_install" destid="Konnektoren"/>
+
+    <!-- create the importscrips -->
+    <instxml sourcefile="importscripts/structures.xml"
+             destiddomain="ibs_install" destid="Importskripts"/>
+
+    <!-- create the translators -->
+    <instxml sourcefile="translators/structures.xml"
+             destiddomain="ibs_install" destid="Translatoren"/>
+
+    <!-- create the workflowtemplates -->
+    <instxml sourcefile="workflows/structures.xml"
+             destiddomain="ibs_install" destid="Workflowvorlagen"/>
+
+
+    <!-- create the formtemplates structures -->
+<!--
+    <instxml sourcefile="formtemplates/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+-->
+
+    <!-- create the formtemplates -->
+    <!-- value domain -->
+    <instxml sourcefile="formtemplates/valuedomain/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+    <!-- database connector -->
+    <instxml sourcefile="formtemplates/dbcon/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+    <!-- external database -->
+    <instxml sourcefile="formtemplates/extdb/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+    <!-- webdav -->
+    <instxml sourcefile="formtemplates/webdav/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+    <!-- reorg -->
+    <instxml sourcefile="formtemplates/reorg/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+    <!-- includes -->
+    <instxml sourcefile="formtemplates/include/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+    <!-- configuration -->
+    <instxml sourcefile="formtemplates/config/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+    <!-- valuedomain -->
+    <instxml sourcefile="formtemplates/valuedomain/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+    <!-- query -->
+    <instxml sourcefile="formtemplates/query/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+
+    <!-- export 
+    <instxml sourcefile="formtemplates/export/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+             -->
+
+    <!-- import
+    <instxml sourcefile="formtemplates/import/structures.xml"
+             destiddomain="ibs_install" destid="Formularvorlagen"/>
+             -->
+
+    <!-- stucture templates -->
+    <instxml sourcefile="structures/structures.xml"
+             destiddomain="ibs_install" destid="Strukturvorlagen"/>
+
+    <!-- templates for standard users -->
+    <instxml sourcefile="structures/workspaceTemplate_Administrator.xml"
+             destiddomain="ibs_install" destid="Strukturvorlagen"/>
+    <instxml sourcefile="structures/workspaceTemplate_SysAdmin.xml"
+             destiddomain="ibs_install" destid="Strukturvorlagen"/>
+    <instxml sourcefile="structures/workspaceTemplate_Debug.xml"
+             destiddomain="ibs_install" destid="Strukturvorlagen"/>
+
+    <!-- create common object structures -->
+    <instxml sourcefile="common/usergroups.xml"
+             destiddomain="ibs_instobj" destid="groups"/>
+    <instxml sourcefile="common/objects.xml"
+             destiddomain="ibs_instobj" destid="menuobjects"/>
+    <instxml sourcefile="common/menutabs.xml"
+             destiddomain="ibs_instobj" destid="menutabs"/>
+
+    <!-- create the base workspace references -->
+    <instsql sourcefile="../sql_ibsbase/#DBDIR#/install/createBaseWorkspaceRefs.sql" dispmode="dispone"/>
+             
+</install>

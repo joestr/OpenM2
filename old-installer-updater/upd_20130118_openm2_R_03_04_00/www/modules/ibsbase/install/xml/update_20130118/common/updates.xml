@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    Packaging Instructions:
+    
+    Replace the following strings
+    #20YYMMDD#  with date of the package in format YYYYMMDD e.g. 20070912
+    #MODULE#    with name of module e.q. elak
+
+    #TASTLIST#  Replace with the extended content from the readme.txt
+               - #JIRA_ID#    #JIRA_SHORTDESC#
+                 #JIRA_DESCRIPTION#
+               Just copy and paste the taskslist!
+-->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="Note">
+            <SYSTEM>
+                <ID DOMAIN="ibs_update">update_20130118_openm2</ID>
+                <NAME>update_20130118_openm2</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="content" TYPE="CHAR"><![CDATA[
+<B>Inhalt des Installationspakets:</B>
+<PRE>
+
+<h2 id="issuelist">Release Notes - openM2 - Version Release 3.4.0</h2>
+
+<h2>Bug</h2>
+<ul>
+<li>[<a href='javascript:document.getElementById("IBS-647").scrollIntoView(true);'>IBS-647</a>]	Entries in the protocol tab are not shown correctly in all cases</li>
+<li>[<a href='javascript:document.getElementById("IBS-828").scrollIntoView(true);'>IBS-828</a>]	Closing text is not shown within pop-up windows</li>
+<li>[<a href='javascript:document.getElementById("IBS-831").scrollIntoView(true);'>IBS-831</a>]	containerOid2 is not updated on an object OID change when using the provided stored procedure</li>
+<li>[<a href='javascript:document.getElementById("IBS-834").scrollIntoView(true);'>IBS-834</a>]	f_getValuesFromOids - values cannot have more than 18 characters and result starts always with a space</li>
+<li>[<a href='javascript:document.getElementById("IBS-835").scrollIntoView(true);'>IBS-835</a>]	Value for Multiselection QUERYSELECTIONBOX field disappears after reloading</li>
+</ul>
+<h2>Improvement</h2>
+<ul>
+<li>[<a href='javascript:document.getElementById("IBS-610").scrollIntoView(true);'>IBS-610</a>]	Try reconnect after loosing database connection in Observer</li>
+<li>[<a href='javascript:document.getElementById("IBS-685").scrollIntoView(true);'>IBS-685</a>]	Support type specific fields within link tab</li>
+<li>[<a href='javascript:document.getElementById("IBS-704").scrollIntoView(true);'>IBS-704</a>]	Remove deprecated parts from 'BusinessObject'</li>
+<li>[<a href='javascript:document.getElementById("IBS-739").scrollIntoView(true);'>IBS-739</a>]	Add the possibility to add credentials to the SMTP server within the configuration</li>
+<li>[<a href='javascript:document.getElementById("IBS-781").scrollIntoView(true);'>IBS-781</a>]	Adaption of notification service to update name of received object</li>
+<li>[<a href='javascript:document.getElementById("IBS-783").scrollIntoView(true);'>IBS-783</a>]	Highlighning of search fields for fieldref and objectref fields</li>
+<li>[<a href='javascript:document.getElementById("IBS-830").scrollIntoView(true);'>IBS-830</a>]	Define OBJECTREF SEARCHROOT via Ext Keys</li>
+<li>[<a href='javascript:document.getElementById("IBS-832").scrollIntoView(true);'>IBS-832</a>]	Create a new conf var pointing to the users container within user administration</li>
+<li>[<a href='javascript:document.getElementById("IBS-841").scrollIntoView(true);'>IBS-841</a>]	Add the possibility to show the DocumentTemplate link without showing the DOM tree section</li>
+<li>[<a href='javascript:document.getElementById("IBS-842").scrollIntoView(true);'>IBS-842</a>]	XSLT library update</li>
+<li>[<a href='javascript:document.getElementById("IBS-848").scrollIntoView(true);'>IBS-848</a>]	Update current jTDS database driver to new version</li>
+<li>[<a href='javascript:document.getElementById("IBS-850").scrollIntoView(true);'>IBS-850</a>]	Replace string concatenation with StringBuilder usage</li>
+</ul>
+<h2>New Feature</h2>
+<ul>
+<li>[<a href='javascript:document.getElementById("IBS-782").scrollIntoView(true);'>IBS-782</a>]	Creation of method to check group membership of user</li>
+<li>[<a href='javascript:document.getElementById("IBS-788").scrollIntoView(true);'>IBS-788</a>]	Subobject creation via ajax</li>
+<li>[<a href='javascript:document.getElementById("IBS-838").scrollIntoView(true);'>IBS-838</a>]	Support dates back to 1.1.1753 for field type DATE</li>
+<li>[<a href='javascript:document.getElementById("IBS-839").scrollIntoView(true);'>IBS-839</a>]	Add month preview support to Calendar Popup component</li>
+<li>[<a href='javascript:document.getElementById("IBS-840").scrollIntoView(true);'>IBS-840</a>]	Confvar for system language dependent standard group names</li>
+</ul>
+<h2>Task</h2>
+<ul>
+<li>[<a href='javascript:document.getElementById("IBS-851").scrollIntoView(true);'>IBS-851</a>]	Packaging 3.4.0</li>
+</ul>
+<h2>Sub-task</h2>
+<ul>
+<li>[<a href='javascript:document.getElementById("IBS-843").scrollIntoView(true);'>IBS-843</a>]	XSLT library update - Analysis</li>
+<li>[<a href='javascript:document.getElementById("IBS-844").scrollIntoView(true);'>IBS-844</a>]	XSLT library update - Implementation</li>
+</ul>
+
+- [<a href='javascript:document.getElementById("IBS-647").scrollIntoView(true);' id='IBS-647'>IBS-647</a>]	Entries in the protocol tab are not shown correctly in all cases
+    + type:	Bug
+    + created:	2011-05-19 10:38:32.0
+    -----------------------------------   
+	Not all entries are shown correctly in the protocol container when they are expanded through the '+' - Symbol.
+	Rendering of entries are wrong in IE6, IE8 and IE8 - Compatible mode
+	
+	After analysis of this issue 
+	&gt;&gt; It is NOT an Internet Explorer problem!!
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-828").scrollIntoView(true);' id='IBS-828'>IBS-828</a>]	Closing text is not shown within pop-up windows
+    + type:	Bug
+    + created:	2012-10-02 09:48:37.0
+    -----------------------------------   
+	Closing text is not shown within pop-up windows.
+	E.g. when opening a document and the config parameter 'Opening in a separate window' is selected.
+	The necessary closing text 'Close window...' is not shown and therefore the link to close the window is not shown too.
+	Further an JS exception is thrown that a text is not accessable.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-831").scrollIntoView(true);' id='IBS-831'>IBS-831</a>]	containerOid2 is not updated on an object OID change when using the provided stored procedure
+    + type:	Bug
+    + created:	2012-10-03 10:32:52.0
+    -----------------------------------   
+	When using the stored procedure 'p_changeOid' the OID within all fields and objects should be change to the new OID.
+	Depending on a comment the field 'ibs_object.containerOid2' should be changed with the update trigger on the table ibs_object.
+	This is not working in all cases due to some checks and ifs within the trigger for an update of the containerOid2.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-834").scrollIntoView(true);' id='IBS-834'>IBS-834</a>]	f_getValuesFromOids - values cannot have more than 18 characters and result starts always with a space
+    + type:	Bug
+    + created:	2012-10-29 11:40:44.0
+    -----------------------------------   
+	Two bugs were found within the provided function 'f_getValuesFromOids'
+	1.) The existing function 'f_getValuesFromOids' returns only 18 characters of a resolved value domain value, but entries can have up to 63 characters
+	2.) The return value from the function 'f_getValuesFromOids' contains always a space at the beginning of the result
+	
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-835").scrollIntoView(true);' id='IBS-835'>IBS-835</a>]	Value for Multiselection QUERYSELECTIONBOX field disappears after reloading
+    + type:	Bug
+    + created:	2012-11-14 17:42:45.0
+    -----------------------------------   
+	Value for Multiselection QUERYSELECTIONBOX field disappears after reloading.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-610").scrollIntoView(true);' id='IBS-610'>IBS-610</a>]	Try reconnect after loosing database connection in Observer
+    + type:	Improvement
+    + created:	2011-03-10 15:22:22.0
+    -----------------------------------   
+	Sometimes the connection to the database gets lost.
+	If this occurs within Observer an error message is thrown and the observer stops working.
+	-------------------------
+	Message from observer 'standard'
+	
+	**** ERROR: ERROR in THREAD observer 'standard'.ibs.service.observer.ObserverException: Error while loading ObserverJobs: java.sql.SQLException: I/O Error: Connection reset by peer: socket write error (SQLState=08S01) Query: SELECT id, name, created, nextExecution, prevExecution, executionCount, state, retryOnError, retryAttempts, className FROM obs_standard WHERE 0 = 0 AND (state = 1 OR state = 3) AND nextExecution &lt; CONVERT (DATETIME, '19.02.2011 15:42')
+	-------------------------
+	
+	The target of this issue is to find a way that the observer recognizes the connection reset and retries to perform its work.
+	The connection reset shall be logged for later traceability.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-685").scrollIntoView(true);' id='IBS-685'>IBS-685</a>]	Support type specific fields within link tab
+    + type:	Improvement
+    + created:	2011-08-02 08:43:17.0
+    -----------------------------------   
+	Support type specific fields within link tab
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-704").scrollIntoView(true);' id='IBS-704'>IBS-704</a>]	Remove deprecated parts from 'BusinessObject'
+    + type:	Improvement
+    + created:	2011-08-22 10:27:17.0
+    -----------------------------------   
+	Remove deprecated and unnecessary parts from the 'BusinessObject' (e.g. Deprecated Stored Procedures)
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-739").scrollIntoView(true);' id='IBS-739'>IBS-739</a>]	Add the possibility to add credentials to the SMTP server within the configuration
+    + type:	Improvement
+    + created:	2011-12-22 13:13:50.0
+    -----------------------------------   
+	Reported internally after switching office to the new location at 06.12.2011:
+	------------------------------------------------------------------------------------------------------
+	After swichting the office and the internet provider it is not possible to send e-mails within the local test environment
+	When within the same domain it is not a problem to use the SMTP from the internet provider
+	Due to the swich we have now XPIRIO as provider and INODE for mails
+	Normally this can be solved due to add credentials to the SMTP server
+	Within openm2 it is not possible to set credentials for the SMTP server
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-781").scrollIntoView(true);' id='IBS-781'>IBS-781</a>]	Adaption of notification service to update name of received object
+    + type:	Improvement
+    + created:	2012-05-30 13:43:28.0
+    -----------------------------------   
+	When a object is distributed by the notification service and afterwards the object name is changed, the change has no effect on the displayed name in the reciever' inbox. This improvement provides a method for updating the displayed name so that it is conform to the object name again.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-783").scrollIntoView(true);' id='IBS-783'>IBS-783</a>]	Highlighning of search fields for fieldref and objectref fields
+    + type:	Improvement
+    + created:	2012-06-04 16:55:19.0
+    -----------------------------------   
+	The following change on fieldref and objectref input fields was requested:
+	
+	When a user allocates an object via a fieldref or objectref to an other object, he clicks on the &quot;allocate&quot; link to show the search fields. Despite the input focus jumps on the input field for search strings, some users don't follow it and leave the search field empty. So the input field shall be highlighted in the style of a mandatory field to point the user to this input field.
+	
+	This change request makes it necessary to pass an additional CSS class to search fields of fieldrefs and objectrefs to hightlight them. This makes it necessary to augment the signature of the templates &quot;m2Dt_objectref_edit&quot;, &quot;m2Dt_fieldref_edit&quot; and &quot;createFieldrefStructure&quot; with the CSS Class of the search field.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-830").scrollIntoView(true);' id='IBS-830'>IBS-830</a>]	Define OBJECTREF SEARCHROOT via Ext Keys
+    + type:	Improvement
+    + created:	2012-10-03 09:39:55.0
+    -----------------------------------   
+	Currently an OBJECTREF SEARCHROOT is defined via the path.
+	
+	Example:
+	                &lt;VALUE FIELD=&quot;Benutzerzuordnung&quot; TYPE=&quot;OBJECTREF&quot;
+	                       TYPECODEFILTER=&quot;User&quot;
+	                       SEARCHROOT=&quot;#CONFVAR.ibsbase.menuPublic#/user administration/users&quot;
+	                       SEARCHRECURSIVE=&quot;YES&quot;
+	                       DBFIELD=&quot;m_user&quot;/&gt;
+	
+	Within system where the user administration container is positioned within another location or has a different name (e.g. Benutzerverwaltung) this approach does not work without using CONFVARs.
+	
+	Provide a possibility to define the SEARCHROOT by setting the Ext Key of the search root container.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-832").scrollIntoView(true);' id='IBS-832'>IBS-832</a>]	Create a new conf var pointing to the users container within user administration
+    + type:	Improvement
+    + created:	2012-10-17 11:14:40.0
+    -----------------------------------   
+	The path to the users container is sometimes needed within object ref fields having this container as search root.
+	
+	To support systems having this container within another location than the standard location (Administration/user administration/users) a conf var holding this path should be created.
+	
+	The long term solution should be to provide the possibility of using extKeys within the SEARCHROOT (see IBS-830)
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-841").scrollIntoView(true);' id='IBS-841'>IBS-841</a>]	Add the possibility to show the DocumentTemplate link without showing the DOM tree section
+    + type:	Improvement
+    + created:	2012-12-20 17:15:51.0
+    -----------------------------------   
+	Add the possibility to to show the DocumentTemplate link without showing the DOM tree section
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-842").scrollIntoView(true);' id='IBS-842'>IBS-842</a>]	XSLT library update
+    + type:	Improvement
+    + created:	2012-12-21 13:20:39.0
+    -----------------------------------   
+	An update of the used XSLT library should be performed for beeing able to used advanced features and enhance performance.
+	Currently XALAN 2.7.0 is used.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-848").scrollIntoView(true);' id='IBS-848'>IBS-848</a>]	Update current jTDS database driver to new version
+    + type:	Improvement
+    + created:	2013-01-16 09:05:30.0
+    -----------------------------------   
+	Currently openM2 uses the jTDS database driver in version 1.2.4
+	Based on the homepage the new version of jTDS resolves some bugs and has a better performance.
+	Additional information --&gt; http://sourceforge.net/p/jtds/news/2012/10/jtds-jdbc-driver-127-and-130-released/
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-850").scrollIntoView(true);' id='IBS-850'>IBS-850</a>]	Replace string concatenation with StringBuilder usage
+    + type:	Improvement
+    + created:	2013-01-17 11:50:44.0
+    -----------------------------------   
+	String concatenation with + or += is far slower than String concatenation when using StringBuffer or StringBuilder.
+	
+	String concatenation with + or += is used within central openM2 methods which frequently used.
+	
+	Examples:
+	* String Helper methods
+	* SQL Helper methods
+	* Stored Procedure call generation
+	* ...
+	
+	These String concatenations especially when used within loops should be replaced by usage of StringBuilder.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-782").scrollIntoView(true);' id='IBS-782'>IBS-782</a>]	Creation of method to check group membership of user
+    + type:	New Feature
+    + created:	2012-05-31 11:52:17.0
+    -----------------------------------   
+	The need arouse to check if a known user (represented by its user object of type &quot;ibs.service.user.User&quot;) is member of a user group. The user group is only known by group name.
+	
+	The task in this issue is to create a method in the user object checking if the user is member in a group specified by the group name.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-788").scrollIntoView(true);' id='IBS-788'>IBS-788</a>]	Subobject creation via ajax
+    + type:	New Feature
+    + created:	2012-06-05 11:37:58.0
+    -----------------------------------   
+	Sometimes it is required to create an object as subobject from within another objects edit view.
+	
+	Create necessary helper functionality based on ajax which can be integrated into an objects edit stylesheet for being able to create subobjects on demand via Ajax.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-838").scrollIntoView(true);' id='IBS-838'>IBS-838</a>]	Support dates back to 1.1.1753 for field type DATE
+    + type:	New Feature
+    + created:	2012-12-05 11:12:56.0
+    -----------------------------------   
+	Currently the client side java script validation restricts DATE fields to 1.1.1900.
+	This restriction was based on the old database date types which were restricted to 1.1.1900.
+	
+	The currently used MSSQL type DATETIME supports dates from 1.1.1753 (siehe http://msdn.microsoft.com/en-us/library/ms187819.aspx and http://msdn.microsoft.com/en-us/library/ms187819%28v=sql.90%29.aspx)
+	
+	So the lower bound restriction for DATE fields should be changed from 1.1.1900 to 1.1.1753
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-839").scrollIntoView(true);' id='IBS-839'>IBS-839</a>]	Add month preview support to Calendar Popup component
+    + type:	New Feature
+    + created:	2012-12-17 11:11:58.0
+    -----------------------------------   
+	Currently there is only one full month displayed within Calendar Popup.
+	
+	The Calendar Popup functionality should be extended by month preview handling.
+	This handling should display a defined number of preview months additionally to the current month selected within the months selectionbox.
+	
+	The number of preview months should be configurable so that it can changed by the component using the Calendar Popup.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-840").scrollIntoView(true);' id='IBS-840'>IBS-840</a>]	Confvar for system language dependent standard group names
+    + type:	New Feature
+    + created:	2012-12-20 09:20:03.0
+    -----------------------------------   
+	In the past openM2 systems could be installed in different system languages (en/de).
+	Since ML version this has feature is not necessary anymore and has been removed.
+	Since then there is only one system installation language anymore which is en.
+	
+	Though there are some olders systems with system installation language de.
+	For those systems it is sometimes necessary to know the system language dependent name of standard groups like admin group (de: Administratoren, en: administrators) and all group (de: Jeder, en: all).
+	
+	So a new CONFVAR holding the system language dependent name of the admin and all group should be created.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-851").scrollIntoView(true);' id='IBS-851'>IBS-851</a>]	Packaging 3.4.0
+    + type:	Task
+    + created:	2013-01-20 19:43:56.0
+    -----------------------------------   
+	* Update module versions from 3.3.0/3.3.1 to 3.4.0
+	* Create ibs.jar, m2bbd.jar, m2diary.jar, m2doc.jar, m2mad.jar, m2store.jar
+	* Create update package 
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-843").scrollIntoView(true);' id='IBS-843'>IBS-843</a>]	XSLT library update - Analysis
+    + type:	Sub-task
+    + created:	2012-12-21 13:27:44.0
+    -----------------------------------   
+	Analysis concerning possible updates of used XSLT library.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+- [<a href='javascript:document.getElementById("IBS-844").scrollIntoView(true);' id='IBS-844'>IBS-844</a>]	XSLT library update - Implementation
+    + type:	Sub-task
+    + created:	2013-01-08 11:16:38.0
+    -----------------------------------   
+	Update XSLT library Xalan 2.7.0 to most recent version 2.7.1.
+	
+	This has been decided based on the analysis performed within IBS-843.
+
+   <a href='javascript:document.getElementById("issuelist").scrollIntoView(true);'>zurück...</a>    
+
+</PRE>
+]]></VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

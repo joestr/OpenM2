@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+	<OBJECTS>
+        <OBJECT TYPECODE="OrderContainer">
+            <SYSTEM>
+                <ID DOMAIN="m2_instobj" ADDWSPUSER="true">wsp_orders</ID>
+                <NAME>Bestellungen</NAME>
+                <DESCRIPTION>Übersicht über alle Bestellungen.</DESCRIPTION>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+			<RIGHTS>
+				<RIGHT NAME="#SYSVAR.WORKSPACEUSERNAME#" TYPE="USER" PROFILE="READ"/>
+				<RIGHT NAME="#SYSVAR.WORKSPACEUSERNAME#" TYPE="USER" PROFILE="WRITE"/>
+			</RIGHTS>
+        </OBJECT>
+        <OBJECT TYPECODE="ShoppingCart">
+            <SYSTEM>
+                <ID DOMAIN="m2_instobj" ADDWSPUSER="true">wsp_shoppingcart</ID>
+                <NAME>Warenkorb</NAME>
+                <DESCRIPTION>Klicken Sie auf Bestellen oder auf Liste löschen um Korrekturen vorzunehmen</DESCRIPTION>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+			<RIGHTS>
+				<RIGHT NAME="#SYSVAR.WORKSPACEUSERNAME#" TYPE="USER" PROFILE="READ"/>
+				<RIGHT NAME="#SYSVAR.WORKSPACEUSERNAME#" TYPE="USER" PROFILE="WRITE"/>
+			</RIGHTS>
+        </OBJECT>
+	</OBJECTS>
+</IMPORT>

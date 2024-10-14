@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+   "http://www.w3.org/TR/html4/frameset.dtd">
+<HTML>
+<SCRIPT LANGUAGE='javascript' TYPE='text/javascript' SRC='../../scripts/scriptCommonStartup.js'></SCRIPT>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">setTitle ("m2")</SCRIPT>
+</HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (top != window)
+    top.location.href = window.location.href;
+
+top.simpleSearch = true;
+
+
+function w (t)
+{
+    document.write (t);
+} // w
+
+function frs (rowscols, props, frames)
+{
+    return ('<frameset ' + rowscols + ' ' + props + '>' + frames + '</frameset>');
+} // frs
+
+function fr (name, src, props)
+{
+    return ('<frame src="' + src + '" name="' + name + '" ' + props + '>');
+} // fr
+
+
+// set the necessary urls:
+// don't show any menu at startup (menu = 'none')
+top.setUrls ("none");
+
+
+// define the frameset:
+var frs_noborders = ' FRAMEBORDER="0" BORDER="0" FRAMESPACING="0"';
+var frs_border =
+    ' FRAMEBORDER="1" BORDER="0" FRAMESPACING="1" BORDERCOLOR="black"';
+var fr_noborders =
+    ' FRAMEBORDER="0" BORDER="0" MARGINWIDTH="0" MARGINHEIGHT="0"';
+var fr_noborders_autoscroll = fr_noborders + ' SCROLLING="AUTO"';
+var fr_noborders_autoscrres = fr_noborders_autoscroll + ' NORESIZE="NORESIZE"';
+var fr_noborders_noscroll = fr_noborders + ' SCROLLING="NO"';
+var fr_noborders_noscrres = fr_noborders_noscroll + ' NORESIZE="NORESIZE"';
+
+w (
+frs ('rows="30,*,0"', frs_noborders + ' OnLoad="top.framesLoaded ();"',
+    frs ('cols="*,495"', frs_noborders,
+        fr ("navigationtabs", "empty.htm", fr_noborders_noscroll) +
+        fr ("search", "search.htm", fr_noborders_noscroll)
+    ) +
+    frs ('cols="250,*"', frs_border,
+        frs ('rows="*,75"', frs_noborders,
+            fr ("navigation", "navigationWelcome.htm",fr_noborders_autoscroll) +
+            fr ("logo", "logo.htm", fr_noborders_noscroll)
+        ) +
+        frs ('rows="30,30,*,0"', frs_noborders,
+            fr ("buttons", "buttonsempty.htm", fr_noborders_autoscroll) +
+            fr ("sheettabs", "sheettabsempty.htm", fr_noborders_noscrres) +
+            fr ("sheet", urlWelcome, fr_noborders_autoscroll) +
+            fr ("searchFrame", "empty.htm", fr_noborders_autoscroll)
+        )
+    ) +
+    frs ('cols="*,*,*,*,*,*"', "",
+        fr ("multilang", urlMultilangInfo, fr_noborders_noscrres) +
+        fr ("temp", "empty.htm", fr_noborders_noscrres) +
+        fr ("searchtemp", "empty.htm", fr_noborders_noscrres) +
+        fr ("tempnavigation", urlNomenu, fr_noborders_noscrres) +
+        fr ("scripts", "empty.htm", fr_noborders_noscrres) +
+        fr ("styles", "styles.htm", fr_noborders_noscrres)
+    )
+)
+);
+
+// must be here to be compatible with IE 4.0 which does not support the onLoad
+// attribute in the FRAMESET tag:
+if (top.browser.ie4)
+{
+    top.framesLoaded ();
+} // if
+
+-->
+</SCRIPT>
+</HTML>

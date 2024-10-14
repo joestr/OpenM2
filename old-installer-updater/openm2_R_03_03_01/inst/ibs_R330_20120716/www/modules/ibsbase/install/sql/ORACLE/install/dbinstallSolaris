@@ -1,0 +1,8 @@
+sqlplus sa/sa @deleteAllTableContents
+sqlplus sa/sa @createBaseObjectTypes
+sqlplus sa/sa @createSchemes
+sqlplus sa/sa @createBaseData
+sqlplus sa/sa @updateBaseDataForSolaris
+sqlplus sa/sa @createBaseDomain
+sqlplus sa/sa @createBaseDomain_NWR
+exit

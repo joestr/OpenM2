@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="IbsReorg"
+                TYPE="IBS Reorganisation"
+                MAYEXISTIN="ExportContainer"
+                SHOWINMENU="YES"
+                CLASS="ibs.obj.reorg.IbsReorg_01">
+            <CONFIG>
+            	<INFOBUTTONS>EDIT</INFOBUTTONS>
+            </CONFIG>
+            <SYSTEM DISPLAY="NO"/>
+            <VALUES>
+                <VALUE FIELD="filesystem reorg log" TYPE="LONGTEXT"/>
+                <VALUE FIELD="Log" TYPE="HTMLTEXT"/>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

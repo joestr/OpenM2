@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="vd_valueDomain"
+                TYPE="valueDomain"
+                MAYEXISTIN="ExportContainer"
+                SHOWINMENU="Yes">
+            <SYSTEM DISPLAY="YES">
+                <ID DOMAIN=""/>
+                <NAME>Value Domain</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL/>
+            </SYSTEM>
+            <VALUES/>
+			<CONTENT>
+				<MAYCONTAIN>vd_vDElement</MAYCONTAIN>
+				<COLUMNS>
+					<SYSCOLUMN NAME="Description"/>
+					<COLUMN NAME="Order it by"/>
+				</COLUMNS>
+			</CONTENT>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

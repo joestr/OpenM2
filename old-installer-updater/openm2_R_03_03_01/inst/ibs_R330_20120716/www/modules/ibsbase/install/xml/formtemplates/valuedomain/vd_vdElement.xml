@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+    <OBJECTS>
+        <OBJECT TYPECODE="vd_vDElement"
+                TYPE="valueDomainElem"
+                MAYEXISTIN="ExportContainer"
+                SHOWINMENU="YES"
+                DBTABLE="dbm_valuedomainelem">
+            <SYSTEM DISPLAY="YES">
+                <ID DOMAIN=""/>
+                <NAME>Value Domain Element</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL/>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="Order it by" TYPE="TEXT" MANDATORY="NO"
+                       DBFIELD="m_ordercrit"/>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

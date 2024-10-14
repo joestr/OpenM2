@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_OrganizationalUnit"
+		        TYPE="Organizational Unit"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="NO"
+		        DBTABLE="dbm_masterd_ou">
+			<SYSTEM DISPLAY="YES">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES>
+  				<VALUE FIELD="Type" TYPE="VALUEDOMAIN" MANDATORY="NO" DBFIELD="m_type" CONTEXT="Organizational Unit Type" READONLY="NO" REFRESH="YES" VIEWTYPE="CHECKLIST" MULTISELECTION="NO">
+    	        	<FIELDS>
+        		      <SYSFIELD NAME="Name" TOKEN="Name"/> 
+		            </FIELDS>
+		        </VALUE>
+		        
+				<VALUE FIELD="Unit code" TYPE="TEXT" DBFIELD="m_unitcode"/>
+				<!-- Unit type selection box -->
+				<VALUE FIELD="Description" TYPE="TEXT" DBFIELD="m_descr"/>
+			</VALUES>
+			<TABS>
+				<TABOBJECT TYPECODE="masterd_RoleMapperContainer" TABCODE="masterd_OrganizationalUnit_masterd_RoleMapperContainer">
+					<SYSTEM>
+						<ID DOMAIN=""/>
+						<NAME>Staff</NAME>
+					</SYSTEM>
+				</TABOBJECT>
+				<TABOBJECT TYPECODE="masterd_ContactDataContainer" TABCODE="masterd_OrganizationalUnit_masterd_ContactDataContainer">
+					<SYSTEM>
+						<ID DOMAIN=""/>
+						<NAME>Contact data</NAME>
+					</SYSTEM>
+				</TABOBJECT>
+			</TABS>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

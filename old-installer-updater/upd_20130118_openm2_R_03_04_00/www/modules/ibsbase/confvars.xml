@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    Configuration definition file.
+    All values defined in this file can be set via the configuration.
+    For this purpose there must be a file named <moduleId>.xml in the
+    configuration directory, which contains a configuration tag an within
+    this a confValue tag for each confvardef tag within this file.
+
+    - the configuration definition files of the m2 system are defined via
+    - xml-nodes and attributes.
+    - the format of this file is xml-conform.
+
+    The configuration values can be referenced in xml and xslt files with
+    #CONFVAR.<moduleName>.<valueName>#
+-->
+
+<!--
+*************************
+CONFIGURATION DEFINITION:
+*************************
+confvars node:
+    Contains all configuration variable definitions for one module.
+    moduleid:       Id of module to which this configuration belongs to.
+                    This is the same as the id of the module.
+    moduleversion:  Version of the module. This must exactly be the same
+                    as the installed version of the module.
+
+confvardef node (within confvars node):
+    Definition of a configuration variable. The content of the node is
+    the default node value.
+    name:   Name of the value.
+-->
+<confvars
+    moduleid="ibsbase"
+    moduleversion="3.4.0">
+
+    <!-- servlet names: -->
+    <confvardef name="appServlet" type="TEXT">ApplicationServlet</confvardef>
+    <confvardef name="fileServlet" type="TEXT">FileAccessServlet</confvardef>
+    <confvardef name="webdavServlet" type="TEXT">WebdavLinkServlet</confvardef>
+
+    <!-- database access: -->
+    <!-- Number of retries if there is a deadlock -->
+    <confvardef name="retriesOnDeadlock" type="INTEGER">20</confvardef>
+    <!-- Time in milliseconds before retry after a deadlock -->
+    <confvardef name="retryTimeOnDeadlock" type="INTEGER">1000</confvardef>
+    <!-- Time in milliseconds for a random number to be added
+        to retry after a deadlock -->
+    <confvardef name="retryTimeOffsetOnDeadlock" type="INTEGER">512</confvardef>
+    <!-- Timespan in milliseconds before a new DB connection is tried
+    	to be created -->
+    <confvardef name="retryTimeOffsetOnDBConnectionLoss" type="INTEGER">0</confvardef>
+    <!-- Number of retries to create a new DB connection -->
+    <confvardef name="retriesForDBConnection" type="INTEGER">0</confvardef>
+    <!-- Number of losses of DBConnection before informing the SysAdmin -->
+    <confvardef name="dbConnectionLossThreshold" type="INTEGER">0</confvardef>
+    <!-- Timespan within losses of DBConnections are counted. When
+    	dbConnLossThreshold is exceeded within timespan, the SysAdmin
+    	is informed. In Milliseconds.-->
+    <confvardef name="dbConnectionLossTimespan" type="INTEGER">0</confvardef>
+    <!-- Time in milliseconds until a query field result expires -->
+    <confvardef name="queryFieldResultExpires" type="INTEGER">300000</confvardef>
+    <!-- Name of database owner -->
+    <confvardef name="dbOwner" type="INTEGER">dbo</confvardef>
+
+    <!-- Language of system installation -->
+    <confvardef name="lang" >de</confvardef>
+    <!-- Multi lingual content leading language -->
+    <confvardef name="leadLangMLC" >de</confvardef>
+    <!-- Multi lingual content languages -->
+    <confvardef name="langsMLC" >en</confvardef>
+    <!-- Multi lingual content language labels -->
+    <confvardef name="labelsMLC" >English</confvardef>
+
+    <!-- customized values: -->
+    <!-- Name of public menu container -->
+    <confvardef name="menuPublic" type="TEXT">Verwaltung</confvardef>
+    <!-- Name of private menu container -->
+    <confvardef name="menuPrivate" type="TEXT">Privat</confvardef>
+    <!-- Default value for valid until date -->
+    <confvardef name="validUntil" type="DATE">01.01.2099</confvardef>
+    <!-- Default value for valid until date, sql format -->
+    <confvardef name="validUntilSql" type="TEXT">2099-01-01</confvardef>
+    <!-- Default value for historySize -->
+    <confvardef name="historySize" type="TEXT">20</confvardef>
+
+    <!-- notifications: -->
+    <!-- Default notification service implementation -->
+    <confvardef name="notificationServiceClassname" type="TEXT">ibs.service.notification.NotificationService</confvardef>
+    <!-- Administrator's workbox (used for workflows) -->
+    <confvardef name="AdministratorWorkbox">Administrator's workbox for workflow objects</confvardef>
+    <!-- System installation language specific group name for admin group -->
+    <confvardef name="adminGroupName">System installation language specific group name for admin group</confvardef>
+    <!-- System installation language specific group name for all group -->
+    <confvardef name="allGroupName">System installation language specific group name for all group</confvardef>
+</confvars>

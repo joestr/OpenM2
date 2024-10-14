@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+feature configuration file
+
+- this file contains all data which is necessary for the feature
+- the format of this file is xml-conform.
+-->
+
+<!--
+********
+FEATURE:
+********
+feature node:
+    Contains the feature data.
+    id:             The id of the feature.
+    name:           The feature name.
+    version:        The version number of the feature.
+    build:          The build number of the feature.
+    providername:   The name of the provider for the feature.
+    active:         Is the feature active? ("true" or "false")
+-->
+<feature
+    id="ibs"
+    name="IBS base"
+    version="3.4.0"
+    build="#BUILD_NUMBER#"
+    providername="kr"
+    active="true">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+        (c) 1998 - 2008 trinitec IT Solutions &amp; Consulting GmbH. All Rights Reserved.
+   </copyright>
+
+   <license key="" url="%licenseURL">
+     %licensetext
+   </license>
+
+   <update url="%licenseURL" label=""/>
+
+    <!--
+    *********
+    REQUIRES:
+    *********
+    requires node:
+        Contains all features and modules which are necessary for the feature
+        to run.
+    -->
+    <requires>
+    <!--
+    *******************************
+    NECESSARY FEATURES AND MODULES:
+    *******************************
+    reqfeature node (within requires node):
+        id:         The id of the necessary feature.
+        version:    The version number of the necessary feature.
+        match:      Version match.
+                    x ... identical, y ... greater, z ... any value
+                    perfect:        x.x.x
+                    equivalent:     x.x.x or x.x.y
+                    compatible:     x.x.x or x.x.y or x.y.z
+                    greaterOrEqual: x.x.x or x.x.y or x.y.z or y.z.z
+
+    reqmodule node (within requires node):
+        id:         The id of the necessary module.
+        version:    The version number of the necessary module.
+        match:      Version match.
+                    x ... identical, y ... greater, z ... any value
+                    perfect:        x.x.x
+                    equivalent:     x.x.x or x.x.y
+                    compatible:     x.x.x or x.x.y or x.y.z
+                    greaterOrEqual: x.x.x or x.x.y or x.y.z or y.z.z
+    -->
+<!--
+        <reqfeature id="ibs" version="3.4.0" match="equivalent"/>
+-->
+        <reqmodule id="ibsbase" version="3.4.0" match="equivalent"/>
+        <reqmodule id="ibsworkflow" version="3.4.0" match="equivalent"/>
+        <reqmodule id="ibsdoc" version="3.4.0" match="equivalent"/>
+        <reqmodule id="ibswebdav" version="3.4.0" match="equivalent"/>
+    </requires>
+</feature>

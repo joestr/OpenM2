@@ -1,0 +1,489 @@
+@import url(styleCommon.css);
+
+BODY
+{
+    text-align: center;
+    margin-left: 1px;
+    margin-right: -20px;
+}
+.body
+{
+    text-align: center;
+}
+
+/* description of list object: */
+TR.listdescription
+{
+    color: black;
+    font-size: 11px;
+    font-style: italic;
+    text-align: center;
+    padding: 5px;
+}
+
+/* the list: */
+TABLE.list
+{
+/*
+    width: 100%;
+*/
+    float: right;
+    left: 0pt;
+    top: 0pt;
+    margin: 0px;
+/*
+    margin-left: 5px;
+    margin-right: 15px;
+*/
+    padding-left: 0px;
+    padding-right: 0px;
+}
+TR.listheader,
+TD.listheader,
+TD.listheader_right
+{
+    font-size: 11px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+}
+TD.listheader,
+TD.listheader_right
+{
+    background-image: url("../images/sheet/listHeaderBackground.gif");
+    padding-left: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-right: 1px solid #ffffff;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+TD.listheader_right
+{
+    text-align: right;
+}
+A.listheader
+{
+    color: black;
+    font-weight: bold;
+}
+A.listheader:hover
+{
+    color: #6e132a;
+    text-decoration: underline;
+}
+
+/* list rows: */
+IMG
+{
+    vertical-align: bottom;
+}
+TD.listRow1,
+TD.listRow2,
+TD.listRow_saturday,
+TD.listRow_sunday,
+TD.listRow1_right,
+TD.listRow2_right,
+TD.listRow_saturday_right,
+TD.listRow_sunday_right
+{
+    text-align: left;
+    font-size: 11px;
+    vertical-align: middle;
+    height: 23px;
+    padding-left: 2px;
+}
+TD.listRow1_right,
+TD.listRow2_right,
+TD.listRow_saturday_right,
+TD.listRow_sunday_right
+{
+    text-align: right;
+}
+TD.listRow1,
+TR.listRow1 TD,
+TD.listRow1_right
+{
+/*
+    background-image: url("../images/global/barBackground.gif");
+*/
+    background-color: #f1f2f2;
+    border-right: 1px solid white;
+}
+TD.listRow2,
+TR.listRow2 TD,
+TD.listRow2_right
+{
+/*
+    background-image: url("../images/global/barBackground2.gif");
+    background-color: #dcddde;
+*/
+    background-color: white;
+    border-right: 1px solid #eeeeee;
+}
+TD.listRow_saturday,
+TD.listRow_saturday_right
+{
+    background-color: #ffe8e8; /* orig: #f1f2f2 */
+}
+TD.listRow_sunday,
+TD.listRow_sunday_right
+{
+    background-color: #ffddde;  /* orig: #dcddde */
+}
+TABLE.entries
+{
+    margin-bottom: 8px;
+}
+TD.listSubRow1,
+TD.listSubRow2
+{
+    text-align: left;
+    font-size: 11px;
+    vertical-align: middle;
+    height: 18px;
+    padding-left: 2px;
+}
+TD.listSubRow1
+{
+    background-color: #CCCCCC;
+}
+TD.listSubRow2
+{
+    background-color: #E0E0E0;
+}
+.subEntriesState_open
+{
+}
+.subEntriesState_closed
+{
+	display: none;
+}
+.rep_sep
+{
+    font-size: 1px;
+}
+.rep_heading
+{
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.projSelForm_invisible
+{
+    display: none;
+}
+
+A
+{
+    color: black;
+    text-decoration: none;
+}
+A:hover
+{
+    color: #6e132a;
+    text-decoration: underline;
+}
+TR.listRow1 A,
+TR.listRow2 A,
+TR.listRow_saturday A,
+TR.listRow_sunday A
+{
+    text-decoration: none;
+}
+
+/* Discussion */
+TR.discEntry1,
+TR.discEntry2
+{
+    font-size: 11px;
+    font-weight: normal;
+    text-align: left;
+    height: 20px;
+}
+.discTopic
+{
+    background-color: #efbc98;
+    font-size: 11px;
+    text-align: left;
+}
+COL.name
+{
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Permissions */
+.legend
+{
+    font-size: 11px;
+}
+SPAN.legend
+{
+    font-weight: bold;
+}
+COL.right,
+TD.right
+{
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Products */
+.pno
+{
+    font-size: 11px;
+    color: black;
+    font-weight: bold;
+}
+.pname
+{
+    font-size: 11px;
+    color: #6e132a;
+    font-weight: bold;
+}
+.pname A
+{
+    color: black;
+    text-decoration: none;
+}
+.pdesc
+{
+    font-size: 11px;
+    color: black;
+}
+.listcontspecial
+{
+    font-size: 11px;
+    color: #6e132a;
+}
+.objRef
+{
+    font-weight: bold;
+}
+TD.listRow1_objRef
+{
+    background-color: #f1f2f2;
+    border-right: 1px solid white;
+
+    text-align: left;
+    font-size: 11px;
+    vertical-align: middle;
+    height: 23px;
+    padding-left: 2px;
+    font-weight: bold;
+}
+TD.listRow2_objRef
+{
+    background-color: white;
+    border-right: 1px solid #eeeeee;
+
+    text-align: left;
+    font-size: 11px;
+    vertical-align: middle;
+    height: 23px;
+    padding-left: 2px;
+    font-weight: bold;
+}
+/* styles for search navigation: */
+.searchButtons
+{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.changesearch
+{
+    position: absolute;
+/* not supported by MSIE 6
+    position: fixed;
+*/
+    top: 5px;
+    left: 5px;
+    border: solid 1px black; /*solid outset inset dotted dashed groove ridge*/
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    height: 16px;
+}
+.changesearch A,
+.changesearch A:hover,
+.changesearch_clicked
+{
+    color: black;
+    text-decoration: none;
+    padding: 3px 8px 2px 8px;
+    background-repeat: repeat-x;
+    -x-background-x-position: center;
+    -x-background-y-position: bottom;
+}
+.changesearch A
+{
+    font-size: 12px;
+    font-weight: normal;
+    background-color: #cccccc;
+    background-image: url("../images/buttons/buttonBg.gif");
+}
+.changesearch A:hover
+{
+    background-color: white;
+    background-image: url("../images/buttons/buttonBgOn.gif");
+}
+.changesearch_clicked
+{
+/*
+    display: none;
+    visibility: hidden;
+*/
+    background-image: url("../images/buttons/buttonBgOn.gif");
+}
+.resultobjectlink
+{
+    cursor: pointer;
+}
+/*
+TD.listRow1:hover, TD.listRow2:hover
+{
+    background-color:   #ffd780;
+}
+*/
+
+/* Styles for fieldref:*/
+TABLE.fieldRef
+{
+    MARGIN: 0px;
+    BORDER: 0px;
+}
+
+TABLE.fieldRef TD
+{
+    BORDER-RIGHT: 0px;
+    BORDER-BOTTOM: 0px;
+}
+
+TABLE.fieldRefAssign
+{
+    font-face: Times;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+TABLE.fieldRefSearchParamsLegend
+{
+    margin-top:0px;
+    font-face: Times;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+TABLE.fieldRefSearchParams
+{
+    font-face: Times;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+DIV.fieldRefSearchParamsHelpText
+{
+    TEXT-ALIGN: left;
+}
+
+DIV.fieldRefSearch_open
+{
+    margin-top:0px;
+    display: list-item;
+    visibility: visible;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+                        
+DIV.fieldRefSearch_closed
+{
+    margin-top:0px;
+    display: none;
+    visibility: visible;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+DIV.fieldRefExtSearchParams_closed
+{
+    float: left;
+    display: none;
+}
+
+DIV.fieldRefExtSearchParams_open
+{
+    float: left;
+    display: list-item;
+}
+
+/* Styles for objectref:*/
+TABLE.objectRef
+{
+    font-face: Times;
+    font-size: 10px;
+    font-weight: normal;
+    MARGIN: 0px;
+    BORDER: 0px;
+}
+
+TABLE.objectRef TD
+{
+    BORDER-RIGHT: 0px;
+    BORDER-BOTTOM: 0px;
+}
+
+TABLE.objectRefSearch
+{
+    font-face: Times;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+TABLE.objectRefSearch TD
+{
+    BORDER-LEFT: 0px solid #000000;
+    TEXT-ALIGN: left;
+}
+
+TABLE.objectRefSearchParamsLegend
+{
+    margin-top:0px;
+    font-face: Times;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+TABLE.objectRefSearchParams
+{
+    font-face: Times;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+DIV.objectRefSearch_open
+{
+    margin-top:0px;
+    display: list-item;
+    visibility: visible;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+                        
+DIV.objectRefSearch_closed
+{
+    margin-top:0px;
+    display: none;
+    visibility: visible;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* rights tab */
+HR
+{
+    border-left: none;
+}

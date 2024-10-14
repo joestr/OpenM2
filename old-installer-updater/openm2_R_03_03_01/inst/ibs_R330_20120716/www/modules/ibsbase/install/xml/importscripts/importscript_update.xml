@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $Id: importscript_update.xml,v 1.2 2004/08/04 19:26:03 klaus Exp $ -->
+<!-- DOCTYPE IMPORTSCRIPT SYSTEM "ImportScript.dtd" -->
+<IMPORTSCRIPT>
+	<OBJECT TYPECODEREF="*">
+		<OPERATION TYPE="CHANGE"/>
+	</OBJECT>
+</IMPORTSCRIPT>

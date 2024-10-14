@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_StaffMember"
+		        TYPE="Staff member"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="NO"
+		        DBTABLE="dbm_masterd_staffmem">
+			<SYSTEM DISPLAY="NO">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES>
+				<VALUE FIELD="Contact" TYPE="FIELDREF"
+					   QUERYNAME="_masterd_getPotentialCompanyContacts"
+ 					   MANDATORY="YES" DBFIELD="m_contact">
+                    <FIELDS>
+                        <SYSFIELD NAME="Name"/>
+                        <!-- <FIELD NAME="Short name" TOKEN="Short"/>  -->
+                    </FIELDS>
+                </VALUE>
+				
+				<VALUE FIELD="Job description" TYPE="TEXT" DBFIELD="m_jobdesc"/>
+				<VALUE FIELD="Personnel no" TYPE="TEXT" DBFIELD="m_personnelno"/>
+			</VALUES>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

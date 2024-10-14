@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_Subsidiary"
+		        TYPE="Subsidiary"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="NO"
+		        DBTABLE="dbm_masterd_subsid">
+			<SYSTEM DISPLAY="NO">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES>
+				<VALUE FIELD="Subsidiary" TYPE="FIELDREF"
+					   TYPECODEFILTER="masterd_Company"
+					   SEARCHROOT="MasterData" SEARCHRECURSIVE="YES" 
+					   QUERYNAME="_masterd_getPotentialSubsidiaries"
+ 					   MANDATORY="YES" DBFIELD="m_subsid">
+                    <FIELDS>
+                        <SYSFIELD NAME="Name"/>
+                        <!-- <FIELD NAME="Short name" TOKEN="Short"/>  -->
+                    </FIELDS>
+                </VALUE>
+			</VALUES>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

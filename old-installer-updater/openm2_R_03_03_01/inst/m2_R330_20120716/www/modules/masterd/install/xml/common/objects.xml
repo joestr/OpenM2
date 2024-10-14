@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 export/import file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="Container">
+            <SYSTEM>
+                <ID DOMAIN="masterd_instobj">MasterData</ID>
+                <NAME>MasterData</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+            <RIGHTS>
+                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+                       PROFILE="READ"/>
+                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+                       PROFILE="WRITE"/>
+                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+                       PROFILE="ADMIN"/>
+                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+                       PROFILE="READ"/>
+                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+                       PROFILE="WRITE"/>
+                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+                       PROFILE="ADMIN"/>
+                <RIGHT NAME="USER MasterData" TYPE="GROUP"
+                       PROFILE="READ"/>
+                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+                       PROFILE="READ"/>
+            </RIGHTS>
+			<OBJECTS>
+				<!-- masterdata  container -->
+                <OBJECT TYPECODE="masterd_MasterDataContainer">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_instobj">MasterdataContainer</ID>
+                        <NAME>Masterdata Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+		            <RIGHTS>
+		                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+		                       PROFILE="READ"/>
+		                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+		                       PROFILE="WRITE"/>
+		                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+		                       PROFILE="ADMIN"/>
+		                <RIGHT NAME="USER MasterData" TYPE="GROUP"
+		                       PROFILE="READ"/>
+		            </RIGHTS>
+					<OBJECTS>
+						<!-- CompanyContainer -->
+                		<OBJECT TYPECODE="masterd_CompanyContainer">
+	                    	<SYSTEM>
+	                        	<ID DOMAIN="masterd_instobj">CompanyContainer</ID>
+	                        	<NAME>Companies</NAME>
+	                        	<DESCRIPTION/>
+	                        	<VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+	                        	<SHOWINNEWS>false</SHOWINNEWS>
+	                    	</SYSTEM>
+	                    	<VALUES/>
+				            <RIGHTS>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="READ"/>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="WRITE"/>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="ADMIN"/>
+				                <RIGHT NAME="USER MasterData" TYPE="GROUP"
+				                       PROFILE="READ"/>
+				            </RIGHTS>
+                		</OBJECT>
+						<!-- CustomerContainer -->
+                		<OBJECT TYPECODE="masterd_CompanyContainer">
+	                    	<SYSTEM>
+	                        	<ID DOMAIN="masterd_instobj">CustomerContainer</ID>
+	                        	<NAME>Customers</NAME>
+	                        	<DESCRIPTION/>
+	                        	<VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+	                        	<SHOWINNEWS>false</SHOWINNEWS>
+	                    	</SYSTEM>
+	                    	<VALUES/>
+				            <RIGHTS>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="READ"/>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="WRITE"/>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="ADMIN"/>
+				                <RIGHT NAME="USER MasterData" TYPE="GROUP"
+				                       PROFILE="READ"/>
+				            </RIGHTS>
+                		</OBJECT>
+						<!-- SupplierContainer -->
+                		<OBJECT TYPECODE="masterd_CompanyContainer">
+	                    	<SYSTEM>
+	                        	<ID DOMAIN="masterd_instobj">SupplierContainer</ID>
+	                        	<NAME>Suppliers</NAME>
+	                        	<DESCRIPTION/>
+	                        	<VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+	                        	<SHOWINNEWS>false</SHOWINNEWS>
+	                    	</SYSTEM>
+	                    	<VALUES/>
+				            <RIGHTS>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="READ"/>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="WRITE"/>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="ADMIN"/>
+				                <RIGHT NAME="USER MasterData" TYPE="GROUP"
+				                       PROFILE="READ"/>
+				            </RIGHTS>
+                		</OBJECT>
+		                <!-- query entry points within the menu bar: -->
+		                <!-- Company Search: -->
+		                <OBJECT TYPECODE="QueryExecutive">
+		                    <SYSTEM>
+		                        <ID DOMAIN="masterd_instobj" ADDWSPUSER="true">CompanySearch</ID>
+		                        <NAME>Company Search</NAME>
+		                        <DESCRIPTION/>
+		                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+		                        <SHOWINNEWS>false</SHOWINNEWS>
+		                    </SYSTEM>
+		                    <VALUES>
+		                        <VALUE FIELD="queryobjectname" TYPE="CHAR">masterd_companySearch</VALUE>
+		                        <VALUE FIELD="showsearchform" TYPE="BOOLEAN">true</VALUE>
+		                        <VALUE FIELD="showdomtree" TYPE="BOOLEAN">false</VALUE>
+		                    </VALUES>
+		                    <RIGHTS>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="READ"/>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="WRITE"/>
+				                <RIGHT NAME="ADMIN MasterData" TYPE="GROUP"
+				                       PROFILE="ADMIN"/>
+				                <RIGHT NAME="USER MasterData" TYPE="GROUP"
+				                       PROFILE="READ"/>
+		                    </RIGHTS>
+		                </OBJECT>
+            	 	</OBJECTS>
+                </OBJECT>
+                
+				<!-- value domain  container: -->
+                <OBJECT TYPECODE="XMLViewerContainer">
+                    <SYSTEM>
+                        <ID DOMAIN="masterd_instobj">ValueDomains</ID>
+                        <NAME>Value Domain Container</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+		            <RIGHTS>
+		                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+		                       PROFILE="READ"/>
+		                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+		                       PROFILE="WRITE"/>
+		                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+		                       PROFILE="ADMIN"/>
+		                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+		                       PROFILE="READ"/>
+		            </RIGHTS>
+					<OBJECTS>
+						<!-- standard value domain container -->
+				        <OBJECT TYPECODE="XMLViewerContainer">
+				             <SYSTEM>
+				                 <ID DOMAIN="masterd_instobj">StandardValueDomains</ID>
+				                 <NAME>Standard Value Domains</NAME>
+				                 <DESCRIPTION/>
+				                 <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+				                 <SHOWINNEWS>false</SHOWINNEWS>
+				             </SYSTEM>
+				             <VALUES/>
+				            <RIGHTS>
+				                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+				                       PROFILE="READ"/>
+				                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+				                       PROFILE="WRITE"/>
+				                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+				                       PROFILE="ADMIN"/>
+				                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+				                       PROFILE="READ"/>
+				            </RIGHTS>
+							<OBJECTS>
+								<!-- role -->
+		                		<OBJECT TYPECODE="vd_valueDomain">
+			                    	<SYSTEM>
+			                        	<ID DOMAIN="masterd_instobj">role</ID>
+			                        	<NAME>Role</NAME>
+			                        	<DESCRIPTION/>
+			                        	<VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+			                        	<SHOWINNEWS>false</SHOWINNEWS>
+			                    	</SYSTEM>
+			                    	<VALUES/>
+						            <RIGHTS>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="READ"/>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="WRITE"/>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="ADMIN"/>
+						                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+						                       PROFILE="READ"/>
+						            </RIGHTS>
+			                    	<OBJECTS>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">role_kam</ID>
+						                        <NAME>Key Account Manager</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">role_productmanager</ID>
+						                        <NAME>Product Manager</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">role_admin</ID>
+						                        <NAME>Administrator</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">role_projectmanager</ID>
+						                        <NAME>Project Manager</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">role_qamanager</ID>
+						                        <NAME>Quality Assurance Manager</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            </OBJECTS>
+						        </OBJECT>
+						        <!-- role -->
+								<!-- organization unit type -->
+		                		<OBJECT TYPECODE="vd_valueDomain">
+			                    	<SYSTEM>
+			                        	<ID DOMAIN="masterd_instobj">orgunittype</ID>
+			                        	<NAME>Organizational Unit Type</NAME>
+			                        	<DESCRIPTION/>
+			                        	<VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+			                        	<SHOWINNEWS>false</SHOWINNEWS>
+			                    	</SYSTEM>
+			                    	<VALUES/>
+						            <RIGHTS>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="READ"/>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="WRITE"/>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="ADMIN"/>
+						                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+						                       PROFILE="READ"/>
+						            </RIGHTS>
+			                    	<OBJECTS>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">orgunittype_maindep</ID>
+						                        <NAME>Main department</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">orgunittype_dep</ID>
+						                        <NAME>Department</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">orgunittype_project</ID>
+						                        <NAME>Project</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">orgunittype_team</ID>
+						                        <NAME>Team</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            </OBJECTS>
+						        </OBJECT>
+						        <!-- orgunittype -->
+								<!-- companytype -->
+		                		<OBJECT TYPECODE="vd_valueDomain">
+			                    	<SYSTEM>
+			                        	<ID DOMAIN="masterd_instobj">companytype</ID>
+			                        	<NAME>Company Type</NAME>
+			                        	<DESCRIPTION/>
+			                        	<VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+			                        	<SHOWINNEWS>false</SHOWINNEWS>
+			                    	</SYSTEM>
+			                    	<VALUES/>
+						            <RIGHTS>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="READ"/>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="WRITE"/>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="ADMIN"/>
+						                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+						                       PROFILE="READ"/>
+						            </RIGHTS>
+			                    	<OBJECTS>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">companytype_customer</ID>
+						                        <NAME>Customer</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">companytype_supplier</ID>
+						                        <NAME>Supplier</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">companytype_company</ID>
+						                        <NAME>Company</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            </OBJECTS>
+						        </OBJECT>
+						        <!-- companytype -->
+								<!-- title -->
+		                		<OBJECT TYPECODE="vd_valueDomain">
+			                    	<SYSTEM>
+			                        	<ID DOMAIN="masterd_instobj">title</ID>
+			                        	<NAME>Title</NAME>
+			                        	<DESCRIPTION/>
+			                        	<VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+			                        	<SHOWINNEWS>false</SHOWINNEWS>
+			                    	</SYSTEM>
+			                    	<VALUES/>
+						            <RIGHTS>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="READ"/>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="WRITE"/>
+						                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+						                       PROFILE="ADMIN"/>
+						                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+						                       PROFILE="READ"/>
+						            </RIGHTS>
+			                    	<OBJECTS>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Akad_Vkfm</ID>
+						                        <NAME>Akad.Vkfm.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dipl_Vw</ID>
+						                        <NAME>Dipl.Vw.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            	<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dr</ID>
+						                        <NAME>Dr.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dr_med</ID>
+						                        <NAME>Dr.med.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dr_phil</ID>
+						                        <NAME>Dr.phil.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dr_mont</ID>
+						                        <NAME>Dr.mont.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dr_techn</ID>
+						                        <NAME>Dr.techn.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dr_theol</ID>
+						                        <NAME>Dr.theol.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Ing</ID>
+						                        <NAME>Ing.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Mag</ID>
+						                        <NAME>Mag.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dipl_Dolm</ID>
+						                        <NAME>Dipl.Dolm.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Mag_arch</ID>
+						                        <NAME>Mag.arch.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Mag_art</ID>
+						                        <NAME>Mag.art.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Mag_Dr</ID>
+						                        <NAME>Mag.Dr.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Mag_FH</ID>
+						                        <NAME>Mag.(FH).</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Mag_iur</ID>
+						                        <NAME>Mag.iur.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Mag_pharm</ID>
+						                        <NAME>Mag.pharm.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Mag_phil</ID>
+						                        <NAME>Mag.phil.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Mag_theol</ID>
+						                        <NAME>Mag.theol.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_MMag</ID>
+						                        <NAME>MMag.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_DDr</ID>
+						                        <NAME>DDr.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_DI</ID>
+						                        <NAME>DI.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_DI_Dr</ID>
+						                        <NAME>DI.Dr.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_DI_FH</ID>
+						                        <NAME>DI.(FH).</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_DI_Mag</ID>
+						                        <NAME>DI.Mag.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dkff</ID>
+						                        <NAME>Dkff.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dkfm</ID>
+						                        <NAME>Dkfm.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+										<OBJECT TYPECODE="vd_vDElement">
+						                    <SYSTEM>
+						                        <ID DOMAIN="masterd_instobj">title_Dipl_Oek</ID>
+						                        <NAME>Dipl.Ök.</NAME>
+						                        <DESCRIPTION></DESCRIPTION>
+						                        <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+						                        <SHOWINNEWS>false</SHOWINNEWS>
+						                    </SYSTEM>
+						                    <VALUES/>
+								            <RIGHTS>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="WRITE"/>
+								                <RIGHT NAME="ADMIN ValueDomain" TYPE="GROUP"
+								                       PROFILE="ADMIN"/>
+								                <RIGHT NAME="USER ValueDomain" TYPE="GROUP"
+								                       PROFILE="READ"/>
+								            </RIGHTS>
+						                    <TABS>
+						                    </TABS>
+						                </OBJECT>
+						            </OBJECTS>
+						        </OBJECT>
+						        <!-- title -->
+						    </OBJECTS>
+						</OBJECT>
+						<!-- standard value domain container -->
+					</OBJECTS>
+                </OBJECT>
+             </OBJECTS>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

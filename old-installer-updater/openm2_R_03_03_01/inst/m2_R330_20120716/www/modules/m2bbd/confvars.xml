@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    Configuration definition file.
+    All values defined in this file can be set via the configuration.
+    For this purpose there must be a file named <moduleId>.xml in the
+    configuration directory, which contains a configuration tag an within
+    this a confValue tag for each confvardef tag within this file.
+
+    - the configuration definition files of the m2 system are defined via
+    - xml-nodes and attributes.
+    - the format of this file is xml-conform.
+ 
+    The configuration values can be referenced in xml and xslt files with
+    #CONFVAR.<moduleName>.<valueName>#
+-->
+
+<!--
+*************************
+CONFIGURATION DEFINITION:
+*************************
+confvars node:
+    Contains all configuration variable definitions for one module.
+    moduleid:       Id of module to which this configuration belongs to.
+                    This is the same as the id of the module.
+    moduleversion:  Version of the module. This must exactly be the same
+                    as the installed version of the module.
+
+confvardef node (within confvars node):
+    Definition of a configuration variable. The content of the node is
+    the default node value.
+    name:   Name of the value.
+-->
+<confvars
+    moduleid="m2bbd"
+    moduleversion="3.3.0">
+</confvars>

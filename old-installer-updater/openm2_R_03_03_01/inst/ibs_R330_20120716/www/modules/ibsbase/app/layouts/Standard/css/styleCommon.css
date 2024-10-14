@@ -1,0 +1,131 @@
+/* standard styles: */
+HTML,
+BODY
+{
+    /* page properties: */
+    MARGIN-LEFT: 0px;
+    MARGIN-TOP: 0px;
+    /* page colors: */
+    BACKGROUND-COLOR: #FAFAFA;
+    /* font properties: */
+    FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top;
+}
+HTML,
+BODY,
+A
+{
+    /* font properties: */
+    COLOR: black;
+    FONT-SIZE: 11px;
+    TEXT-DECORATION: none;
+}
+/* specific styles for links: */
+A
+{
+    /* no specific definitions */
+}
+A:hover
+{
+    COLOR: #6e132a;
+    TEXT-DECORATION: none;
+}
+/* common stylesheets for field types: */
+.integer,
+.number,
+.money
+{
+    TEXT-ALIGN: right;
+}
+.name,
+.date,
+.time,
+.datetime,
+.email,
+.url,
+.description,
+.text,
+.textarea,
+.htmltext,
+.file,
+.image,
+.picture,
+.thumbnail,
+.importfile
+{
+    TEXT-ALIGN: left;
+}
+.boolean,
+.booleanempty,
+.radio
+{
+    TEXT-ALIGN: center;
+}
+
+/* stlyes for history */
+DIV.historyOpen
+{
+	display:list-item;
+	z-index:1;
+	position:absolute;
+	left:0px;
+	top:0px;	
+}
+
+DIV.historyClosed
+{
+	display:none;
+	z-index:1;
+	position:absolute;
+	left:0px;
+	top:0px;	
+}
+
+OPTION.activeIndex
+{
+	background-color:#DCDDDE;
+}
+
+/* stlyes for changepwd ssi */
+DIV.changepwd_open
+{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+	margin-top: -90px;
+
+	border:4px solid #DCDDDE;
+	text-align:center;
+	background-color:red;
+	color:white;
+	width:300px;
+	height:90px;
+	FONT-SIZE: 11px;
+}
+
+
+DIV.changepwd_open button
+{
+    width: 50px;
+    height: 25px;
+    vertical-align: top;
+    MARGIN-BOTTOM: 5px;
+}
+
+DIV.changepwd_open P
+{
+    MARGIN-TOP: 5px;
+}
+
+DIV.changepwd_closed
+{
+	display:none;
+}
+
+/* object icon within header */
+TD.header IMG
+{
+    vertical-align: bottom;
+}

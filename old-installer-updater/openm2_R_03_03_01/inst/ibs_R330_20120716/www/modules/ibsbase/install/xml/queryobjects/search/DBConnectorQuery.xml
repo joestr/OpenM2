@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ibs framework export file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreator">
+            <SYSTEM>
+                <ID DOMAIN="ibs_instquery">dbconnectors</ID>
+                <NAME>DBConnectors</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>03.08.2002</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="SELECT" TYPE="CHAR">o.oid, o.name, d.m_jdbcDriverClass, d.m_connectionString, d.m_sid, d.m_userName, d.m_password, d.m_loginTimeOut, d.m_queryTimeOut</VALUE>
+                <VALUE FIELD="FROM" TYPE="CHAR">dbm_DBConnector d, ibs_Object o</VALUE>
+                <VALUE FIELD="WHERE" TYPE="CHAR">d.oid = o.oid\nAND o.state = 2</VALUE>
+                <VALUE FIELD="QUERYTYPE" TYPE="CHAR">SEARCH,REPORT,SYSTEM</VALUE>
+                <VALUE FIELD="GROUPBY" TYPE="CHAR"/>
+                <VALUE FIELD="ORDERBY" TYPE="CHAR">o.name</VALUE>
+                <VALUE FIELD="COLUMNHEADERS" TYPE="CHAR">Name, #OBJECTID, ConnectionString, SID, id, value</VALUE>
+                <VALUE FIELD="COLUMNQUERYATTRIBUTES" TYPE="CHAR">name, oid, m_connectionString, m_sid, oid, name</VALUE>
+                <VALUE FIELD="COLUMNTYPES" TYPE="CHAR">STRING, SYSVAR, STRING, STRING, OBJECTID, STRING</VALUE>
+                <VALUE FIELD="SEARCHFIELDS" TYPE="CHAR">Name, Klasse, ConnectionString, SID</VALUE>
+                <VALUE FIELD="SEARCHFIELDQUERYATTRIBUTES" TYPE="CHAR">o.name, d.m_jdbcDriverClass, d.m_connectionString, d.m_sid</VALUE>
+                <VALUE FIELD="SEARCHFIELDTYPES" TYPE="CHAR">STRING, STRING, STRING, STRING</VALUE>
+                <VALUE FIELD="MAXRESULTS" TYPE="INTEGER">-1</VALUE>
+                <VALUE FIELD="DEBUGGING" TYPE="BOOLEAN">0</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

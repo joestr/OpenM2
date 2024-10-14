@@ -1,0 +1,31 @@
+TABLE.order_table
+{
+    border-color: silver;    
+}
+
+TD
+{
+    color: black;
+    font-size: 13px;
+}
+TD.order_header,
+TD.order_value
+{
+    background-color: beige;
+    text-align: center;
+    font-style: italic;
+}
+
+TD.order_dimension
+{
+    background-color: silver;
+    text-align: center;
+    font-weight: bold;
+}
+
+TD.order_quantity
+{
+    background-color: white;
+    text-align: center;
+    font-style: italic;
+}

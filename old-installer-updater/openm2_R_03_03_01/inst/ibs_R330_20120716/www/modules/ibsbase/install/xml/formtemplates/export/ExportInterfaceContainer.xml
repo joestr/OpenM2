@@ -1,0 +1,17 @@
+<!--  DOCTYPE IMPORT SYSTEM "import.dtd"  -->
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="ExportInterfaceContainer" TYPE="export interface container" MAYEXISTIN="IntegratorContainer" SHOWINMENU="YES">
+			<SYSTEM>
+				<ID/>
+				<NAME>export interface container</NAME>
+				<DESCRIPTION/>
+			</SYSTEM>
+			<VALUES/>
+			<CONTENT>
+				<MAYCONTAIN>ExportInterface</MAYCONTAIN>
+				<COLUMNS/>
+			</CONTENT>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

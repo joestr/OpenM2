@@ -1,0 +1,80 @@
+@import url(styleCommon.css);
+
+BODY
+{
+    background-color: #eeeeee;
+
+    background-image: url("../images/tabs/navBarBackground.gif");
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+TABLE
+{
+    float: none;
+    margin-top: 1px;
+    margin-left: 1px;
+    top: 0pt;
+    height: 28px;
+}
+TD
+{
+    background-image: url("../images/tabs/menuBarBackground.jpg");
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-left: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #888888;
+    border-bottom: 1px solid #888888;
+    font-weight: bold;
+    font-variant: small-caps;
+    width: 60px;
+}
+
+A
+{
+    text-decoration: none;
+}
+A:hover
+{
+    color: #888888;
+}
+.name
+{
+    color: black;
+    font-size: 11px;
+}
+
+.high
+{
+    background-image: url("../images/tabs/menuBarBackgroundHigh.jpg");
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+.groupFront,
+.groupBack,
+.privateFront,
+.privateBack,
+.systemFront,
+.systemBack
+{
+    color: black;
+    font-size: 11px;
+    font-weight: bold;
+    vertical-align: center;
+}
+.groupFront,
+.privateFront,
+.systemFront
+{
+/*    background-image: url("../images/tabs/navTabBackground.gif");*/
+    background-image: url("../images/tabs/menuBarBackgroundSelected.jpg");
+    background-repeat: repeat-x;
+    background-position: top;
+    color: black;
+    border-bottom: 0px dotted black;
+}

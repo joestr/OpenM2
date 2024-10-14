@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+/**
+ * String computeBaseUrl ()
+ * Compute the base url of the application.
+ */
+function computeBaseUrl ()
+{
+    var baseUrl = window.location.pathname;
+
+    baseUrl = baseUrl.substring (0, baseUrl.lastIndexOf ('/') + 1);
+
+    return baseUrl;
+} // computeBaseUrl
+
+document.write (
+    '<META HTTP-EQUIV="Refresh" CONTENT="0; URL=app/login.html?path=' +
+    computeBaseUrl () +
+    'app/">');
+//<META HTTP-EQUIV="Refresh" CONTENT="0; URL=app/login.html?path=/m2/app/">
+-->
+</SCRIPT>
+<TITLE>m2</TITLE>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT="#000000" LINK="#829AB2" VLINK="#13507B">
+&nbsp;
+</BODY>
+</HTML>

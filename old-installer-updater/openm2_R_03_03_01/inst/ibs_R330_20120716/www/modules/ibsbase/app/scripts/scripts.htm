@@ -1,0 +1,43 @@
+<HTML>
+<HEAD><TITLE>Scripts</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var layoutDir = top.system.layoutDir;
+var scriptDir = top.system.baseDir + "scripts/";
+
+document.write ('<BASE HREF="' + layoutDir + '"/>');
+
+top.loadScript (document, scriptDir + "prototype-1.5.1.1.js");
+top.loadScript (document, scriptDir + "scriptObject.js");
+// top.loadScript (document, scriptDir + "messages.js");
+top.loadScript (document, scriptDir + "scriptCollection.js");
+top.loadScript (document, scriptDir + "scriptMap.js");
+top.loadScript (document, scriptDir + "scriptHash.js");
+top.loadScript (document, scriptDir + "scriptLists.js");
+top.loadScript (document, scriptDir + "scriptTupleList.js");
+top.loadScript (document, scriptDir + "scriptLoader.js");
+top.loadScript (document, scriptDir + "scriptConversion.js");
+top.loadScript (document, scriptDir + "scriptDocument.js");
+top.loadScript (document, scriptDir + "scriptCommon.js");
+top.loadScript (document, layoutDir + "scriptSpecific.js");
+top.loadScript (document, scriptDir + "formvalidation.js");
+top.loadScript (document, scriptDir + "scriptURLLists.js");
+top.loadScript (document, scriptDir + "scriptButtonBar.js");
+top.loadScript (document, scriptDir + "scriptTabBar.js");
+top.loadScript (document, scriptDir + "scriptHierarchy.js");
+top.loadScript (document, scriptDir + "scriptMenuBar.js");
+top.loadScript (document, scriptDir + "scriptNavBar.js");
+
+if (top.search && top.search.document.searchForm.slct)
+{
+    top.searchtemp.location.href = top.urlSearch;
+} // if
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="WHITE" onLoad="top.setScriptsLoaded ();">
+&nbsp;
+</BODY>
+</HTML>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreator">
+            <SYSTEM>
+                <ID DOMAIN="masterd_instquery">_masterd_getPotentialOuStaffFromCompany</ID>
+                <NAME>_masterd_getPotentialOuStaffFromCompany</NAME>
+                <DESCRIPTION>Retrieves all staff objects for the current company.</DESCRIPTION>
+                <VALIDUNTIL>01.01.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="SELECT" TYPE="CHAR">staffo.oid AS compOid,staffo.name,staff.m_personnelno AS persno,'setFieldRef (''_STAFFXMEMBER'',''#SYSVAR.ELEMOID#'', new Array (''' + staffo.name + '''))' AS setButton</VALUE>
+                <VALUE FIELD="FROM" TYPE="CHAR">ibs_Object o, ibs_Object compo, dbm_masterd_company comp, ibs_Object staffo, dbm_masterd_staffmem staff</VALUE>
+                <VALUE FIELD="WHERE" TYPE="CHAR">compo.oid = comp.oid AND staffo.oid = staff.oid AND compo.state = 2 AND staffo.state = 2 AND o.oid = #SYSVAR.CURRENTOBJECTOID# AND o.posNoPath LIKE compo.posNoPath + '%' AND staffo.posNoPath LIKE compo.posNoPath + '%'</VALUE>
+                <VALUE FIELD="QUERYTYPE" TYPE="CHAR">SYSTEM</VALUE>
+                <VALUE FIELD="GROUPBY" TYPE="CHAR"/>
+                <VALUE FIELD="ORDERBY" TYPE="CHAR">staffo.name ASC</VALUE>
+                <VALUE FIELD="COLUMNHEADERS" TYPE="CHAR">#OBJECTID, Name, Personnel No, #SET</VALUE>
+                <VALUE FIELD="COLUMNQUERYATTRIBUTES" TYPE="CHAR">compOid, name, persno, setButton</VALUE>
+                <VALUE FIELD="COLUMNTYPES" TYPE="CHAR">SYSVAR, STRING, STRING, SYSVAR</VALUE>
+                <VALUE FIELD="SEARCHFIELDS" TYPE="CHAR">Name</VALUE>
+                <VALUE FIELD="SEARCHFIELDQUERYATTRIBUTES" TYPE="CHAR">compo.name</VALUE>
+                <VALUE FIELD="SEARCHFIELDTYPES" TYPE="CHAR">STRING</VALUE>
+                <VALUE FIELD="MAXRESULTS" TYPE="INTEGER">-1</VALUE>
+                <VALUE FIELD="DEBUGGING" TYPE="BOOLEAN">0</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

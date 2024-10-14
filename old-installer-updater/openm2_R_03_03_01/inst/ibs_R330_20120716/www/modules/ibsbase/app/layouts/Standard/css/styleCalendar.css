@@ -1,0 +1,92 @@
+@import url(styleCommon.css);
+
+BODY
+{
+    background: url("../images/global/infoBackground.gif");
+    text-align: center;
+}
+TABLE
+{
+    float: none;
+    font-size: 11px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+/* calendar header: */
+TABLE.calheader
+{
+    font-weight: bold;
+    margin-top: 0px;
+}
+TD.calheader
+{
+    text-align: center;
+}
+
+/* calendar body: */
+TABLE.calbody
+{
+    padding: 2px;
+}
+TABLE.day,
+TABLE.month
+{
+/*
+    border: 0px solid black;
+*/
+}
+TABLE.month
+{
+    margin-top: 27px;
+}
+COL.hours,
+COL.days
+{
+    background-color: #cccccc;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* calendar days: */
+TD.listRow1,
+TD.listRow2
+{
+    vertical-align: middle;
+    height: 23px;
+}
+TD.listRow1
+{
+    background-color: #f1f2f2;
+}
+TD.listRow2
+{
+    background-color: #dcddde;
+}
+
+TD.days,
+TD.date
+{
+    vertical-align: middle;
+}
+
+A
+{
+    color: #6e132a;
+}
+.term
+{
+    background-image: url(../images/global/barBackground.gif);
+}
+.place
+{
+    color: black;
+}
+.holiday,
+.termname1 A,
+.termname2 A,
+.termname3 A,
+.termname4 A
+{
+    color: #6e132a;
+}

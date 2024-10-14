@@ -1,0 +1,176 @@
+<HTML>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"><HEAD><TITLE>List</TITLE></HEAD>
+<BODY BGCOLOR="ffffff">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// include the stylesheet in the document:
+top.showStylesheet (document, 'styleButtonBar.css');
+
+function b (id,n,i,d,u)
+{
+    top.scripts.addButton (id,n,i,d,u);
+}
+
+var btn_none = -1;
+var btn_edit = 1;
+var btn_delete = 2;
+var btn_cut = 3;
+var btn_copy = 4;
+var btn_paste = 5;
+var btn_distribute = 6;
+var btn_clean = 7;
+var btn_assign = 8;
+var btn_goto = 9;
+var btn_search = 10;
+var btn_help = 11;
+var btn_answer = 12;
+var btn_submit = 13;
+var btn_cancel = 14;
+var btn_login = 15;
+
+var btn_shoppingCart = 16;
+var btn_listDelete = 17;
+var btn_reference = 18;
+var btn_announce = 19;
+var btn_unannounce = 20;
+var btn_changePassword = 21;
+var btn_deleteEntries = 22;
+var btn_order = 23;
+var btn_rightsEdit = 24;
+var btn_rightsDelete = 25;
+var btn_setRightsRec = 26;
+var btn_cleanLog = 27;
+var btn_sendOrder = 28;
+var btn_announceOther = 29;
+var btn_unannounceList = 30;
+var btn_print = 31;
+
+var btn_gotoContainer = 32;
+var btn_back = 33;
+var btn_rightsNew = 34;
+var btn_listDeleteRights = 35;
+var btn_import = 36;
+var btn_activate = 37;
+var btn_topicNew = 38;
+var btn_export = 39;
+var btn_changeorderstate = 40;
+var btn_new = 41;
+var btn_listChange = 42;
+var btn_assignRights = 43;
+var btn_list_copy = 44;
+var btn_list_cut = 45;
+var btn_checkout = 46;
+var btn_checkin = 47;
+var btn_forward = 48;
+var btn_startWorkflow = 49;
+var btn_finishWorkflow = 50;
+var btn_abortWorkflow = 51;
+var btn_unDelete = 52;
+var btn_listForward = 53;
+var btn_generateTranslator = 54;
+var btn_editBeforeCheckIn = 55;
+var btn_checkInContainer = 56;
+var btn_checkOutContainer = 57;
+var btn_editBeforeCheckInContainer = 58;
+var btn_searchAndReference = 59;
+var btn_newAndReference = 60;
+var btn_publish = 61;
+var btn_gotoContainerExt = 62;
+var btn_newExt = 63;
+var btn_webdavcheckout = 64;
+var btn_webdavcheckin = 65;
+var btn_goforward = 66;
+
+var btn_assignobj = 102;
+
+
+b (btn_back, top.multilang.ibs_ibsbase_buttons_backName, "buttonBack.gif", top.multilang.ibs_ibsbase_buttons_backDesc, "top.goback(1);");
+//b (btn_back, "Zurück", "buttonBack.gif", "Zum letzten Objekt zurückblättern", "top.goback(1);");
+b (btn_goforward, top.multilang.ibs_ibsbase_buttons_goforwardName, "buttonGoForward.gif", top.multilang.ibs_ibsbase_buttons_goforwardDesc, "top.goforward(1);");
+b (btn_gotoContainer, top.multilang.ibs_ibsbase_buttons_gotoContainerName, "buttonGotoC.gif", top.multilang.ibs_ibsbase_buttons_gotoContainerDesc, "top.content();");
+//b (btn_gotoContainer, "Zur Ablage", "buttonGotoC.gif", "Zur übergeordneten Ablage gehen", "top.content();");
+b (btn_shoppingCart, top.multilang.ibs_ibsbase_buttons_shoppingCartName, "buttonShoppingCart.gif", top.multilang.ibs_ibsbase_buttons_shoppingCartDesc, "top.loadOrderWindow (5004);");
+b (btn_order, top.multilang.ibs_ibsbase_buttons_orderName, "buttonShoppingCart.gif", top.multilang.ibs_ibsbase_buttons_orderDesc, "top.load(5007);");
+b (btn_new, top.multilang.ibs_ibsbase_buttons_newName, "buttonNew.gif", top.multilang.ibs_ibsbase_buttons_newDesc, "top.loadCont(61);");
+b (btn_topicNew, top.multilang.ibs_ibsbase_buttons_topicNewName, "buttonNew.gif", top.multilang.ibs_ibsbase_buttons_topicNewDesc, "top.loadCont(61);");
+b (btn_rightsNew, top.multilang.ibs_ibsbase_buttons_rightsNewName, "buttonNew.gif", top.multilang.ibs_ibsbase_buttons_rightsNewDesc, "top.loadCont(61);"); // for Rights
+b (btn_answer, top.multilang.ibs_ibsbase_buttons_answerName, "buttonAnswer.gif", top.multilang.ibs_ibsbase_buttons_answerDesc, "top.loadCont(61);");
+b (btn_import, top.multilang.ibs_ibsbase_buttons_importName, "buttonImport.gif", top.multilang.ibs_ibsbase_buttons_importDesc, "top.loadCont(401);");
+b (btn_export, top.multilang.ibs_ibsbase_buttons_exportName, "buttonExport.gif", top.multilang.ibs_ibsbase_buttons_exportDesc, "top.load(405);");
+
+// add the buttons for checkin/checkout operations
+b (btn_checkout, top.multilang.ibs_ibsbase_buttons_checkoutName, "buttonCheckOut.gif", top.multilang.ibs_ibsbase_buttons_checkoutDesc, "top.load(441);");
+b (btn_checkin, top.multilang.ibs_ibsbase_buttons_checkinName, "buttonCheckIn.gif", top.multilang.ibs_ibsbase_buttons_checkinDesc, "top.load(442);");
+
+b (btn_edit, top.multilang.ibs_ibsbase_buttons_editName, "buttonEdit.gif", top.multilang.ibs_ibsbase_buttons_editDesc, "top.load(71);");
+b (btn_rightsEdit, top.multilang.ibs_ibsbase_buttons_rightsEditName, "buttonEdit.gif", top.multilang.ibs_ibsbase_buttons_rightsEditDesc, "top.load(71);");
+b (btn_changePassword, top.multilang.ibs_ibsbase_buttons_changePasswordName, "buttonLogin.gif", top.multilang.ibs_ibsbase_buttons_changePasswordDesc, "top.load(7);");
+b (btn_listChange, top.multilang.ibs_ibsbase_buttons_listChangeName, "buttonEdit.gif", top.multilang.ibs_ibsbase_buttons_listChangeDesc, "top.load(154);");
+b (btn_assign, top.multilang.ibs_ibsbase_buttons_assignName, "buttonAssign.gif", top.multilang.ibs_ibsbase_buttons_assignDesc, "top.load(422);");
+b (btn_assignRights, top.multilang.ibs_ibsbase_buttons_assignRightsName, "buttonAssignRights.gif", top.multilang.ibs_ibsbase_buttons_assignRightsDesc, "top.loadTabEvent(154);");
+b (btn_changeorderstate, top.multilang.ibs_ibsbase_buttons_changeorderstateName, "buttonChangeState.gif", top.multilang.ibs_ibsbase_buttons_changeorderstateDesc, "top.load(5011);");
+b (btn_delete, top.multilang.ibs_ibsbase_buttons_deleteName, "buttonDelete.gif", top.multilang.ibs_ibsbase_buttons_deleteDesc, "top.load(92, top.temp);");
+b (btn_rightsDelete, top.multilang.ibs_ibsbase_buttons_rightsDeleteName, "buttonDelete.gif", top.multilang.ibs_ibsbase_buttons_rightsDeleteDesc, "top.load(92, top.temp);");
+b (btn_listDelete, top.multilang.ibs_ibsbase_buttons_listDeleteName, "buttonDelete.gif", top.multilang.ibs_ibsbase_buttons_listDeleteDesc, "top.load(107);");
+b (btn_listDeleteRights, top.multilang.ibs_ibsbase_buttons_listDeleteRightsName, "buttonDelete.gif", top.multilang.ibs_ibsbase_buttons_listDeleteRightsDesc, "top.loadTabEvent(107);"); // for Rights
+b (btn_cleanLog, top.multilang.ibs_ibsbase_buttons_cleanLogName, "buttonCleanLog.gif", top.multilang.ibs_ibsbase_buttons_cleanLogDesc, "top.load(87);");
+
+b (btn_deleteEntries, top.multilang.ibs_ibsbase_buttons_deleteEntriesName, "buttonDelete.gif", top.multilang.ibs_ibsbase_buttons_deleteEntriesDesc, "top.load(108);");
+b (btn_cut, top.multilang.ibs_ibsbase_buttons_cutName, "buttonCut.gif", top.multilang.ibs_ibsbase_buttons_cutDesc, "top.load(111, top.temp);");
+b (btn_list_cut, top.multilang.ibs_ibsbase_buttons_list_cutName, "buttonCut.gif", top.multilang.ibs_ibsbase_buttons_list_cutDesc, "top.load(163);");
+b (btn_copy, top.multilang.ibs_ibsbase_buttons_copyName, "buttonCopy.gif", top.multilang.ibs_ibsbase_buttons_copyDesc, "top.load(114, top.temp);");
+b (btn_list_copy, top.multilang.ibs_ibsbase_buttons_list_copyName, "buttonCopy.gif", top.multilang.ibs_ibsbase_buttons_list_copyDesc, "top.load(161);");
+
+b (btn_paste, top.multilang.ibs_ibsbase_buttons_pasteName, "buttonPaste.gif", top.multilang.ibs_ibsbase_buttons_pasteDesc, "top.load(117);");
+b (btn_reference, top.multilang.ibs_ibsbase_buttons_referenceName, "buttonReference.gif", top.multilang.ibs_ibsbase_buttons_referenceDesc, "top.load(118);");
+b (btn_announce, top.multilang.ibs_ibsbase_buttons_announceName, "buttonRegister.gif", top.multilang.ibs_ibsbase_buttons_announceDesc, "top.load(3012);");
+b (btn_unannounce, top.multilang.ibs_ibsbase_buttons_unannounceName, "buttonUnregister.gif", top.multilang.ibs_ibsbase_buttons_unannounceDesc, "top.load(3013);");
+b (btn_announceOther, top.multilang.ibs_ibsbase_buttons_announceOtherName, "buttonRegister.gif", top.multilang.ibs_ibsbase_buttons_announceOtherDesc, "top.loadCont(61);");
+b (btn_unannounceList, top.multilang.ibs_ibsbase_buttons_unannounceListName, "buttonUnregister.gif", top.multilang.ibs_ibsbase_buttons_unannounceListDesc, "top.load(3015);");
+b (btn_distribute, top.multilang.ibs_ibsbase_buttons_distributeName, "buttonDistribute.gif", top.multilang.ibs_ibsbase_buttons_distributeDesc, "top.load(81);");
+
+b (btn_forward, top.multilang.ibs_ibsbase_buttons_forwardName, "buttonForward.gif", top.multilang.ibs_ibsbase_buttons_forwardDesc, "top.loadEvent(185,3);");
+b (btn_startWorkflow, top.multilang.ibs_ibsbase_buttons_startWorkflowName, "buttonStartWorkflow.gif", top.multilang.ibs_ibsbase_buttons_startWorkflowDesc, "top.loadEvent(185,1);");
+b (btn_finishWorkflow, top.multilang.ibs_ibsbase_buttons_finishWorkflowName, "buttonFinishWorkflow.gif", top.multilang.ibs_ibsbase_buttons_finishWorkflowDesc, "top.loadEvent(185,6);");
+b (btn_abortWorkflow, top.multilang.ibs_ibsbase_buttons_abortWorkflowName, "buttonAbortWorkflow.gif", top.multilang.ibs_ibsbase_buttons_abortWorkflowDesc, "top.loadEvent(185,4);");
+b (btn_listForward, top.multilang.ibs_ibsbase_buttons_listForwardName, "buttonForward.gif", top.multilang.ibs_ibsbase_buttons_listForwardDesc, "top.load(186);");
+
+b (btn_setRightsRec, top.multilang.ibs_ibsbase_buttons_setRightsRecName, "buttonSetRights.gif", top.multilang.ibs_ibsbase_buttons_setRightsRecDesc, "top.loadTabEvent (301);");
+b (btn_goto, top.multilang.ibs_ibsbase_buttons_gotoName, "buttonGoto.gif", top.multilang.ibs_ibsbase_buttons_gotoDesc, "top.load(9);");
+b (btn_submit, top.multilang.ibs_ibsbase_buttons_submitName, "buttonSubmit.gif", top.multilang.ibs_ibsbase_buttons_submitDesc, "top.load(13);");
+b (btn_cancel, top.multilang.ibs_ibsbase_buttons_cancelName, "buttonCancel.gif", top.multilang.ibs_ibsbase_buttons_cancelDesc, "top.load(14);");
+b (btn_sendOrder, top.multilang.ibs_ibsbase_buttons_sendOrderName, "buttonSendOrder.gif", top.multilang.ibs_ibsbase_buttons_sendOrderDesc, "top.load(28);");
+b (btn_activate, top.multilang.ibs_ibsbase_buttons_activateName, "buttonActivate.gif", top.multilang.ibs_ibsbase_buttons_activateDesc, "top.load(431, top);");
+b (btn_print, top.multilang.ibs_ibsbase_buttons_printName, "buttonPrint.gif", top.multilang.ibs_ibsbase_buttons_printDesc, "top.loadInWindow(5010);");
+b (btn_clean, top.multilang.ibs_ibsbase_buttons_cleanName, "buttonClean.gif", top.multilang.ibs_ibsbase_buttons_cleanDesc, "top.load(83);");
+
+b (btn_search, top.multilang.ibs_ibsbase_buttons_searchName, "buttonSearch.gif", top.multilang.ibs_ibsbase_buttons_searchDesc, "top.loadEvent(85, 100);");
+
+b (btn_login, top.multilang.ibs_ibsbase_buttons_loginName, "buttonLogin.gif", top.multilang.ibs_ibsbase_buttons_loginDesc, "top.load(4);");
+b (btn_help, top.multilang.ibs_ibsbase_buttons_helpName, "buttonHelp.gif", top.multilang.ibs_ibsbase_buttons_helpDesc, "top.showHelp();");
+b (btn_unDelete, top.multilang.ibs_ibsbase_buttons_unDeleteName, "buttonUnDelete.gif", top.multilang.ibs_ibsbase_buttons_unDeleteDesc,"top.load(94);");
+b (btn_generateTranslator, top.multilang.ibs_ibsbase_buttons_generateTranslatorName, "buttonGenerateTranslator.gif", top.multilang.ibs_ibsbase_buttons_generateTranslatorDesc,"top.load(776);");
+b (btn_editBeforeCheckIn, top.multilang.ibs_ibsbase_buttons_editBeforeCheckInName, "buttonEditBeforeCheckIn.gif", top.multilang.ibs_ibsbase_buttons_editBeforeCheckInDesc,"top.load(443);");
+b (btn_checkInContainer, top.multilang.ibs_ibsbase_buttons_checkInContainerName, "buttonCheckInContainer.gif", top.multilang.ibs_ibsbase_buttons_checkInContainerDesc,"top.load(444);");
+b (btn_checkOutContainer, top.multilang.ibs_ibsbase_buttons_checkOutContainerName, "buttonCheckOutContainer.gif", top.multilang.ibs_ibsbase_buttons_checkOutContainerDesc,"top.load(445);");
+b (btn_editBeforeCheckInContainer, top.multilang.ibs_ibsbase_buttons_editBeforeCheckInContainerName, "buttonEditBeforeCheckInContainer.gif", top.multilang.ibs_ibsbase_buttons_editBeforeCheckInContainerDesc,"top.load(446);");
+b (btn_publish, top.multilang.ibs_ibsbase_buttons_publishName, "publish.gif", top.multilang.ibs_ibsbase_buttons_publishDesc,"top.load(10031);");
+b (btn_searchAndReference, top.multilang.ibs_ibsbase_buttons_searchAndRefName, "buttonSearchRef.gif", top.multilang.ibs_ibsbase_buttons_searchAndRefDesc, "top.load(211);");
+b (btn_newAndReference, top.multilang.ibs_ibsbase_buttons_newAndRefName, "buttonNewRef.gif", top.multilang.ibs_ibsbase_buttons_newAndRefDesc, "top.load(213);");
+b (btn_gotoContainerExt, top.multilang.ibs_ibsbase_buttons_gotoContainerExtName, "buttonGotoContainerExt.gif", top.multilang.ibs_ibsbase_buttons_gotoContainerExtDesc, "top.loadEvent(900,2);");
+b (btn_newExt, top.multilang.ibs_ibsbase_buttons_newExtName, "buttonGotoContainerExt.gif", top.multilang.ibs_ibsbase_buttons_newExtDesc, "top.loadEvent(900,3);");
+
+// add the buttons for webdav checkin/checkout operations
+b (btn_webdavcheckout, top.multilang.ibs_ibsbase_buttons_webdavcheckoutName, "buttonCheckOut.gif", top.multilang.ibs_ibsbase_buttons_webdavcheckoutDesc, "top.load(447);");
+b (btn_webdavcheckin, top.multilang.ibs_ibsbase_buttons_webdavcheckinName, "buttonCheckIn.gif", top.multilang.ibs_ibsbase_buttons_webdavcheckinDesc, "top.load(448);");
+
+// add button for assigning objects
+// this is ELAK specific
+b (btn_assignobj, top.multilang.ibs_ibsbase_buttons_assignobjName, "buttonAssignObj.gif", top.multilang.ibs_ibsbase_buttons_assignobjDesc, "top.load(100003);");
+
+
+top.scripts.buttonsLoaded ();
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

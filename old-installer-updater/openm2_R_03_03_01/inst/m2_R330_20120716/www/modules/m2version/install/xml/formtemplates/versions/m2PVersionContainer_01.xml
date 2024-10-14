@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com) by Andreas Jansa -->
+<IMPORT VERSION="1.0">
+	<OBJECTS>
+		<OBJECT TYPECODE="m2PVersionContainer"
+		        TYPE="Versionen"
+		        MAYEXISTIN="ExportContainer"
+		        CLASS="m2.version.publish.PVersionContainer_01">
+			<SYSTEM>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+				<SHOWINNEWS/>
+			</SYSTEM>
+			<CONTENT>
+				<MAYCONTAIN>m2PVersion</MAYCONTAIN>
+				<COLUMNS>
+					<COLUMN NAME="Dateiname"/>
+					<COLUMN NAME="Dateigröße" UNIT="Bytes"/>
+					<COLUMN NAME="Version"/>
+					<COLUMN NAME="PDatum"/>
+					<COLUMN NAME="PObjekt"/>
+					<COLUMN NAME="PVersion"/>
+					<COLUMN NAME="PGröße"/>
+				</COLUMNS>
+			</CONTENT>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

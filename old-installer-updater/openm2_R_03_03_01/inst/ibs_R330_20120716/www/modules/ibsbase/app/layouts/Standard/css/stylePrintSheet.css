@@ -1,0 +1,39 @@
+.name,
+.header,
+.value,
+.adress, .address,
+.signature,
+.ohd,
+.or1,
+.olistdesc
+{
+    color: black;
+    font-family: Arial, Tahoma, Verdana, 'MS Sans Serif';
+}
+.name,
+.header,
+.ohd
+{
+    font-weight: bold;
+}
+.header
+{
+    font-size: 16pt;
+    font-style: italic;
+}
+.value
+{
+    background-color: transparent;
+}
+.adress, .address
+{
+    font-size: 8pt;
+}
+.or1
+{
+    font-style: italic;
+}
+.olistdesc
+{
+    font-variant: small-caps;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com) by Andreas Jansa -->
+<IMPORT VERSION="1.0">
+	<OBJECTS>
+		<OBJECT TYPECODE="m2VersionContainer"
+		        TYPE="Versionen"
+		        MAYEXISTIN="ExportContainer"
+		        CLASS="m2.version.VersionContainer_01">
+			<SYSTEM>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+				<SHOWINNEWS/>
+			</SYSTEM>
+			<CONTENT>
+				<MAYCONTAIN>m2Version</MAYCONTAIN>
+				<COLUMNS>
+<!--
+					<COLUMN NAME="Dateiname"/>
+					<COLUMN NAME="Dateigröße" UNIT="Bytes"/>
+-->
+					<COLUMN NAME="Version"/>
+				</COLUMNS>
+			</CONTENT>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

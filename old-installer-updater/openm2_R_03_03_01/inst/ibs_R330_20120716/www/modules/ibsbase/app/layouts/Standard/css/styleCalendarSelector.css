@@ -1,0 +1,236 @@
+@import url(styleCommon.css);
+
+BODY
+{
+    font-size: 8pt;
+}
+TABLE.cal_calendar,
+TABLE.cal_monthheader,
+TABLE.cal_monthview
+{
+    float: none;
+    margin: 0px;
+    text-align: center;
+    align: center;
+    padding: 0px;
+    border-spacing: 0px;
+}
+TABLE.cal_calendar,
+TABLE.cal_monthheader
+{
+    font-size: 8pt;
+    border: 0px outset white;
+    background-color: lightgrey;
+}
+TABLE.cal_monthheader
+{
+    font-size: 9pt;
+    vertical-align: middle;
+    border: 0px none white;
+    width: 100%;
+}
+TD.cal_monthheader
+{
+    background-color: gainsboro;
+/*
+    background-color: gray;
+*/
+    border: 2px outset white;
+    width: 100%;
+}
+
+IMG.cal_monthbutton
+{
+    border: 2px solid lightgrey;
+    cursor: pointer;
+}
+IMG.cal_monthbutton:hover
+{
+    border: 2px outset lightgrey;
+    cursor: pointer;
+}
+DIV.cal_monthheader
+{
+    border: 0px none lightgrey;
+}
+IMG
+{
+    border: 0px none blue;
+}
+
+TABLE.cal_monthview
+{
+    font-size: 8pt;
+    border: 2px outset white;
+    width: 100%;
+}
+TABLE.cal_okbutton
+{
+    align: center;
+}
+THEAD.cal_monthviewheader
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 8pt;
+}
+TR.cal_monthview
+{
+    text-align: right;
+    font-size: 8pt;
+}
+TD.cal_monthviewday
+{
+    border: 1px solid lightgrey;
+}
+TD.cal_okbutton
+{
+    text-align: center;
+    align: center;
+}
+DIV.cal_monthviewday,
+DIV.cal_monthviewdaynone,
+DIV.cal_monthviewdaynone:hover
+{
+    border: 1px solid lightgrey;
+}
+DIV.cal_selectedday
+{
+    border: 1px solid #FF8888;
+}
+DIV.cal_currentday,
+DIV.cal_selectedcurrentday
+{
+    border: 1px solid green;
+}
+DIV.cal_selectedday,
+DIV.cal_selectedcurrentday
+{
+    background-color: #FF8888;
+}
+DIV.cal_monthviewday,
+DIV.cal_currentday,
+DIV.cal_selectedday,
+DIV.cal_selectedcurrentday
+{
+    cursor: pointer;
+}
+DIV.cal_monthviewday:hover,
+DIV.cal_selectedday:hover,
+{
+    background-color: yellow;
+    cursor: pointer;
+    border: 1px solid #FF8888;
+}
+DIV.cal_currentday:hover,
+DIV.cal_selectedcurrentday:hover
+{
+    background-color: yellow;
+    cursor: pointer;
+}
+IMG.cal_daybutton
+{
+    border: 2px solid lightgrey;
+    cursor: pointer;
+}
+IMG.cal_daybutton:hover
+{
+    border: 2px outset lightgrey;
+    cursor: pointer;
+}
+
+/* special styles for internet explorer animation: */
+IMG.cal_monthbutton_highlighted
+{
+    border: 2px outset lightgrey;
+    cursor: pointer;
+}
+IMG.cal_monthbutton_pressed
+{
+    border: 2px inset lightgrey;
+    cursor: pointer;
+}
+DIV.cal_monthviewdaynone_highlighted,
+DIV.cal_monthviewdaynone_pressed
+{
+    border: 1px solid lightgrey;
+}
+DIV.cal_monthviewday_highlighted,
+DIV.cal_selectedday_highlighted
+{
+    border: 1px outset white;
+}
+DIV.cal_currentday_highlighted,
+DIV.cal_selectedcurrentday_highlighted
+{
+    border: 1px outset green;
+}
+DIV.cal_monthviewday_highlighted,
+DIV.cal_currentday_highlighted,
+DIV.cal_selectedday_highlighted,
+DIV.cal_selectedcurrentday_highlighted
+{
+    background-color: yellow;
+    cursor: pointer;
+}
+DIV.cal_monthviewday_pressed,
+DIV.cal_selectedday_pressed
+{
+    border: 1px inset white;
+}
+DIV.cal_currentday_pressed,
+DIV.cal_selectedcurrentday_pressed
+{
+    border: 1px inset green;
+}
+DIV.cal_monthviewday_pressed,
+DIV.cal_currentday_pressed,
+DIV.cal_selectedday_pressed,
+DIV.cal_selectedcurrentday_pressed
+{
+    background-color: yellow;
+    cursor: pointer;
+}
+IMG.cal_daybutton_highlighted
+{
+    border: 2px outset lightgrey;
+    cursor: pointer;
+}
+IMG.cal_daybutton_pressed
+{
+    border: 2px inset lightgrey;
+    cursor: pointer;
+}
+TD.token, TD.cal_token,
+TD.username, TD.cal_username
+{
+    text-align: center;
+    align: center;
+    border: 0px outset white;
+    padding: 0px;
+    border-spacing: 0px;
+}
+TD.token, TD.cal_token
+{
+    font-size: 9pt;
+}
+TD.username, TD.cal_username
+{
+    font-size: 9pt;
+    font-weight: bold;
+}
+INPUT
+{
+    font-size: 9pt;
+}
+INPUT.cal_datefield,
+INPUT.cal_datefield_highlighted
+{
+    font-size: 10pt;
+    text-align: center;
+}
+.calendar
+{
+    background-color: lightgrey;
+    vertical-align: middle;
+}

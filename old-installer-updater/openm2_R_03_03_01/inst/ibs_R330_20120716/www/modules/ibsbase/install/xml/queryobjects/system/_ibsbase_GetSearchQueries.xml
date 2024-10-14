@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreator">
+            <SYSTEM>
+                <ID DOMAIN="ibs_instquery">_ibsbase_GetSearchQueries</ID>
+                <NAME>_ibsbase_GetSearchQueries</NAME>
+                <DESCRIPTION>get all search queries within the system the user is allowed to read</DESCRIPTION>
+                <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="SELECT" TYPE="CHAR">oqc.oid, \noqc.icon, \noqc.name, \noqc.description, \nqc.category</VALUE>
+                <VALUE FIELD="FROM" TYPE="CHAR">v_Container$rights oqc, \nibs_queryCreator_01 qc\n</VALUE>
+                <VALUE FIELD="WHERE" TYPE="CHAR">oqc.oid = qc.oid\nAND qc.queryType &amp; 1 = 1\nAND oqc.rights &amp; 4 = 4\nAND oqc.userID = #SYSVAR.USERID#\n</VALUE>
+                <VALUE FIELD="CATEGORY" TYPE="CHAR"></VALUE>
+                <VALUE FIELD="QUERYTYPE" TYPE="CHAR">SYSTEM</VALUE>
+                <VALUE FIELD="GROUPBY" TYPE="CHAR"/>
+                <VALUE FIELD="ORDERBY" TYPE="CHAR">qc.category, oqc.name</VALUE>
+                <VALUE FIELD="COLUMNHEADERS" TYPE="CHAR">oid, \nicon, \nname, \ndescription, \ncategory</VALUE>
+                <VALUE FIELD="COLUMNQUERYATTRIBUTES" TYPE="CHAR">oid, \nicon, \nname, \ndescription, \ncategory</VALUE>
+                <VALUE FIELD="COLUMNTYPES" TYPE="CHAR">SYSVAR,\nSYSVAR,\nSTRING,\nSTRING,\nSTRING</VALUE>
+                <VALUE FIELD="SEARCHFIELDS" TYPE="CHAR"/>
+                <VALUE FIELD="SEARCHFIELDQUERYATTRIBUTES" TYPE="CHAR"/>
+                <VALUE FIELD="SEARCHFIELDTYPES" TYPE="CHAR"/>
+                <VALUE FIELD="MAXRESULTS" TYPE="INTEGER">-1</VALUE>
+                <VALUE FIELD="DEBUGGING" TYPE="BOOLEAN">0</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

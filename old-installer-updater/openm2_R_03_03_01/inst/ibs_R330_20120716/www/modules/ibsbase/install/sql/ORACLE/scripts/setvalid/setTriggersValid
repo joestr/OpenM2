@@ -1,0 +1,26 @@
+
+echo
+echo VALIDATING TRIGGERS
+echo
+
+sqlplus -s sa/sa @invalid_triggers.sql > out.sql
+
+grep ALTER out.sql | grep -v "'" > out1.sql
+
+echo ... found `wc -l out1.sql` invalid triggers
+
+echo "exit;" >> out1.sql
+
+
+sqlplus -s sa/sa @out1.sql > temp
+
+rm out.sql
+rm out1.sql
+
+sqlplus -s sa/sa @invalid_triggers.sql> out.sql
+
+grep ALTER out.sql | grep -v "'" > out1.sql
+
+echo ... result: `wc -l out1.sql` invalid triggers
+echo
+echo ... for still invalid triggers see out1.sql

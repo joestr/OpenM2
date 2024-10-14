@@ -1,0 +1,62 @@
+/* 
+  This style sheet is used for the following forms:
+        - the window to put a product in the shopping cart
+        - the form to change a product collection 
+*/
+TABLE.ordertable
+{
+    border-bottom-color: black;
+    border-left-color: black;
+    border-right-color: black;
+    border-top-color: black;
+}
+
+/* The cell format used for the header of the table */
+TD.ohd 
+{
+    background-color: #c0c0c0;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* The cell format used for the input fields in the matrix */
+TD.oqt
+{
+    background-color: silver;
+    font-style: normal;
+    text-align: center;
+}
+
+/* The cell format used for values (sizes, colors) in the matrix */
+TD.ovl
+{
+    background-color: #c0c0c0;
+    font-style: italic;
+    text-align: center;
+}
+
+/* The cell format for the name of the dimensions in the matrix (e.g. sizes, colors) */
+TD.odi
+{
+    background-color: silver;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* The cell format for special rows and columns in the product collection change form */
+TD.osp
+{
+    background-color: silver;
+    font-weight: normal;
+    text-align: center;
+}
+/* The cell format used for value "alle" in the matrix (same as TD.ovl but bold !!)*/
+TD.ona
+{
+    background-color: #c0c0c0;
+    font-style: italic;
+    font-weight:bold;
+    text-align: center;
+}

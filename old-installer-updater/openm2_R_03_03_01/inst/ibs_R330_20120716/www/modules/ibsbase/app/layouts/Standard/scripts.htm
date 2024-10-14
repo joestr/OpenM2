@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD><TITLE>Scripts</TITLE></HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function scriptsLoaded ()
+{
+    top.setScriptsLoaded ();
+} // scriptsLoaded
+
+top.loadScript (document, "../../scripts/messages.js");
+top.loadScript (document, "../../scripts/scriptLists.js");
+top.loadScript (document, "../../scripts/scriptCommon.js");
+/*
+top.loadScript (document, "scriptSpecific.js");
+top.loadScript (document, "../../scripts/formvalidation.js");
+top.loadScript (document, "../../scripts/scriptURLLists.js");
+top.loadScript (document, "../../scripts/scriptButtonBar.js");
+top.loadScript (document, "../../scripts/scriptTabBar.js");
+top.loadScript (document, "../../scripts/scriptMenuBar.js");
+top.loadScript (document, "../../scripts/scriptNavBar.js");
+*/
+
+if (top.search && top.search.document.searchForm.slct)
+   top.searchtemp.location.href = top.urlSearch;
+//-->
+</SCRIPT>
+
+
+<BODY BGCOLOR="WHITE" onLoad="scriptsLoaded ()">
+&nbsp;
+</BODY>
+</HTML>

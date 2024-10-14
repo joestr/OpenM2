@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPECODE="masterd_PersonContainer"
+		        TYPE="Person container"
+		        MAYEXISTIN="ExportContainer"
+		        SHOWINMENU="YES">
+			<SYSTEM DISPLAY="NO">
+				<ID DOMAIN=""/>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+			</SYSTEM>
+			<VALUES/>
+			<CONTENT>
+				<MAYCONTAIN>masterd_Person</MAYCONTAIN>
+				<COLUMNS>
+					<COLUMN NAME="Nationality"/>
+					<COLUMN NAME="Birhtdate"/>
+					<COLUMN NAME="Social Insurence No"/>
+				</COLUMNS>
+			</CONTENT>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

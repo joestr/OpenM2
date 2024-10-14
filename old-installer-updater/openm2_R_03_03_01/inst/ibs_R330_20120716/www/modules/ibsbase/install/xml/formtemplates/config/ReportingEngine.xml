@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--DOCTYPE IMPORT SYSTEM "import.dtd"-->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="ReportingEngine"
+                TYPE="ReportingEngine"
+                MAYEXISTIN="ExportContainer"
+                SHOWINMENU="YES"
+                DBTABLE="dbm_reportingengine"
+                CLASS="ibs.obj.reporting.ReportingEngine_01">
+            <SYSTEM DISPLAY="YES">
+                <NAME/>
+                <DESCRIPTION/>
+                <VALIDUNTIL/>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="activated" TYPE="BOOLEAN" DBFIELD="m_activated"/>
+                <VALUE FIELD="invocationUrl" TYPE="TEXT" MANDATORY="NO" DBFIELD="m_url"/>
+                <VALUE FIELD="reportDir" TYPE="TEXT" MANDATORY="NO" DBFIELD="m_reportdir"/>
+                <VALUE FIELD="fileextension" TYPE="TEXT" MANDATORY="NO" DBFIELD="m_extension">rptdesign</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

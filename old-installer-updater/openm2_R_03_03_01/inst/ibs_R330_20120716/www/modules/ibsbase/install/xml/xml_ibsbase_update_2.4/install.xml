@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $Id: install.xml,v 1.5 2006/01/10 20:46:50 klreimue Exp $ -->
+<!DOCTYPE install SYSTEM "install.dtd">
+<!--
+    multi-installer configuration file
+    this file defines the steps for an installation
+-->
+<install>
+    <!-- create common package structures -->
+<!-- nothing to do -->
+
+    <!-- create the queryobject structures -->
+<!-- nothing to do -->
+    <!-- create the queryobjects -->
+    <instxml sourcefile="queryobjects/reports/*.xml"
+             destiddomain="ibs_instquery" destid="Berichte"/>
+    <instxml sourcefile="queryobjects/search/*.xml"
+             destiddomain="ibs_instquery" destid="Suchmasken"/>
+    <instxml sourcefile="queryobjects/system/*.xml"
+             destiddomain="ibs_instquery" destid="System"/>
+    <instxml sourcefile="queryobjects/misc/*.xml"
+             destiddomain="ibs_instquery" destid="Sonstige"/>
+
+    <!-- create the connectors -->
+    <instxml sourcefile="connectors/structures.xml"
+             destiddomain="ibs_install" destid="Konnektoren"/>
+
+    <!-- create the importscrips -->
+    <instxml sourcefile="importscripts/structures.xml"
+             destiddomain="ibs_install" destid="Importskripts"/>
+
+    <!-- create the translators -->
+<!-- nothing to do -->
+
+    <!-- create the workflowtemplates -->
+<!-- nothing to do -->
+
+
+    <!-- create the formtemplates structures -->
+<!-- nothing to do -->
+
+    <!-- create the formtemplates -->
+    <!-- database connector -->
+<!-- nothing to do -->
+    <!-- external database -->
+<!-- nothing to do -->
+    <!-- webdav -->
+<!-- nothing to do -->
+    <!-- reorg -->
+<!-- nothing to do -->
+
+
+    <!-- stucture templates -->
+<!-- nothing to do -->
+
+    <!-- create common object structures -->
+<!-- nothing to do -->
+</install>

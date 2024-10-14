@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<m2Configuration>
+    <!--
+     m2 system configuration file
+
+     - the configuration of the m2 system is defined via xml-nodes and
+     - attributes.
+     - the format of this file is xml-conform.
+    -->
+    <!--
+     server node:
+         name:    name of the server where it is possible to establish a connection
+                  to m2. "*" to allow any servername
+         port:    the port on which the communication will take place
+         sslname: the name of the server where it is possible to establish
+                  a secure communication. notice that this must be the name
+                  of the server for which the certificate was issued.
+                  default: name of the server given above
+         sslport: the port for the secure communication;
+                  default: 443
+         ssl:     if ssl is activated then true, otherwise false
+                  default: false
+    -->
+    <server name="@APPSERVER@" port="@APPSERVERPORT@"
+        sslname="@SSLSERVER@" sslport="@SSLSERVERPORT@" ssl="@SSLACTIVE@"/>
+    <!--
+    <server name="localhost"
+            port="80"
+            sslname="localhost"
+            sslport="443"
+            ssl="false"/>
+
+    <server name=""
+            port="80"
+            sslname=""
+            sslport="443"
+            ssl="false"/>
+    -->
+    <!--
+     the base url to the server side include files (SSI)
+     default: http://localhost/m2/app/include/
+     the URL must be welformed with the following schema:
+     http://<servername>[:<port>]/<url>
+    -->
+    <ssiurl value="http://localhost:@APPSERVERPORT@@HOMEPAGEPATH@app/include/"/>
+    <!--
+     email server on which eMails can be send out of m2
+     possible values:
+     - dns name of server, e.g. 'emailserver'
+     - ip address of server, e.g. "111.222.333.444"
+    -->
+    <smtpserver name="@SMTPSERVER@"/>
+    <!--
+
+     ********************
+     DATABASE CONNECTION:
+     ********************
+
+     JDBC Driver Class
+
+     jdbcdriverclass:      the name of the class for the database connection
+                           driver
+     jdbcconnectionstring: the connection string for the driver to connect to
+                           the database desired.
+                           Replace SERVERNAME, PORT and SID (two times), USERNAME
+                           and PASSWORD with the correct values!
+       ORACLE:
+         classname:        oracle.jdbc.driver.OracleDriver
+         connectionstring oci:
+             jdbc:oracle:oci:@(description=(address=(host=<servername>)(protocol=tcp)(port=<port>))(connect_data=(sid=<SID>)))
+         connectionstring thin:
+             jdbc:oracle:thin:@(description=(address=(host=<servername>)(protocol=tcp)(port=<port>))(connect_data=(sid=<SID>)))
+       MSSQL:
+         classname:        com.inet.tds.TdsDriver
+         connectionstring: jdbc:inetdae7a:<servername>[:<port>]
+           where inetdae7a for SQLServer 7 or higher, ASCII
+           where inetdae6  for SQLServer 65, compatible mode
+     dbuser:               name of database-user for connection to repository
+                           database from m2
+     dbpassword:           password for given user account
+     dbtype:               the type of the database, possible values:
+                           - ora805 .... Oracle 8.05
+                           - sqls65 .... SQL Server 6.5
+     dblogintimeout:      max. waitingtime (in seconds) for db login attempt,
+                          default: 45
+     dbquerytimeout:      max. waitingtime (in seconds) for db query attempt,
+                          default: 120
+
+    ********************
+    EXAMPLE: ORACLE
+    ********************
+    Remark: default/standard PORT=1521
+    <database jdbcdriverclass="oracle.jdbc.driver.OracleDriver"
+              jdbcconnectionstring="jdbc:oracle:thin:@(description=(address=(host=SERVERNAME)(protocol=tcp)(port=PORT))(connect_data=(sid=SID)))"
+              user="USERNAME"
+              password="PASSWORD"
+              sid="SID"
+              type="ora805"
+              logintimeout="45"
+              querytimeout="120"
+    />
+
+    ********************
+    EXAMPLE: MSSQL65
+    ********************
+    Remark: default/standard PORT=1433
+    <database jdbcdriverclass="com.inet.tds.TdsDriver"
+              jdbcconnectionstring="jdbc:inetdae6:SERVERNAME:PORT"
+              user="USERNAME"
+              password="PASSWORD"
+              sid="DATABASENAME"
+              type="sqls65"
+              logintimeout="45"
+              querytimeout="120"
+    />
+
+    ********************
+    EXAMPLE: MSSQL7
+    ********************
+    Remark: default/standard PORT=1433
+    <database jdbcdriverclass="com.inet.tds.TdsDriver"
+              jdbcconnectionstring="jdbc:inetdae7a:SERVERNAME:PORT"
+              user="USERNAME"
+              password="PASSWORD"
+              sid="DATABASENAME"
+              type="sqls65"
+              logintimeout="45"
+              querytimeout="120"
+    />
+    
+    ****************************
+    EXAMPLE: MSSQL - jTDS Driver
+    ****************************
+    <database jdbcdriverclass="net.sourceforge.jtds.jdbc.Driver"
+              jdbcconnectionstring="jdbc:jtds:sqlserver://SERVERNAME:PORT/DATABASENAME"
+              user="USERNAME"
+              password="PASSWORD"
+              sid="DATABASENAME"
+              type="sqls65"
+              logintimeout="45"
+              querytimeout="120"/>
+
+    ********************
+    EXAMPLE: DB2 on AS400
+    ********************
+    Remark: default/standard PORT=unknown
+    <database jdbcdriverclass="com.ibm.as400.access.AS400JDBCDriver"
+            jdbcconnectionstring="jdbc:as400://HOSTNAME/LIBRARYNAME;naming=sql;errors=full;dateformat=iso;extended dynamic=false;package=JDBCEX;package library=LIBRARYNAME"
+            user="USERNAME"
+            password="PASSWORD"
+            sid="LIBRARYNAME"
+            type="db2"
+            logintimeout="45"
+            querytimeout="120"
+    />
+    -->
+    <!-- fill in required db-connection -->
+    <database jdbcdriverclass="@DRIVERCLASS@"
+              jdbcconnectionstring="@CONNECTIONSTRING@"
+              user="@USER@" password="@PWD@"
+              sid="@SID@" type="@TYPE@"
+              logintimeout="@LOGINTIMEOUT@" querytimeout="@QUERYTIMEOUT@"/>
+    <!--
+    this node contains the configuration of the trace server. use that only for
+    debugging purposes.
+
+     name:      the name of the traceserver which communicates with the traceclients
+                - default localhost
+     port:      the port on which the traceserver communicates with the traceclients
+                - default 1733
+     active:    triggers activation of the tracer-mechanism in m2
+                possible values:
+                - true
+                - false
+     path:      the absolute path where the output file of the tracer is stored
+     password:  the password which identifies the traceclients to the traceserver
+    -->
+    <traceserver name="localhost" port="1733" active="false"
+        path="@TRACERPATH@" password="myPwd73"/>
+    <!--
+    this node contains the configuration of the webdav service.
+
+     url:      url for webdav requests
+     path:     absolute path to the webdav enabled os folder
+    -->
+    <webdav webdavurl="http://@APPSERVER@:@APPSERVERPORT@@HOMEPAGEPATH@/WebdavLinkServlet"
+        webdavpath="D:\wwwroot\webdav"/>
+    <!--
+    # activate login-wizard
+    # possible values:
+    # - true
+    # - false
+    wizardlogin                  false
+    -->
+    <!--
+    # this node contains the configuration of the authentication.
+    #
+    # @deprecated (see IBS-675)
+    # ntdomains:     a list comma separated nt domains valid for the authentication.
+    #                Take care to avoid whitespaces!
+    -->
+    <authentication ntdomains="@NTDOMAINS@"/>
+</m2Configuration>

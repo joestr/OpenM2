@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- DOCTYPE IMPORT SYSTEM "import.dtd" -->
+<IMPORT>
+	<OBJECTS>
+		<OBJECT TYPE="versionierte Datei"
+		        TYPECODE="m2FileVersion"
+		        CLASS="m2.version.FileVersion_01">
+			<SYSTEM>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+				<SHOWINNEWS/>
+			</SYSTEM>
+            <VALUES>
+                <!--Name der Datei-->
+                <VALUE FIELD="Dateiname" TYPE="FILE" DBFIELD="m_filename"
+                       MANDATORY="YES"/>
+            </VALUES>
+			<TABS>
+				<TABOBJECT TYPECODE="m2VersionContainer"
+				           TABCODE="m2FileVersion_tab1"/>
+			</TABS>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

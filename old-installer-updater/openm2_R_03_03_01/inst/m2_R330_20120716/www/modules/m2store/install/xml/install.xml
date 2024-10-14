@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE install SYSTEM "install.dtd">
+<!--
+    multi-installer configuration file
+    this file defines the steps for an installation
+-->
+<install>
+    <!-- create common package structures -->
+    <instxml sourcefile="common/structures.xml"
+             destiddomain="ibs_instobj" destid="di"/>
+
+    <!-- create the queryobject structures -->
+<!-- nothing to do -->
+
+    <!-- create the connectors -->
+<!-- nothing to do -->
+
+    <!-- create the importscrips -->
+<!-- nothing to do -->
+
+    <!-- create the translators -->
+<!-- nothing to do -->
+
+    <!-- create the workflowtemplates -->
+<!-- nothing to do -->
+
+
+    <!-- create the formtemplates structures -->
+<!-- nothing to do -->
+
+    <!-- create the formtemplates -->
+<!-- nothing to do -->
+
+    <!-- stucture templates -->
+    <instxml sourcefile="structures/structures.xml"
+             destiddomain="m2store_install" destid="Strukturvorlagen"/>
+
+    <!-- create common object structures -->
+<!-- nothing to do -->
+</install>

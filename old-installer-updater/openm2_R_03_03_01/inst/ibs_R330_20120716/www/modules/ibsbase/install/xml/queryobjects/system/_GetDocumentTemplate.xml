@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 export file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreator">
+            <SYSTEM>
+                <ID DOMAIN="ibs_instquery">_GetDocumentTemplate</ID>
+                <NAME>_GetDocumentTemplate</NAME>
+                <DESCRIPTION>Get all DocumentTemplate01 Objectnames for queryselectionbox</DESCRIPTION>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="SELECT" TYPE="CHAR">name</VALUE>
+                <VALUE FIELD="FROM" TYPE="CHAR">ibs_Object</VALUE>
+                <VALUE FIELD="WHERE" TYPE="CHAR">typename like &apos;WebDav Dokumentvorlage&apos;</VALUE>
+                <VALUE FIELD="QUERYTYPE" TYPE="CHAR">SYSTEM</VALUE>
+                <VALUE FIELD="GROUPBY" TYPE="CHAR"/>
+                <VALUE FIELD="ORDERBY" TYPE="CHAR"/>
+                <VALUE FIELD="COLUMNHEADERS" TYPE="CHAR">value</VALUE>
+                <VALUE FIELD="COLUMNQUERYATTRIBUTES" TYPE="CHAR">name</VALUE>
+                <VALUE FIELD="COLUMNTYPES" TYPE="CHAR">STRING</VALUE>
+                <VALUE FIELD="SEARCHFIELDS" TYPE="CHAR"/>
+                <VALUE FIELD="SEARCHFIELDQUERYATTRIBUTES" TYPE="CHAR"/>
+                <VALUE FIELD="SEARCHFIELDTYPES" TYPE="CHAR"/>
+                <VALUE FIELD="MAXRESULTS" TYPE="INTEGER">-1</VALUE>
+                <VALUE FIELD="DEBUGGING" TYPE="BOOLEAN">0</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

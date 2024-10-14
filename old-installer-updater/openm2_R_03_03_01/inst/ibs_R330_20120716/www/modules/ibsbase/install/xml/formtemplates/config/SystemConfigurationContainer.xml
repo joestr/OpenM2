@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+	<OBJECTS>
+		<OBJECT TYPECODE="SystemConfigurationContainer"
+		        TYPE="Systemkonfigurations-Ablage"
+		        MAYEXISTIN="ExportContainer"
+                SHOWINMENU="YES"
+		        CLASS="ibs.di.DefaultContainer">
+			<SYSTEM>
+				<NAME/>
+				<DESCRIPTION/>
+				<VALIDUNTIL/>
+				<SHOWINNEWS/>
+			</SYSTEM>
+			<CONTENT>
+				<MAYCONTAIN>ReportingEngineContainer</MAYCONTAIN>
+				<COLUMNS/>
+			</CONTENT>
+		</OBJECT>
+	</OBJECTS>
+</IMPORT>

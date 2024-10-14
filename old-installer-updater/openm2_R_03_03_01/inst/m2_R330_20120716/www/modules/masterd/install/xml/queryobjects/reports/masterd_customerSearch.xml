@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="QueryCreator">
+            <SYSTEM>
+                <ID DOMAIN="masterd_instquery">masterd_customerSearch</ID>
+                <NAME>masterd_customerSearch</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>31.12.2099</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="SELECT" TYPE="CHAR">	mapo.oid, map.m_custno as custNo, custo.name as custName, assignedTo.name as assignedName</VALUE>
+                <VALUE FIELD="FROM" TYPE="CHAR"> 	dbm_masterd_cust map left outer join\n		ibs_object as assignedTo on (assignedTo.oid = map.m_assignedto and assignedTo.state = 2),\n	ibs_object mapo, dbm_masterd_company cust, ibs_object custo</VALUE>
+                <VALUE FIELD="WHERE" TYPE="CHAR">	mapo.containerId = #SYSVAR.CURRENTOBJECTOID#\n	AND map.oid = mapo.oid\n	AND mapo.state = 2\n	AND cust.oid = map.m_cust\n	AND	custo.oid = cust.oid\n	AND custo.state = 2</VALUE>
+                <VALUE FIELD="CATEGORY" TYPE="CHAR"/>
+                <VALUE FIELD="QUERYTYPE" TYPE="CHAR">SEARCH,REPORT</VALUE>
+                <VALUE FIELD="GROUPBY" TYPE="CHAR"/>
+                <VALUE FIELD="ORDERBY" TYPE="CHAR"/>
+                <VALUE FIELD="COLUMNHEADERS" TYPE="CHAR">#OBJECTID, Customer no, Customer name, Assigned to</VALUE>
+                <VALUE FIELD="COLUMNQUERYATTRIBUTES" TYPE="CHAR">oid, custNo, custName, assignedName</VALUE>
+                <VALUE FIELD="COLUMNTYPES" TYPE="CHAR">SYSVAR, STRING, STRING, STRING</VALUE>
+                <VALUE FIELD="SEARCHFIELDS" TYPE="CHAR">Customer name, Customer no</VALUE>
+                <VALUE FIELD="SEARCHFIELDQUERYATTRIBUTES" TYPE="CHAR">custo.name, map.m_custno</VALUE>
+                <VALUE FIELD="SEARCHFIELDTYPES" TYPE="CHAR">STRING, STRING</VALUE>
+                <VALUE FIELD="MAXRESULTS" TYPE="INTEGER">-1</VALUE>
+                <VALUE FIELD="DEBUGGING" TYPE="BOOLEAN">0</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

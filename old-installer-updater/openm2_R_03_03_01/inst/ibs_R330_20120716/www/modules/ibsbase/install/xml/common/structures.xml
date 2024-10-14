@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 export/import file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="IntegratorContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="ibs_instobj">di</ID></CONTAINER>
+                <ID DOMAIN="ibs_install">di_ibs</ID>
+                <NAME>ibs</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+            <OBJECTS>
+                <OBJECT TYPECODE="QueryCreatorContainer">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_install">Queries</ID>
+                        <NAME>Queries</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                </OBJECT>
+                <OBJECT TYPECODE="DocumentTemplateContainer">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_install">Formularvorlagen</ID>
+                        <NAME>Formularvorlagen</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                </OBJECT>
+                <OBJECT TYPECODE="ConnectorContainer">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_install">Konnektoren</ID>
+                        <NAME>Konnektoren</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                </OBJECT>
+                <OBJECT TYPECODE="TranslatorContainer">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_install">Translatoren</ID>
+                        <NAME>Translatoren</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                </OBJECT>
+                <OBJECT TYPECODE="ImportScriptContainer">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_install">Importskripts</ID>
+                        <NAME>Importskripts</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                </OBJECT>
+                <OBJECT TYPECODE="WorkflowTemplateContainer">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_install">Workflowvorlagen</ID>
+                        <NAME>Workflowvorlagen</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                </OBJECT>
+                <OBJECT TYPECODE="WorkspaceTemplateContainer">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_install">Strukturvorlagen</ID>
+                        <NAME>Strukturvorlagen</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES/>
+                </OBJECT>
+            </OBJECTS>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

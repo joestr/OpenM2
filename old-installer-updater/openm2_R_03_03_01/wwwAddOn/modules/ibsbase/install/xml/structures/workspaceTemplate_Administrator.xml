@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="Container">
+            <SYSTEM>
+                <CONTAINER TYPE="PATH">#CONFVAR.ibsbase.menuPrivate#/Administrator</CONTAINER>
+                <ID DOMAIN="ibs_instobj" ADDWSPUSER="true">wsp_workbox</ID>
+                <NAME>workbox</NAME>
+                <DESCRIPTION>Your personal working area.</DESCRIPTION>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <RIGHTS>
+                <RIGHT NAME="Administrator" TYPE="USER" PROFILE="READ"/>
+                <RIGHT NAME="Administrator" TYPE="USER" PROFILE="WRITE"/>
+            </RIGHTS>
+            <OBJECTS>
+                <OBJECT TYPECODE="Note">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_instobj" ADDWSPUSER="true">wsp_workboxnote</ID>
+                        <NAME>Welcome</NAME>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="content" TYPE="LONGTEXT">Welcome to the system.</VALUE>
+                    </VALUES>
+                </OBJECT>
+            </OBJECTS>
+        </OBJECT>
+<!--
+        <OBJECT TYPECODE="ReferenzContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="PATH">#CONFVAR.ibsbase.menuPrivate#/Administrator</CONTAINER>
+                <ID DOMAIN="ibs_instobj" ADDWSPUSER="true">wsp_hotlist</ID>
+                <NAME>Hotlist</NAME>
+                <DESCRIPTION>Die wesentlichen Objekte, welche öfter benötigt werden.</DESCRIPTION>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+            <RIGHTS>
+                <RIGHT NAME="Administrator" TYPE="USER" PROFILE="READ"/>
+                <RIGHT NAME="Administrator" TYPE="USER" PROFILE="WRITE"/>
+            </RIGHTS>
+        </OBJECT>
+-->
+        <OBJECT TYPECODE="NewsContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="PATH">#CONFVAR.ibsbase.menuPrivate#/Administrator</CONTAINER>
+                <ID DOMAIN="ibs_instobj" ADDWSPUSER="true">wsp_news</ID>
+                <NAME>news</NAME>
+                <DESCRIPTION>Everthing, which has been added within a defined period (=&gt; user profile).</DESCRIPTION>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+            <RIGHTS>
+                <RIGHT NAME="Administrator" TYPE="USER" PROFILE="READ"/>
+                <RIGHT NAME="Administrator" TYPE="USER" PROFILE="WRITE"/>
+            </RIGHTS>
+        </OBJECT>
+        <OBJECT TYPECODE="Inbox">
+            <SYSTEM>
+                <CONTAINER TYPE="PATH">#CONFVAR.ibsbase.menuPrivate#/Administrator</CONTAINER>
+                <ID DOMAIN="ibs_instobj" ADDWSPUSER="true">wsp_inbox</ID>
+                <NAME>inbox</NAME>
+                <DESCRIPTION>Your personal inbox.</DESCRIPTION>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <RIGHTS>
+                <RIGHT NAME="Administrator" TYPE="USER" PROFILE="READ"/>
+                <RIGHT NAME="Administrator" TYPE="USER" PROFILE="WRITE"/>
+            </RIGHTS>
+        </OBJECT>
+        <OBJECT TYPECODE="SentObjectContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="PATH">#CONFVAR.ibsbase.menuPrivate#/Administrator</CONTAINER>
+                <ID DOMAIN="ibs_instobj" ADDWSPUSER="true">wsp_outbox</ID>
+                <NAME>outbox</NAME>
+                <DESCRIPTION>Your personal outbox.</DESCRIPTION>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <RIGHTS>
+                <RIGHT NAME="Administrator" TYPE="USER" PROFILE="READ"/>
+                <RIGHT NAME="Administrator" TYPE="USER" PROFILE="WRITE"/>
+            </RIGHTS>
+        </OBJECT>
+        <OBJECT TYPECODE="QueryExecutive">
+            <SYSTEM>
+                <CONTAINER TYPE="PATH">#CONFVAR.ibsbase.menuPrivate#/SysAdmin</CONTAINER>
+                <ID DOMAIN="ibs_instobj" ADDWSPUSER="true">wsp_checkoutobjects</ID>
+                <NAME>checkout objects</NAME>
+                <DESCRIPTION>Objects checked out by you.</DESCRIPTION>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES>
+                <VALUE FIELD="queryobjectname" TYPE="CHAR">ibs_getCheckOutObjects</VALUE>
+            </VALUES>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- m2 export/import file -->
+<IMPORT VERSION="1.0">
+    <OBJECTS>
+        <OBJECT TYPECODE="DocumentTemplateContainer">
+            <SYSTEM>
+                <CONTAINER TYPE="EXTKEY"><ID DOMAIN="ibs_install">Formularvorlagen</ID></CONTAINER>
+                <ID DOMAIN="ibs_insttempl">dbcon_templates</ID>
+                <NAME>DB Konnektor</NAME>
+                <DESCRIPTION/>
+                <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                <SHOWINNEWS>false</SHOWINNEWS>
+            </SYSTEM>
+            <VALUES/>
+            <OBJECTS>
+                <!-- db connector -->
+                <OBJECT TYPECODE="DocumentTemplate">
+                    <SYSTEM>
+                        <ID DOMAIN="ibs_insttempl">dbconnector01</ID>
+                        <NAME>DatenbankConnector</NAME>
+                        <DESCRIPTION/>
+                        <VALIDUNTIL>#CONFVAR.ibsbase.validUntil#</VALIDUNTIL>
+                        <SHOWINNEWS>false</SHOWINNEWS>
+                    </SYSTEM>
+                    <VALUES>
+                        <VALUE FIELD="filename" TYPE="FILE">DatabaseConnector_01.xml</VALUE>
+                    </VALUES>
+                </OBJECT>
+            </OBJECTS>
+        </OBJECT>
+    </OBJECTS>
+</IMPORT>
