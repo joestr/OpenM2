@@ -38,3 +38,17 @@ else
   echo >&2 "Connection test unsuccessful!"
   exit 1
 fi
+
+# Create Database
+result=$(sqlcmd -S localhost -U $DatabaseUserUsername -P $DatabaseUserPassword -No -i "./www/modules/ibsbase/install/sql/MS-SQL/install/createDB.sql")
+expected="                              
+------------------------------
+TEST ERFOLGREICH ABGESCHLOSSEN
+"
+
+if [ "$result" = "$expected" ]; then
+  echo "Connection test successful!"
+else
+  echo >&2 "Connection test unsuccessful!"
+  exit 1
+fi
